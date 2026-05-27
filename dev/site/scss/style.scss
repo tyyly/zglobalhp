@@ -1,0 +1,91 @@
+/* Taxix | Taxi HTML Template
+
+Template Name: Taxix
+Version: 1.0.0
+License: copyright commercial
+/************ TABLE OF CONTENTS ***************
+1.  Fonts
+2.  Reset
+3.  Global Settings
+4.  Main Header / Two
+5.  Sticky Header 
+6.  Mobile Menu
+7.  Section Title
+8.  Main Slider
+9.  Banner Section / Two
+10. Pricing Section / Two / Three
+11. Benefit Section
+12. About Section / Two / Three
+13. Services Section / Two / Three / Four
+14. Fun Fact Section
+15. Testimonial Section / Two
+16. Team Section 
+17. Apps Section / Two / Three
+18. News Section / Two / Three
+19. Work Section / Two
+20. Booking Section / Two
+21. Clients Section
+22. Main Footer / Two / Three
+**********************************************/
+
+@import "scss-bootstrap/functions";
+@import "scss-bootstrap/variables";
+@import "scss-bootstrap/mixins";
+@import "common/root.scss";
+@import "common/mixing.scss";
+@import "common/loader.scss";
+
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Epilogue:wght@300;400;500;600;700;800;900&family=Odibee+Sans&display=swap');
+
+@import url('animate.css');
+@import url('owl.css');
+@import url('jquery.fancybox.min.css');
+@import url('linear.css');
+@import url('select2.min.css');
+@import url('aos.css');
+@import url('odometer-theme-default.css');
+@import url('fontawesome.css');
+@import url('flaticon_taxi.css');
+@import url('tm-bs-mp.css');
+@import url('tm-utility-classes.css');
+
+// import SCSS components one by one
+@import "reset.scss";
+@import "button.scss";
+@import "animate-icon.scss";
+@import "search-popup.scss";
+@import "header.scss";
+@import "mobile-menu.scss";
+@import "section-title.scss";
+@import "main-slider.scss";
+@import "accordion.scss";
+@import "banner.scss";
+@import "pricing.scss";
+@import "benefit.scss";
+@import "about.scss";
+@import "services.scss";
+@import "funfact.scss";
+@import "testimonials.scss";
+@import "team.scss";
+@import "app.scss";
+@import "news.scss";
+@import "work.scss";
+@import "booking.scss";
+@import "map.scss";
+@import "clients.scss";
+@import "footer.scss";
+
+@import "shop/loader.scss";
+
+//inner
+@import "inner/page-title.scss";
+@import "inner/404.scss";
+@import "inner/service-details.scss";
+@import "inner/project-details.scss";
+@import "inner/news-details.scss";
+@import "inner/news-sidebar.scss";
+@import "inner/news-comment.scss";
+@import "inner/team-details.scss";
+@import "inner/contact-page.scss";
+
+@import "footer.scss";

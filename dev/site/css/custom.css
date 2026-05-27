@@ -1,0 +1,920 @@
+/* =============================================================
+   Z&GLOBAL custom overrides
+   Fixes for template default that breaks with our image sizes.
+   Loaded AFTER style.css to take precedence.
+   ============================================================= */
+
+/* =============================================================
+   JAPANESE PREMIUM UI/UX: YOHAKU (Whitespace) & COLORS
+   ============================================================= */
+:root {
+  --theme-color1: #b8945a !important;          /* champagne gold (主色) */
+  --theme-color1-rgb: 184, 148, 90 !important;
+  --theme-color1-hover: #d4b079;               /* bright gold (hover) */
+  --theme-color1-dim: #8c6f43;                 /* dim gold (active/border) */
+}
+
+body {
+  line-height: 2.0 !important; /* Premium JP sites use wide line-height */
+  letter-spacing: 0.05em !important;
+  color: #333;
+}
+
+h1, h2, h3, h4, h5, h6, .sec-title h2 {
+  font-weight: 400 !important; /* Elegant, non-heavy titles */
+  letter-spacing: 0.1em !important;
+}
+
+/* Yohaku (Whitespace) Expansion */
+section {
+  padding: 100px 0 !important;
+}
+
+/* =============================================================
+   HIGH-VISIBILITY PREMIUM BUTTONS
+   Ensuring strong affordance (clickability) while maintaining luxury feel
+   ============================================================= */
+.theme-btn.btn-style-one,
+.theme-btn.btn-style-three {
+  background: var(--theme-color1) !important;
+  border: 1px solid var(--theme-color1) !important;
+  color: #1a1a1a !important; /* Dark text on gold for high contrast */
+  letter-spacing: 0.1em;
+  padding: 15px 40px !important;
+  font-weight: 500;
+  transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1) !important;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+}
+
+/* Ensure text inside button inherits the dark color initially */
+.theme-btn.btn-style-one .btn-title,
+.theme-btn.btn-style-three .btn-title {
+  color: #1a1a1a !important;
+  transition: color 0.5s ease !important;
+}
+
+/* Hover: Elegant inversion to dark charcoal */
+.theme-btn.btn-style-one:hover,
+.theme-btn.btn-style-three:hover {
+  background: #1a1a1a !important;
+  border-color: #1a1a1a !important;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
+
+.theme-btn.btn-style-one:hover .btn-title,
+.theme-btn.btn-style-three:hover .btn-title {
+  color: var(--theme-color1) !important; /* Gold text on dark background */
+}
+
+.theme-btn::before, .theme-btn::after {
+  display: none !important; /* Remove generic hover sweeps */
+}
+
+/* ヒーロー / ヘッダーの黄色ライン → ゴールドに */
+.banner-section-two .bg-shape,
+.banner-section-two::before,
+.pricing-block-three .inner-box .title-box:before {
+  background-color: #b8945a !important;
+}
+
+/* lang-switch のアクティブ状態をゴールドに */
+.lang-switch button.active {
+  background: #b8945a !important;
+  color: #1a1a1a !important;
+  border-color: #b8945a !important;
+}
+
+/* 直接ハードコードされている #ffee02 (1箇所) を上書き */
+.footer-style-three .inner-container,
+.theme-btn.yellow-line {
+  border-top-color: #b8945a !important;
+}
+
+/* リンクホバー色をゴールド寄りに */
+a:hover {
+  color: #b8945a;
+}
+.main-menu .navigation > li.current > a,
+.main-menu .navigation > li > a:hover {
+  color: #b8945a !important;
+}
+
+/* =============================================================
+   PNG装飾を完全削除 (黄色/ゴールドのオーバーレイ・パターン全廃)
+   テンプレ既定の装飾PNGは Z-Global の高級ハイヤー業態に不要。
+   ============================================================= */
+.bg-overlay,
+.bg-overlay-2,
+.bg-overlay-3,
+.bg-overlay-4,
+.bg-overlay-5,
+.bg-overlay-6,
+.bg-overlay-7,
+.bg-overlay-8,
+.bg-shape,
+.bg-pattern-1,
+.bg-pattern-2,
+.bg-pattern-3,
+.bg-pattern-4,
+.bg-pattern-5,
+.bg-pattern-6,
+.bg-pattern-7,
+.bg-pattern-8 {
+  display: none !important;
+}
+
+/* セクション側にも .bg.bg-pattern-* がインライン適用されている可能性に備えて
+   セクション直下の .bg 要素のうち背景画像があるものは無効化 */
+.banner-section-two .bg.bg-pattern-6,
+.about-section-three .bg.bg-pattern-7,
+.main-footer .bg.bg-pattern-8 {
+  background-image: none !important;
+  display: none !important;
+}
+
+/* =============================================================
+   pseudo-element 装飾 (::before / ::after) の削除
+   テンプレ既定の大型ゴールドシェイプを全廃。content の視認性を確保。
+   ============================================================= */
+.about-section-three::before,
+.about-section-three::after,
+.testimonial-section-two::before,
+.testimonial-section-two::after,
+.service-section-three::before,
+.service-section-three::after,
+.banner-section-two::before,
+.banner-section-two::after,
+.app-section-three::before,
+.app-section-three::after,
+.news-section-three::before,
+.news-section-three::after,
+.pricing-section-three::before,
+.pricing-section-three::after,
+.service-section-four::before,
+.service-section-four::after,
+.featured-products::before,
+.featured-products::after {
+  display: none !important;
+  content: none !important;
+}
+
+/* page-title の暗オーバーレイは残す (これは私が後付けした視認性確保用) */
+.page-title::before {
+  display: block !important;
+  content: "" !important;
+}
+
+/* =============================================================
+   FOOTER: bg-pattern-8 削除で透明背景になってしまった対策
+   フッターに直接ダーク背景を設定し、テキスト視認性を確保
+   ============================================================= */
+.main-footer.footer-style-three {
+  background-color: #1a1a1a !important; /* チャコール */
+  color: #f4f1ec; /* 暖かい白 */
+}
+
+/* ウィジェットセクションは透明にしてフッター親の濃色が透ける */
+.main-footer.footer-style-three .widgets-section {
+  background-color: transparent;
+}
+
+/* about-widget の本文を明るく */
+.main-footer.footer-style-three .footer-widget.about-widget .text,
+.main-footer.footer-style-three .footer-widget.about-widget .widget-content .text {
+  color: rgba(244, 241, 236, 0.78) !important;
+}
+
+/* widget タイトル (h4/h5) はゴールド */
+.main-footer.footer-style-three .footer-widget .widget-title {
+  color: #d4b079 !important;
+  letter-spacing: 0.08em;
+}
+
+/* =============================================================
+   ANIMATION REFINEMENTS (Premium Feel)
+   ============================================================= */
+/* Remove bouncy animations */
+.bounce-x, .bounce-y, .reveal {
+  animation: none !important;
+  transform: none !important;
+}
+
+/* Smooth out AOS and other transitions */
+.aos-animate {
+  transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1) !important;
+  transition-duration: 1.2s !important;
+}
+
+/* =============================================================
+   MOBILE USABILITY (Floating Action Button)
+   ============================================================= */
+.mobile-fab {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  background-color: var(--theme-color1);
+  color: #1a1a1a;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 60px;
+  font-size: 24px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+}
+
+.mobile-fab:hover {
+  background-color: var(--theme-color1-hover);
+  color: #1a1a1a;
+  transform: scale(1.05);
+}
+
+@media (max-width: 767px) {
+  .mobile-fab {
+    display: block;
+  }
+}
+
+/* =============================================================
+   CSS CROSSFADE SLIDER FOR SERVICES
+   テンプレ style.css `.service-block-three .inner-box .image-box .image img`
+   (特異度 0,0,4,1) が position: relative を強制するため、
+   ここでは同等以上の特異度で上書きする。
+   ============================================================= */
+.image-box .image.css-crossfade,
+.service-block-three .inner-box .image-box .image.css-crossfade {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3; /* Prevent collapse */
+  overflow: hidden;
+  margin-bottom: 0;
+}
+.image-box .image.css-crossfade > img,
+.service-block-three .inner-box .image-box .image.css-crossfade > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+.css-crossfade > img:nth-child(1) {
+  opacity: 1; /* Always forms the base layer */
+  z-index: 0;
+}
+.css-crossfade > img:nth-child(n+2) {
+  opacity: 0; /* Hidden by default */
+  z-index: 1;
+}
+.css-crossfade > img:nth-child(3) {
+  z-index: 2; /* Ensure 3 is above 2 */
+}
+
+/* 2 Slides (8s cycle) */
+.css-crossfade.slides-2 > img:nth-child(2) {
+  animation: fade-over-2 8s infinite ease-in-out;
+}
+@keyframes fade-over-2 {
+  0%   { opacity: 0; }
+  40%  { opacity: 0; }
+  50%  { opacity: 1; }
+  90%  { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+/* 3 Slides (12s cycle) */
+.css-crossfade.slides-3 > img:nth-child(2) {
+  animation: fade-over-3-2 12s infinite ease-in-out;
+}
+.css-crossfade.slides-3 > img:nth-child(3) {
+  animation: fade-over-3-3 12s infinite ease-in-out;
+}
+@keyframes fade-over-3-2 {
+  0%   { opacity: 0; }
+  26%  { opacity: 0; }
+  34%  { opacity: 1; }
+  60%  { opacity: 1; }
+  68%  { opacity: 0; }
+  100% { opacity: 0; }
+}
+@keyframes fade-over-3-3 {
+  0%   { opacity: 0; }
+  60%  { opacity: 0; }
+  68%  { opacity: 1; }
+  92%  { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+/* メニューリンクを白寄りに、矢印はゴールド */
+.main-footer.footer-style-three .footer-widget.links-widget ul li a {
+  color: rgba(244, 241, 236, 0.78) !important;
+  transition: color .2s;
+}
+.main-footer.footer-style-three .footer-widget.links-widget ul li a:hover {
+  color: #d4b079 !important;
+}
+.main-footer.footer-style-three .footer-widget.links-widget ul li .icon {
+  color: #b8945a !important;
+}
+
+/* contact-widget の本文 (TEL/FAX/MAIL/住所/対応時間 の値) を確実に白で表示
+   - HTML のインラインstyle="color:#fff;" がテンプレCSSに上書きされていた */
+.main-footer.footer-style-three .footer-widget.contact-widget p,
+.main-footer.footer-style-three .footer-widget.contact-widget p b,
+.main-footer.footer-style-three .footer-widget.contact-widget p span,
+.main-footer.footer-style-three .footer-widget.contact-widget p a {
+  color: #ffffff !important;
+  font-size: 14px;
+  line-height: 1.85;
+  margin-bottom: 8px;
+}
+.main-footer.footer-style-three .footer-widget.contact-widget p b {
+  color: #d4b079 !important; /* ラベル (TEL/FAX/MAIL/住所/対応時間) はゴールド */
+  margin-right: 6px;
+}
+.main-footer.footer-style-three .footer-widget.contact-widget p a:hover {
+  color: #d4b079 !important;
+}
+
+/* フッター上部 (gold背景のCTA帯) の文字色とボタン視認性 */
+.footer-style-three .footer-top .inner-container .top-left .sub-title,
+.footer-style-three .footer-top .inner-container .top-left .title {
+  color: #1a1a1a !important;
+}
+.footer-style-three .footer-top .inner-container .top-right .info-btn .title,
+.footer-style-three .footer-top .inner-container .top-right .info-btn .phone-no {
+  color: #1a1a1a !important;
+}
+.footer-style-three .footer-top .inner-container .top-right .info-btn .icon {
+  color: #1a1a1a;
+}
+/* gold-bg の上の「ご予約」ボタンは反転(濃色)にして視認性確保 */
+.footer-style-three .footer-top .btn-box .theme-btn {
+  background: #1a1a1a !important;
+  color: #d4b079 !important;
+  border-color: #1a1a1a !important;
+}
+.footer-style-three .footer-top .btn-box .theme-btn:hover {
+  background: #ffffff !important;
+  color: #1a1a1a !important;
+  border-color: #ffffff !important;
+}
+.footer-style-three .footer-top .btn-box .theme-btn .btn-title {
+  color: inherit !important;
+}
+
+/* フッター bottom のコピーライト・SNS リンク */
+.footer-style-three .footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+.footer-style-three .footer-bottom .copyright-text {
+  color: rgba(244, 241, 236, 0.6) !important;
+}
+.footer-style-three .footer-bottom .footer-nav li a {
+  color: rgba(244, 241, 236, 0.7) !important;
+  transition: color .2s;
+}
+.footer-style-three .footer-bottom .footer-nav li a:hover {
+  color: #d4b079 !important;
+}
+
+/* フッターウィジェット区切り線をゴールドに統一 */
+.main-footer.footer-style-three .widgets-section {
+  padding-top: 72px;
+  padding-bottom: 36px;
+  border-top: 1px solid rgba(184, 148, 90, 0.18);
+}
+
+/* 念のため: テンプレ既定の icon-car-X (黄色タクシーシルエット) は完全削除 */
+.icon-car-1, .icon-car-2, .icon-car-3,
+.icon-car-4, .icon-car-5, .icon-car-6,
+.icon-car-7, .icon-car-8 {
+  display: none !important;
+}
+
+/* テンプレ既定 yellow-line 装飾 (黄色斜線) もゴールド化 */
+.theme-btn.yellow-line:before,
+.theme-btn.yellow-line:after,
+.yellow-line {
+  background-color: #b8945a !important;
+  border-color: #b8945a !important;
+}
+
+/* テンプレ既定 dark-bg + yellow-line ボタン: ホバー時のゴールド化 */
+.theme-btn.btn-style-one.dark-bg:hover {
+  background: #b8945a !important;
+}
+
+/* オドメーター(数値カウンター)の下線もゴールド */
+.counter-block-two .icon-box,
+.fact-counter .counter-one {
+  color: #b8945a !important;
+}
+
+/* 「Book Your Cab」等のフッター上部の黄色アクセント = bg-pattern-8 経由でもう変換済み */
+
+/* ---------- Testimonial: constrain image-box and disable -80px overlap ---------- */
+.testimonial-section-two { overflow: hidden; position: relative; }
+.testimonial-section-two .sec-title,
+.testimonial-section-two .testimonial-carousel {
+  position: relative;
+  z-index: 5;
+}
+.testimonial-block-two .inner-box .image-box {
+  width: 335px;
+  height: 362px;
+  flex-shrink: 0;
+  overflow: hidden;
+  display: block;
+  position: relative;
+}
+@media (max-width: 1199.98px) {
+  .testimonial-block-two .inner-box .image-box {
+    width: 100%;
+    max-width: 380px;
+    height: auto;
+    aspect-ratio: 1 / 1.08;
+    margin-right: 0;
+    margin-bottom: 24px;
+  }
+}
+.testimonial-block-two .inner-box .image-box .image {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+  clip-path: none; /* disable the diagonal clip — was breaking with our portrait images */
+}
+.testimonial-block-two .inner-box .image-box .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* hide the second offset image — was causing the bleed into adjacent sections */
+.testimonial-block-two .inner-box .image-box .image.two {
+  display: none !important;
+}
+.testimonial-block-two .inner-box .image-box .icon-quote {
+  top: 16px;
+  right: 16px;
+  z-index: 5;
+}
+
+/* keep the row layout on desktop */
+.testimonial-block-two .inner-box {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+@media (max-width: 1199.98px) {
+  .testimonial-block-two .inner-box {
+    display: block;
+  }
+}
+
+/* ---------- App / Reservation Flow Section: 4 steps full-width grid ---------- */
+/* Force content-column to span full width so 4 step blocks have room. */
+.app-section-three .content-column {
+  flex: 0 0 100% !important;
+  max-width: 100% !important;
+}
+.app-section-three .image-column {
+  display: none !important; /* hide the side image on this section — it forced narrow columns */
+}
+.app-section-three .content-column .inner-column {
+  padding-right: 0 !important;
+}
+
+/* Replace template's 2-block stack with a clean 4-up grid. */
+.app-section-three .blocks-outer-box {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-top: 32px;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (max-width: 991.98px) {
+  .app-section-three .blocks-outer-box {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 540px) {
+  .app-section-three .blocks-outer-box {
+    grid-template-columns: 1fr;
+  }
+}
+.app-section-three .blocks-outer-box .app-block {
+  width: 100%;
+  margin: 0;
+}
+.app-section-three .blocks-outer-box .app-block .inner-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 28px 18px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 4px;
+  height: 100%;
+}
+.app-section-three .blocks-outer-box .app-block .inner-box .icon {
+  font-size: 36px;
+  margin-bottom: 14px;
+  color: var(--theme-color1, #ffd322);
+}
+.app-section-three .blocks-outer-box .app-block .inner-box .content .title {
+  font-size: 14px;
+  line-height: 1.55;
+  color: #fff;
+  white-space: normal;
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+  margin: 0;
+}
+
+/* The image column on the side: constrain height so it doesn't dominate */
+.app-section-three .image-column .inner-column {
+  text-align: center;
+}
+.app-section-three .image-column .inner-column .image {
+  max-width: 100%;
+  margin: 0 auto;
+}
+.app-section-three .image-column .inner-column .image img {
+  max-height: 420px;
+  width: auto;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+@media (max-width: 991.98px) {
+  .app-section-three .image-column { display: none; }
+}
+
+/* Make the content-column take the full width when image-column is hidden */
+.app-section-three .row { align-items: center; }
+
+/* ---------- Banner image: keep aspect, not too tall ---------- */
+.banner-section-two .image-column .inner-column .image {
+  max-height: 620px;
+  overflow: hidden;
+}
+.banner-section-two .image-column .inner-column .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ---------- Service Block (Top services carousel) image height fix ---------- */
+.service-block-three .inner-box .image-box {
+  height: 240px;
+  overflow: hidden;
+}
+.service-block-three .inner-box .image-box .image,
+.service-block-three .inner-box .image-box .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ---------- Fleet tab car cards: hide template decorations & fix image ---------- */
+/* テンプレ既定の黄色タクシー装飾 (.icon-car-6 / .bg-overlay-4) は Z-Global の高級ハイヤー
+   ブランドに不要。完全に非表示にして実車写真を主役にする。 */
+.service-block-four .inner-box .image-box .icon-car-6,
+.service-block-four .inner-box .image-box .bg-overlay-4 {
+  display: none !important;
+}
+.service-block-four .inner-box {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  gap: 32px;
+}
+@media (max-width: 991.98px) {
+  .service-block-four .inner-box {
+    flex-direction: column;
+    gap: 24px;
+  }
+}
+.service-block-four .inner-box .image-box {
+  position: relative;
+  order: 1;
+  flex: 0 0 50%;
+  height: 320px;
+  overflow: hidden;
+  border-radius: 4px;
+  margin: 0;
+}
+@media (max-width: 991.98px) {
+  .service-block-four .inner-box .image-box {
+    flex: 0 0 100%;
+    height: 240px;
+  }
+}
+.service-block-four .inner-box .image-box .image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0 !important;
+  z-index: 3;
+}
+.service-block-four .inner-box .image-box .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.service-block-four .inner-box .content {
+  flex: 1 1 50%;
+  padding-top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.service-block-four .inner-box .content .car-name {
+  font-size: 28px;
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+}
+.service-block-four .inner-box .content .city {
+  font-size: 14px;
+  letter-spacing: 0.06em;
+  margin-top: 4px;
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+
+/* ---------- Pricing block: tone down aggressive parallelogram + ensure separation ---------- */
+.pricing-block-three .inner-box {
+  position: relative;
+}
+.pricing-block-three .inner-box .title-box {
+  padding: 36px 40px 40px;
+  overflow: visible; /* 価格タグアイコンが下端からはみ出る設計なので clip しない */
+  position: relative;
+  margin-bottom: 28px; /* feature-list と明確に分離 */
+}
+@media (max-width: 575.98px) {
+  .pricing-block-three .inner-box .title-box {
+    padding: 28px 24px 32px;
+    margin-bottom: 20px;
+  }
+}
+/* 黄色パラレログラムの傾きを大幅に緩める (テンプレ既定の急角度を是正) */
+.pricing-block-three .inner-box .title-box:before {
+  clip-path: polygon(0 0, 100% 0, 100% 92%, 0 100%) !important;
+}
+@media (max-width: 575.98px) {
+  .pricing-block-three .inner-box .title-box:before {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%) !important; /* モバイルは完全矩形 */
+  }
+}
+.pricing-block-three .inner-box .title-box .title {
+  font-size: 20px;
+  letter-spacing: 0.06em;
+  margin-bottom: 18px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+@media (max-width: 575.98px) {
+  .pricing-block-three .inner-box .title-box .title {
+    font-size: 18px;
+  }
+}
+.pricing-block-three .inner-box .title-box .price {
+  font-size: 40px;
+  line-height: 1.1;
+  white-space: nowrap;
+  letter-spacing: 0;
+}
+@media (min-width: 1400px) {
+  .pricing-block-three .inner-box .title-box .price {
+    font-size: 48px;
+  }
+}
+@media (max-width: 991.98px) {
+  .pricing-block-three .inner-box .title-box .price {
+    font-size: 36px;
+  }
+}
+.pricing-block-three .inner-box .title-box .price sub {
+  font-size: 14px;
+  vertical-align: baseline;
+  bottom: 0;
+  margin-left: 4px;
+  white-space: nowrap;
+}
+.pricing-block-three .inner-box .title-box .icon-tag,
+.pricing-block-three .inner-box .title-box .icon {
+  width: 52px;
+  height: 52px;
+  bottom: -22px;
+  right: 24px;
+  font-size: 22px;
+}
+
+/* ---------- About section image (top) ---------- */
+.about-section-three .image-column .inner-column figure.image {
+  max-height: 480px;
+  overflow: hidden;
+}
+.about-section-three .image-column .inner-column figure.image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.about-section-three .image-column .inner-column .video-box {
+  max-width: 240px;
+  max-height: 240px;
+  overflow: hidden;
+}
+.about-section-three .image-column .inner-column .video-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ---------- About page image-column ---------- */
+.about-section .image-column .inner-column figure {
+  max-height: 460px;
+  overflow: hidden;
+}
+.about-section .image-column .inner-column figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.about-section .image-column .inner-column .image-2 {
+  max-width: 280px;
+  max-height: 220px;
+}
+
+/* ---------- Page title hero height & overlay ---------- */
+.page-title {
+  position: relative;
+  padding: 140px 0;
+  background-size: cover !important;
+  background-position: center !important;
+}
+.page-title::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+}
+.page-title .auto-container { position: relative; z-index: 1; }
+.page-title .title { color: #fff !important; }
+.page-title .page-breadcrumb { color: #fff; }
+.page-title .page-breadcrumb a { color: var(--theme-color1, #ffd322); }
+
+/* ---------- Header sticky/lower: make sure z-index above any clipped content ---------- */
+.main-header.header-style-three { z-index: 99; }
+.main-header.header-style-three .header-top,
+.main-header.header-style-three .header-lower { position: relative; z-index: 5; }
+
+/* ---------- Lang switch refinement ---------- */
+.lang-switch { display: inline-flex; gap: 6px; margin-left: 14px; vertical-align: middle; }
+.lang-switch button {
+  background: rgba(0, 0, 0, 0.6) !important;
+  border: 1px solid var(--theme-color1) !important;
+  color: #fff !important;
+  font-size: 11px !important;
+  letter-spacing: .08em !important;
+  padding: 5px 12px !important;
+  cursor: pointer !important;
+  border-radius: 4px !important;
+  transition: all .3s ease !important;
+  line-height: 1.4 !important;
+}
+.lang-switch button:hover { 
+  background: var(--theme-color1-hover) !important; 
+  color: #1a1a1a !important; 
+  border-color: var(--theme-color1-hover) !important;
+}
+.lang-switch button.active { 
+  background: var(--theme-color1) !important; 
+  color: #1a1a1a !important; 
+  border-color: var(--theme-color1) !important; 
+  font-weight: bold !important;
+}
+
+/* ---------- Pricing section feature-list: avoid super tight columns on long text ---------- */
+.pricing-block-three .inner-box .content .feature-list li {
+  line-height: 1.55;
+  white-space: normal;
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+
+/* ---------- Service tab tabs-header layout (long Japanese vehicle names) ---------- */
+.service-section-four .service-tab .tab-btns-box .tabs-header .service-tab-btns {
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+/* ---------- Hide owl-nav inside fleet tabs (each tab has only 1 car -> no nav needed) ---------- */
+.service-section-four .service-tab .tabs-content .owl-nav {
+  display: none !important;
+}
+.service-section-four .service-tab .tabs-content .owl-dots {
+  display: none !important;
+}
+/* Section overflow safety net */
+.service-section-four {
+  overflow: hidden;
+}
+
+/* ---------- Feature-list inside service-block-four: wider right column for ¥XX,XXX〜 ---------- */
+.service-block-four .inner-box .content .feature-list li .price {
+  width: auto;
+  min-width: 90px;
+  padding-left: 16px;
+  white-space: nowrap;
+  font-size: 14px;
+}
+.service-block-four .inner-box .content .feature-list li {
+  font-size: 14px;
+  padding: 8px 16px;
+}
+
+/* ---------- Make Service Section Three (top services carousel) nav less obtrusive ---------- */
+.service-section-three .owl-dots {
+  margin-top: 32px;
+}
+
+/* ---------- Generic safety: any template bg decorative element that may bleed ---------- */
+.banner-section-two,
+.about-section-three,
+.pricing-section-three,
+.app-section-three,
+.news-section-three {
+  overflow: hidden;
+}
+
+/* ---------- Footer contact widget text wrap ---------- */
+.main-footer.footer-style-three .footer-widget.contact-widget p {
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+  line-height: 1.7;
+}
+
+/* ---------- Generic safety net for any .image > img inside template ---------- */
+.image-column figure img,
+.content-column figure img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ---------- Service section grid on services.html (avoid carousel that may not init) ---------- */
+.service-section-three .row .service-block-three {
+  margin-bottom: 30px;
+}
+.service-section-three .row .service-block-three .inner-box {
+  height: 100%;
+}
+
+/* ---------- Banner section bottom title (long phone CTA) ---------- */
+.banner-section-two .image-column .inner-column h4.title {
+  font-size: 18px;
+  line-height: 1.6;
+}
+@media (max-width: 767.98px) {
+  .banner-section-two .image-column .inner-column h4.title {
+    font-size: 15px;
+  }
+}
+
+/* ---------- Hero h1 line-height for Japanese ---------- */
+.banner-section-two .title-column .inner-column h1.title {
+  line-height: 1.35;
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+
+/* ---------- Sec-title h2 with Japanese: avoid forced split ---------- */
+.sec-title h2 {
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+  line-height: 1.45;
+}
+
+/* ---------- Fact counter alignment ---------- */
+.fun-fact-two .fact-counter .counter-block-two .inner-box {
+  padding: 32px 16px;
+}
+.fun-fact-two .fact-counter .counter-block-two .inner-box .content {
+  white-space: normal;
+}
+.fun-fact-two .fact-counter .counter-block-two .inner-box .content .counter-text {
+  font-size: 15px;
+  line-height: 1.5;
+  white-space: normal;
+}

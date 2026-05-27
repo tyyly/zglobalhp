@@ -1,0 +1,150 @@
+/*** 
+
+====================================================================
+    Section Title
+====================================================================
+
+***/
+
+.sec-title {
+  position: relative;
+  margin-bottom: 50px;
+  z-index: 2;
+  @include media-breakpoint-down(md){
+    br {display: none;}
+  }
+  .sub-icon {
+    position: relative;
+    display: inline-block;
+    margin: 0 auto;
+    margin-bottom: 5px;
+  }
+  .sub-title {
+    position: relative;
+    display: block;
+    font-size: var(--sec-title-subtitle-font-size);
+    line-height: var(--sec-title-subtitle-line-height);
+    font-weight: var(--sec-title-subtitle-font-weight);
+    font-family: var(--sec-title-subtitle-font-family);
+    color: var(--sec-title-subtitle-color);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    &.line-style {
+      display: inline-block;
+      top: -2px;
+      padding-left: 25px;
+      &:before {
+        background-color: var(--theme-color1);
+        content: "";
+        width: 6px;
+        height: 13px;
+        left: 0;
+        position: absolute;
+        top: 50%;
+        transform: skewX(-22deg) translateY(-50%);
+        @include transition(all 300ms ease);
+      }
+      &:after {
+        background-color: var(--theme-color1);
+        content: "";
+        width: 2px;
+        height: 13px;
+        left: 9px;
+        position: absolute;
+        top: 50%;
+        transform: skewX(-22deg) translateY(-50%);
+        @include transition(all 300ms ease);
+      }
+    }
+  }
+  h1{
+    position: relative;
+    font-size: var(--h1-font-size);
+    line-height: 1.09;
+    margin-bottom: 0;
+    @include media-breakpoint-down(xl) {
+      font-size: 84px;
+    }
+    @include media-breakpoint-down(lg){
+      font-size: 72px;
+    }
+    @include media-breakpoint-down(md) {
+      font-size: 68px;
+    }
+    @include media-breakpoint-down(sm) {
+      font-size: 36px;
+    }
+  }
+
+  h2 {
+    position: relative;
+    font-size: var(--sec-title-font-size);
+    color: var(--sec-title-color);
+    font-family: var(--sec-title-font-family);
+    font-weight: var(--sec-title-font-weight);
+    margin-bottom: 0;
+    letter-spacing: -.03em;
+    line-height: 1.09;
+    z-index: 2;
+    @include media-breakpoint-down(xl){
+      line-height: 1em;
+    }
+    @include media-breakpoint-down(sm){
+      font-size: 46px;
+      br{display: none;}
+    }
+  }
+  .text {
+    position: relative;
+    color: var(--theme-color-dark);
+    margin-top: 20px;
+    @include media-breakpoint-down(sm){
+      font-size: 16px;
+    }
+  }
+
+  &.light{
+    .sub-title {
+      color: var(--theme-color-light);
+      &:before {
+        background: var(--theme-color1);
+      }
+    }
+    .text{
+      color: var(--theme-color-light);
+    }
+    h2,
+    h1{
+      color: var(--theme-color-light);
+    }
+  }
+}
+
+.text-line-style {
+  display: inline-block;
+  top: -2px;
+  padding-left: 25px;
+  position: relative;
+  &:before {
+    background-color: var(--theme-color1);
+    content: "";
+    width: 6px;
+    height: 13px;
+    left: 0;
+    position: absolute;
+    top: 50%;
+    transform: skewX(-22deg) translateY(-50%);
+    @include transition(all 300ms ease);
+  }
+  &:after {
+    background-color: var(--theme-color1);
+    content: "";
+    width: 2px;
+    height: 13px;
+    left: 9px;
+    position: absolute;
+    top: 50%;
+    transform: skewX(-22deg) translateY(-50%);
+    @include transition(all 300ms ease);
+  }
+}

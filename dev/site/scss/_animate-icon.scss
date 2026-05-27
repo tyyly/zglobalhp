@@ -1,0 +1,326 @@
+
+/*** 
+
+====================================================================
+  Anim Icons
+====================================================================
+
+***/
+
+.reveal {
+    position: relative;
+    display: inline-flex;
+    visibility: hidden;
+    overflow: hidden;
+    img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        transform-origin: left;
+    }   
+}
+
+.anim-icons {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+[text-split] {
+    opacity: 0;
+}
+
+.word {
+    overflow: hidden;
+    margin-bottom: -0.1em;
+    transform-origin: bottom;
+}
+
+.anim-icons.full-width {
+    max-width: 100%;
+}
+
+.anim-icons .icon {
+    position: absolute;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.icon-triangle {
+    width: 8px;
+    height: 21px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.icon-quote {
+    width: 28px;
+    height: 22px;
+    background-image: url(../images/icons/icon-quote.png);
+}
+
+.icon-tag {
+    width: 28px;
+    height: 28px;
+    background-image: url(../images/icons/icon-tag.png);
+}
+
+.sub-icon {
+    width: 26px;
+    height: 54px;
+    background-image: url(../images/icons/sub-icon.png);
+}
+
+.icon-car {
+    width: 274px;
+    height: 172px;
+    background-image: url(../images/icons/icon-car.png);
+}
+
+.icon-car-2 {
+    width: 597px;
+    height: 300px;
+    background-image: url(../images/icons/icon-car-2.png);
+}
+
+.icon-car-3 {
+    width: 590px;
+    height: 496px;
+    background-image: url(../images/icons/icon-car-3.png);
+}
+
+.icon-car-4 {
+    width: 581px;
+    height: 449px;
+    background-image: url(../images/icons/icon-car-4.png);
+}
+
+.icon-car-5 {
+    width: 523px;
+    height: 701px;
+    background-image: url(../images/icons/icon-car-5.png);
+}
+
+.icon-car-6 {
+    width: 507px;
+    height: 228px;
+    background-image: url(../images/icons/icon-car-6.png);
+}
+
+.icon-check {
+    width: 47px;
+    height: 47px;
+    background-image: url(../images/icons/icon-check.png);
+}
+
+.bg-overlay {
+    background-image: url(../images/icons/overlay.png);
+    background-size: cover;
+    height: 100%;
+    width: 936px;
+}
+
+.bg-overlay-2 {
+    width: 743px;
+    height: 100%;
+    background-image: url(../images/icons/overlay-2.png);
+}
+
+.bg-overlay-3 {
+    width: 832px;
+    height: 100%;
+    background-image: url(../images/icons/overlay-3.png);
+}
+
+.bg-overlay-4 {
+    width: 583px;
+    height: 460px;
+    background-image: url(../images/icons/overlay-4.png);
+}
+
+.bg-overlay-5 {
+    width: 867px;
+    height: 100%;
+    background-image: url(../images/icons/overlay-5.png);
+}
+
+.bg-overlay-6 {
+    width: 581px;
+    height: 388px;
+    background-image: url(../images/icons/overlay-6.png);
+}
+
+.bg-overlay-7 {
+    width: 585px;
+    height: 509px;
+    background-image: url(../images/icons/overlay-7.png);
+}
+
+.bg-overlay-8 {
+    width: 1173px;
+    height: 381px;
+    background-image: url(../images/icons/overlay-8.png);
+}
+
+.bg-shape {
+    width: 564px;
+    height: 606px;
+    background-image: url(../images/banner/bg-shape.png);
+}
+
+.bounce-y{
+    animation: bounce-y 10s infinite linear;
+}
+
+.bounce-x{
+    animation: bounce-x 10s infinite linear;
+}
+
+.zoom-one{
+    animation: zoom-one 10s infinite linear;
+}
+
+.zoom-two{
+    animation: zoom-two 5s infinite linear;
+}
+
+@keyframes float{
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce-y {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-30px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce-x {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(30px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes zoom-one {
+    0% {
+        transform: scale(.95);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(.95);
+    }
+}
+
+@keyframes zoom-two {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(.95);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+.overlay-anim {
+    position: relative;
+    &:after {
+        background: rgba(255, 255, 255, 0.3);
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 0;
+        opacity: 1;
+        z-index: 9;
+        pointer-events: none;
+    }
+    &:hover{
+        &:after {
+            height: 100%;
+            opacity: 0;
+            transition: all 400ms linear;
+        }
+    }   
+}
+
+
+// Animated Moving Circles
+
+.circle {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    left: -10px;
+    top: -10px;
+    border-radius: 100%;
+    z-index: 1;
+    pointer-events: none;
+    z-index: 10000;
+    transform: scale(1);
+    @supports (mix-blend-mode: difference) {
+        background-color: white;
+        mix-blend-mode: difference;
+    }
+    @include for-md{
+        display: none !important;
+    }
+}
+
+.circle-follow {
+    position: fixed;
+    mix-blend-mode: difference;
+    width: 30px;
+    height: 30px;
+    left: -21px;
+    top: -21px;
+    border-radius: 100%;
+    z-index: 1;
+    user-select: none;
+    pointer-events: none;
+    z-index: 10000;
+    transform: scale(1);
+    @supports (mix-blend-mode: difference) {
+        border: 1px solid #fff;
+        mix-blend-mode: difference;
+    }
+    @include for-md {
+        display: none !important;
+    }
+}

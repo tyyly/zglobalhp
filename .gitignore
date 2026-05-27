@@ -1,0 +1,4 @@
+deploy/zglobal-hp/site/
+dev/zglobal-raw/
+*.tar.gz
+.env

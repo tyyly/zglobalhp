@@ -1,0 +1,354 @@
+/*** 
+
+====================================================================
+    Apps Section
+====================================================================
+
+***/
+
+.app-section {
+    position: relative;
+    padding: 90px 0 90px;
+    @include media-breakpoint-down(lg){
+        padding-top: 0;
+    }
+    .outer-box {
+        position: relative;
+        margin-right: -367px;
+        @include media-breakpoint-down(xl){
+            margin-right: 0;
+        }
+        @include media-breakpoint-down(lg){
+            text-align: center;
+        }
+        .bg {
+            &:before {
+                content: '';
+                @include overlay;
+                opacity: .85;
+                background-color: var(--theme-color-dark);
+            }
+        }
+        .icon-car-3 {
+            position: absolute;
+            top: -90px;
+            left: 586px;
+            z-index: 1;
+            @include media-breakpoint-down(xl){
+                left: auto;
+                right: -80px;
+                top: -70px;
+            }
+            @include media-breakpoint-down(lg){
+                display: none;
+            }
+        }
+        .bg-overlay-2 {
+            position: absolute;
+            top: 0;
+            right: -10px;
+            bottom: 0;
+            @include media-breakpoint-down(xl){
+                display: none;
+            }
+        }
+        .content {
+            padding: 70px 108px 74px;
+            @include media-breakpoint-down(xl){
+                padding: 60px 50px;
+            }
+            @include media-breakpoint-down(lg){
+                text-align: center;
+            }
+            @include media-breakpoint-down(sm){
+                padding: 50px 15px;
+            }
+            .title {
+                position: relative;
+                color: var(--theme-color-light);
+                font-size: 70px;
+                line-height: 1.1em;
+                letter-spacing: 0.01em;
+                margin-bottom: 0px;
+                @include media-breakpoint-down(sm){
+                    br {display: none;}
+                    font-size: 46px;
+                }
+                .colored {
+                    color: var(--theme-color1);
+                }
+            }
+            .text {
+                position: relative;
+                margin-top: -5px;
+                color: var(--theme-color-light);
+                margin-bottom: 25px;
+                @include media-breakpoint-down(sm){
+                    margin-top: 0;
+                }
+            }
+            .btn-box {
+                position: relative;
+                display: flex;
+                align-items: center;
+                @include media-breakpoint-down(lg){
+                    justify-content: center;
+                }
+                @include media-breakpoint-down(sm){
+                    flex-direction: column;
+                }
+                .image {
+                    margin-right: 18px;
+                    @include media-breakpoint-down(lg){
+                        margin-right: 0;
+                        margin: 0 9px;
+                    }
+                    @include media-breakpoint-down(sm){
+                        margin: 0 0 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*** 
+
+====================================================================
+    Apps Section Two
+====================================================================
+
+***/
+
+.app-section-two {
+    position: relative;
+    margin-bottom: 70px;
+    .bg {
+        &:before {
+            content: '';
+            @include overlay;
+            opacity: .80;
+            background-color: var(--theme-color-dark);
+        }
+    }
+    .icon-car-4 {
+        position: absolute;
+        bottom: -80px;
+        right: 360px;
+        z-index: 1;
+        @include for-xxl{
+            right: 0px;
+        }
+        @include media-breakpoint-down(xl){
+            bottom: 0;
+        }
+        @include media-breakpoint-down(lg){
+            display: none;
+        }
+    }
+    .bg-overlay-3 {
+        position: absolute;
+        top: 0;
+        right: 120px;
+        bottom: 0;
+        @include for-xxl{
+            right: 0px;
+        }
+        @include media-breakpoint-down(xl){
+            display: none;
+        }
+    }
+    .content {
+        position: relative;
+        padding: 68px 0 85px;
+        @include media-breakpoint-down(lg){
+            padding: 60px 0;
+            text-align: center;
+        }
+        .title {
+            position: relative;
+            color: var(--theme-color-light);
+            font-size: 60px;
+            line-height: 1.1em;
+            letter-spacing: 0.01em;
+            margin-bottom: 10px;
+            @include media-breakpoint-down(sm){
+                br {display: none;}
+                font-size: 46px;
+            }
+            .colored {
+                color: var(--theme-color1);
+            }
+        }
+        .text {
+            position: relative;
+            color: var(--theme-color-light);
+            margin-top: -7px;
+            margin-bottom: 25px;
+            @include media-breakpoint-down(sm){
+                margin-top: 0;
+            }
+        }
+        .btn-box {
+            position: relative;
+            display: flex;
+            align-items: center;
+            @include media-breakpoint-down(lg){
+                justify-content: center;
+            }
+            @include media-breakpoint-down(sm){
+                flex-direction: column;
+            }
+            .image {
+                margin-right: 18px;
+                @include media-breakpoint-down(lg){
+                    margin-right: 0;
+                    margin: 0 9px;
+                }
+                @include media-breakpoint-down(sm){
+                    margin: 0 0 10px;
+                }
+            }
+        }
+    }
+}
+
+/*** 
+
+====================================================================
+    Apps Section Three
+====================================================================
+
+***/
+
+.app-section-three {
+    position: relative;
+    overflow: hidden;
+    .bg {
+        &:before {
+            content: '';
+            @include overlay;
+            opacity: .88;
+            background-color: var(--theme-color-dark);
+        }
+    }
+    .bg-overlay-5 {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        @include media-breakpoint-down(xxl){
+            right: -120px;
+        }
+        @include media-breakpoint-down(xl){
+            display: none;
+        }
+    }
+    .content-column {
+        .inner-column {
+            position: relative;
+            padding: 120px 0 113px;
+            margin-left: -30px;
+            @include media-breakpoint-down(xl){margin-left: 0;}
+            @include media-breakpoint-down(lg){
+                text-align: center;
+            }
+            @include media-breakpoint-down(sm){
+                padding: 100px 0;
+            }
+            .sec-title {
+                margin-left: -60px;
+                margin-bottom: 44px;
+                @include media-breakpoint-down(xl){margin-left: 0;}
+                .sub-title {
+                    margin-bottom: 15px;
+                }
+                h2 {
+                    letter-spacing: -.01em;
+                    line-height: 1em;
+                }
+            }
+            .blocks-outer-box {
+                position: relative;
+                display: flex;
+                @include media-breakpoint-down(lg){
+                    justify-content: center;
+                }
+                @include media-breakpoint-down(sm){
+                    flex-direction: column;
+                }
+            }
+            .btn-box {
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-top: 35px;
+                margin-left: -42px;
+                @include media-breakpoint-down(xl){margin-left: 0;}
+                @include media-breakpoint-down(sm){
+                    flex-direction: column;
+                }
+                .image {
+                    margin-right: 18px;
+                    @include media-breakpoint-down(lg){
+                        margin-right: 0;
+                        margin: 0 9px;
+                    }
+                    @include media-breakpoint-down(sm){
+                        margin: 0 0 10px;
+                    }
+                }
+            }
+        }
+    }
+    .image-column {
+        .inner-column {
+            position: relative;
+            @include media-breakpoint-down(lg){display: none;}
+            .image {
+                position: absolute;
+                top: 75px;
+                left: 58px;
+                margin-bottom: 0;
+                z-index: 1;
+            }
+        }
+    }
+}
+
+.app-block {
+    &.style-two {
+        .inner-box {
+            padding: 30px 42px 25px;
+            margin-left: -2px;
+        }
+    }
+    .inner-box {
+        position: relative;
+        padding: 30px 48px 24px;
+        border: 2px solid #323232;
+        text-align: center;
+        &:hover {
+            .icon {
+                transform: scaleX(-1);
+            }
+        }
+        .icon {
+            position: relative;
+            display: inline-block;
+            font-size: 60px;
+            line-height: 1em;
+            color: var(--theme-color1);
+            margin-bottom: 5px;
+            @include transition(all 300ms ease);
+        }
+        .title {
+            position: relative;
+            color: var(--theme-color-light);
+            font-size: 22px;
+            line-height: 1.2em;
+            margin-bottom: 0;
+        }
+    }
+}

@@ -1,0 +1,14 @@
+services:
+  zglobal-hp:
+    build: .
+    container_name: zglobal-hp
+    restart: unless-stopped
+    networks:
+      - caddy_net
+    labels:
+      caddy: http://zglobal.fly-japan.jp
+      caddy.reverse_proxy: "{{upstreams 80}}"
+
+networks:
+  caddy_net:
+    external: true

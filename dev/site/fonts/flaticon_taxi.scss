@@ -1,0 +1,205 @@
+$flaticon_taxi-font: "flaticon_taxi";
+
+@font-face {
+    font-family: $flaticon_taxi-font;
+    src: url("./flaticon_taxi.woff2?cce18cf58e19f1d4b082c7f6eaa387a5") format("woff2"),
+url("./flaticon_taxi.woff?cce18cf58e19f1d4b082c7f6eaa387a5") format("woff"),
+url("./flaticon_taxi.eot?cce18cf58e19f1d4b082c7f6eaa387a5#iefix") format("embedded-opentype"),
+url("./flaticon_taxi.ttf?cce18cf58e19f1d4b082c7f6eaa387a5") format("truetype"),
+url("./flaticon_taxi.svg?cce18cf58e19f1d4b082c7f6eaa387a5#flaticon_taxi") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon_taxi !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+$flaticon_taxi-map: (
+    "connected-car": "\f101",
+    "destination": "\f102",
+    "location": "\f103",
+    "taxi": "\f104",
+    "mobile-app": "\f105",
+    "taxi-1": "\f106",
+    "taxi-2": "\f107",
+    "booking": "\f108",
+    "taxi-3": "\f109",
+    "car-service": "\f10a",
+    "mobile-app-1": "\f10b",
+    "mobile-app-2": "\f10c",
+    "location-1": "\f10d",
+    "app": "\f10e",
+    "app-1": "\f10f",
+    "taxi-4": "\f110",
+    "app-2": "\f111",
+    "taxi-app": "\f112",
+    "mobile-app-3": "\f113",
+    "transportation": "\f114",
+    "taxi-5": "\f115",
+    "mobile-app-4": "\f116",
+    "mobile-app-5": "\f117",
+    "mobile-app-6": "\f118",
+    "taxi-6": "\f119",
+    "route": "\f11a",
+    "location-2": "\f11b",
+    "route-1": "\f11c",
+    "car-service-1": "\f11d",
+    "taxi-7": "\f11e",
+    "taxi-8": "\f11f",
+    "taxi-9": "\f120",
+    "check-circle": "\f121",
+    "accept": "\f122",
+    "driver": "\f123",
+    "driver-1": "\f124",
+    "driver-2": "\f125",
+    "taxi-driver": "\f126",
+    "driver-3": "\f127",
+    "price-tag": "\f128",
+    "search": "\f129",
+    "searching": "\f12a",
+    "search-1": "\f12b",
+    "clock": "\f12c",
+    "stop-watch": "\f12d",
+);
+
+.flaticon-connected-car:before {
+    content: map-get($flaticon_taxi-map, "connected-car");
+}
+.flaticon-destination:before {
+    content: map-get($flaticon_taxi-map, "destination");
+}
+.flaticon-location:before {
+    content: map-get($flaticon_taxi-map, "location");
+}
+.flaticon-taxi:before {
+    content: map-get($flaticon_taxi-map, "taxi");
+}
+.flaticon-mobile-app:before {
+    content: map-get($flaticon_taxi-map, "mobile-app");
+}
+.flaticon-taxi-1:before {
+    content: map-get($flaticon_taxi-map, "taxi-1");
+}
+.flaticon-taxi-2:before {
+    content: map-get($flaticon_taxi-map, "taxi-2");
+}
+.flaticon-booking:before {
+    content: map-get($flaticon_taxi-map, "booking");
+}
+.flaticon-taxi-3:before {
+    content: map-get($flaticon_taxi-map, "taxi-3");
+}
+.flaticon-car-service:before {
+    content: map-get($flaticon_taxi-map, "car-service");
+}
+.flaticon-mobile-app-1:before {
+    content: map-get($flaticon_taxi-map, "mobile-app-1");
+}
+.flaticon-mobile-app-2:before {
+    content: map-get($flaticon_taxi-map, "mobile-app-2");
+}
+.flaticon-location-1:before {
+    content: map-get($flaticon_taxi-map, "location-1");
+}
+.flaticon-app:before {
+    content: map-get($flaticon_taxi-map, "app");
+}
+.flaticon-app-1:before {
+    content: map-get($flaticon_taxi-map, "app-1");
+}
+.flaticon-taxi-4:before {
+    content: map-get($flaticon_taxi-map, "taxi-4");
+}
+.flaticon-app-2:before {
+    content: map-get($flaticon_taxi-map, "app-2");
+}
+.flaticon-taxi-app:before {
+    content: map-get($flaticon_taxi-map, "taxi-app");
+}
+.flaticon-mobile-app-3:before {
+    content: map-get($flaticon_taxi-map, "mobile-app-3");
+}
+.flaticon-transportation:before {
+    content: map-get($flaticon_taxi-map, "transportation");
+}
+.flaticon-taxi-5:before {
+    content: map-get($flaticon_taxi-map, "taxi-5");
+}
+.flaticon-mobile-app-4:before {
+    content: map-get($flaticon_taxi-map, "mobile-app-4");
+}
+.flaticon-mobile-app-5:before {
+    content: map-get($flaticon_taxi-map, "mobile-app-5");
+}
+.flaticon-mobile-app-6:before {
+    content: map-get($flaticon_taxi-map, "mobile-app-6");
+}
+.flaticon-taxi-6:before {
+    content: map-get($flaticon_taxi-map, "taxi-6");
+}
+.flaticon-route:before {
+    content: map-get($flaticon_taxi-map, "route");
+}
+.flaticon-location-2:before {
+    content: map-get($flaticon_taxi-map, "location-2");
+}
+.flaticon-route-1:before {
+    content: map-get($flaticon_taxi-map, "route-1");
+}
+.flaticon-car-service-1:before {
+    content: map-get($flaticon_taxi-map, "car-service-1");
+}
+.flaticon-taxi-7:before {
+    content: map-get($flaticon_taxi-map, "taxi-7");
+}
+.flaticon-taxi-8:before {
+    content: map-get($flaticon_taxi-map, "taxi-8");
+}
+.flaticon-taxi-9:before {
+    content: map-get($flaticon_taxi-map, "taxi-9");
+}
+.flaticon-check-circle:before {
+    content: map-get($flaticon_taxi-map, "check-circle");
+}
+.flaticon-accept:before {
+    content: map-get($flaticon_taxi-map, "accept");
+}
+.flaticon-driver:before {
+    content: map-get($flaticon_taxi-map, "driver");
+}
+.flaticon-driver-1:before {
+    content: map-get($flaticon_taxi-map, "driver-1");
+}
+.flaticon-driver-2:before {
+    content: map-get($flaticon_taxi-map, "driver-2");
+}
+.flaticon-taxi-driver:before {
+    content: map-get($flaticon_taxi-map, "taxi-driver");
+}
+.flaticon-driver-3:before {
+    content: map-get($flaticon_taxi-map, "driver-3");
+}
+.flaticon-price-tag:before {
+    content: map-get($flaticon_taxi-map, "price-tag");
+}
+.flaticon-search:before {
+    content: map-get($flaticon_taxi-map, "search");
+}
+.flaticon-searching:before {
+    content: map-get($flaticon_taxi-map, "searching");
+}
+.flaticon-search-1:before {
+    content: map-get($flaticon_taxi-map, "search-1");
+}
+.flaticon-clock:before {
+    content: map-get($flaticon_taxi-map, "clock");
+}
+.flaticon-stop-watch:before {
+    content: map-get($flaticon_taxi-map, "stop-watch");
+}

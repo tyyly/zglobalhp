@@ -1,0 +1,238 @@
+:root {
+  --dark-color1: #111111;
+  --dark-color2: #232323;
+  --dark-color3: #343434;
+  --dark-color4: #212529;
+}
+
+body,
+.sticky-header.fixed-header,
+.page-wrapper,
+.booking-form .select2-container--default .select2-selection--single,
+.booking-form input:not([type=submit]),
+.booking-form textarea,
+.booking-form select,
+.news-block .inner-box,
+.news-block .inner-box .content .post-meta,
+.pricing-block .inner-box .content,
+.pricing-block .inner-box:after,
+.pricing-block-two .inner-box,
+.header-style-three .header-top {
+  background-color: var(--dark-color1);
+}
+
+.pricing-block .inner-box .content {
+  border-color: var(--dark-color1);
+}
+
+.testimonial-block-five .content-box:before {
+  border-top: 45px solid var(--dark-color1);
+}
+
+.testimonial-block .inner-box .content .author-box .author-info .rating i,
+.counter-block-two .inner-box .icon-box .icon {
+  color: var(--theme-color1);
+}
+
+.bg-dark {
+  background-color: #000;
+}
+
+.border-dark-color1 {
+  border-color: var(--dark-color1);
+}
+
+.bg-dark-color2,
+.service-section,
+.booking-form .boxed-outer-box label,
+.select2-container--default .select2-selection--single .select2-selection__arrow,
+.testimonial-block .inner-box .content,
+.pricing-block .inner-box .feature-list li.colored,
+.about-section-two .image-column .inner-column .exp-box,
+.news-block-two .inner-box,
+.news-block-two .inner-box .content .author-box,
+.client-block .image,
+.service-block-four .inner-box .content .feature-list li.colored,
+.about-section-three .fun-fact-two .fact-counter,
+.pricing-block-three .inner-box {
+  background-color: var(--dark-color2);
+}
+
+.border-color-dark2,
+.team-block .inner-box,
+.booking-form .select2-container--default .select2-selection--single,
+.booking-form input:not([type=submit]),
+.booking-form textarea,
+.booking-form select,
+.booking-form,
+.booking-form:before,
+.default-dots .owl-dots .owl-dot,
+.booking-section-two .booking-tab .tab-btns .tab-btn,
+.default-navs .owl-next, .default-navs .owl-prev,
+.service-block-three .inner-box .content,
+.about-section-three .fun-fact-two .fact-counter,
+.pricing-block-three .inner-box {
+  border-color: var(--dark-color2) !important;
+}
+
+.pricing-block-three .inner-box:hover .btn-style-three {
+  color: var(--dark-color2);
+}
+
+.border-top {
+  border-top-color: var(--dark-color2) !important;
+}
+
+.bg-dark-color3,
+.service-block .inner-box::before,
+.booking-form,
+.booking-form:before {
+  background-color: var(--dark-color3);
+}
+
+.social-icon-two li a {
+  border-color: var(--dark-color3);
+}
+
+.bg-dark-color4,
+.header-style-three .header-lower {
+  background-color: var(--dark-color4);
+}
+
+.list-style-one li,
+.main-header .header-top .inner-container .top-left .list-style-one li a,
+.header-style-two .sticky-header-style-two .navigation li a {
+  color: var(--text-color);
+}
+
+.main-menu .navigation > li.current > a,
+.sticky-header .main-menu .navigation > li.current > a,
+.sticky-header .main-menu .navigation > li:hover > a,
+.service-block .inner-box .content .title a,
+.about-section .content-column .inner-column .bottom-box .author-box .author-info .name,
+.about-section .content-column .inner-column .bottom-box .info-btn strong,
+.team-block .inner-box .content .name a,
+.team-block .inner-box .content .info-btn strong,
+.counter-block .inner-box .counter-one,
+.counter-block .inner-box .icon-box .icon,
+.booking-form .boxed-outer-box label,
+.select2-container--default .select2-selection--single .select2-selection__arrow,
+.testimonial-block .inner-box .content .author-box .author-info .name,
+.news-block .inner-box .content .title a,
+.pricing-block .inner-box .car-name,
+.about-section-two .content-column .inner-column .title,
+.about-section-two .image-column .inner-column .exp-box .title,
+.about-section-two .image-column .inner-column .exp-box .count,
+.about-section-two .image-column .inner-column .exp-box .count small,
+.work-block .inner-box .content .title,
+.pricing-block-two .inner-box .content .title a,
+.news-block-two .inner-box .content .read-more,
+.news-block-two .inner-box .content .title,
+.news-block-two .inner-box .content .author-box .author-info .date,
+.service-block-three .inner-box .content .title a,
+.service-block-four .inner-box .content .car-name,
+.about-section-three .outer-box .content-column .inner-column .author-box .author-info .name,
+.counter-block-two .inner-box .counter-one,
+.btn-style-three,
+.testimonial-block-two .inner-box .content .author-box .author-info .name,
+.news-block-three .inner-box .content-box .title a,
+.news-block-three .inner-box .content-box .author-box .date,
+.list-style-one li i,
+.header-style-three .header-lower .main-box .nav-outer .navigation > li > a,
+.main-header .ui-btn,
+.service-section-four .service-tab .tabs-header .service-tab-btns .tab-btn,
+.news-block-three .inner-box .content-box .sub-title {
+  color: #fff;
+}
+
+.clients-section.alternate {
+  border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+.service-block .inner-box .content .text,
+.list-style-two li,
+.about-section .content-column .inner-column .bottom-box .author-box .author-info .designation,
+.about-section .content-column .inner-column .bottom-box .info-btn small,
+.sticky-header .main-menu .navigation > li > a,
+.counter-block .inner-box .counter-text,
+.testimonial-block .inner-box .content .text,
+.testimonial-block .inner-box .content .author-box .author-info .designation,
+.pricing-block .inner-box .city,
+.pricing-block .inner-box .feature-list li,
+.about-section-two .content-column .inner-column .text,
+.work-block .inner-box .content .text,
+.pricing-block-two .inner-box .content .city,
+.news-block-two .inner-box .content .text,
+.news-block-two .inner-box .content .author-box .author-info .name span,
+.service-block-four .inner-box .content .city,
+.about-section-three .outer-box .content-column .inner-column .author-box .author-info .designation,
+.service-block-three .inner-box .content .text,
+.counter-block-two .inner-box .counter-text,
+.pricing-block-three .inner-box .content .feature-list li,
+.testimonial-block-two .inner-box .content .author-box .author-info .rating-box .designation,
+.testimonial-block-two .inner-box .content .text,
+.news-block-three .inner-box .content-box .text,
+.header-style-three .header-top .inner-container .social-icon-one a,
+.service-block-four .inner-box .content .feature-list li {
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.header-style-two-new .info-btn-two i.icon .bg-dark-text-light,
+.social-icon-two li a,
+.btn-style-two,
+.work-block .inner-box .icon,
+.booking-section-two .booking-tab .tab-btns .tab-btn,
+.map-info-block .inner-box .icon,
+.default-navs .owl-next,
+.default-navs .owl-prev,
+.service-block-three .inner-box .content .icon,
+.default-navs-two .owl-next,
+.default-navs-two .owl-prev,
+.play-btn .icon-triangle,
+.btn-style-three:before {
+  background-color: var(--theme-color-dark);
+  color: var(--theme-color-light);
+}
+
+.bg-light {
+  background-color: #fff;
+}
+
+.project-section {
+  background-color: unset;
+}
+
+.counter-block .inner {
+  background-image: unset;
+}
+
+.opacity15,
+.testimonial-section .bg-pattern-2 {
+  opacity: 0.15;
+}
+
+.opacity03 {
+  opacity: 0.03;
+}
+
+.opacity1,
+.pricing-section .bg.bg-pattern-5,
+.benefit-section .bg.bg-pattern-3,
+.about-section-three .bg.bg-pattern-7 {
+  opacity: 0.1;
+}
+
+.opacity21 {
+  opacity: 0.21;
+}
+
+.clients-carousel .slide-item img {
+  -webkit-filter: brightness(10);
+          filter: brightness(10);
+  opacity: 1;
+}
+
+.about-section-three .outer-box .content-column .inner-column .author-box .sign.hide-sm img {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}

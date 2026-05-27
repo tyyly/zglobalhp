@@ -1,0 +1,52 @@
+<!-- ===== Taxix Color Switcher Panel ===== -->
+<link rel="stylesheet" href="color-switcher/style-switcher.css" />
+
+<div id="style-switcher">
+  <!-- Toggle Button -->
+  <div id="switcher-toggle" title="Color Switcher">
+    <i class="fas fa-palette"></i>
+  </div>
+
+  <!-- Panel -->
+  <div id="switcher-panel">
+    <div class="switcher-header">
+      <h6>Theme Customizer</h6>
+      <button id="switcher-close" title="Close"><i class="fas fa-times"></i></button>
+    </div>
+
+    <!-- Primary Color -->
+    <div class="switcher-section">
+      <p class="switcher-label">Primary Color</p>
+      <ul class="color-swatches" id="color-swatches">
+        <li><a href="#" data-color="#ffee02" data-rgb="255,238,2"   class="swatch active" style="background:#ffee02;" title="Yellow (Default)"></a></li>
+        <li><a href="#" data-color="#ff9500" data-rgb="255,149,0"   class="swatch" style="background:#ff9500;" title="Orange"></a></li>
+        <li><a href="#" data-color="#e83131" data-rgb="232,49,49"   class="swatch" style="background:#e83131;" title="Red"></a></li>
+        <li><a href="#" data-color="#22c55e" data-rgb="34,197,94"   class="swatch" style="background:#22c55e;" title="Green"></a></li>
+        <li><a href="#" data-color="#3b82f6" data-rgb="59,130,246"  class="swatch" style="background:#3b82f6;" title="Blue"></a></li>
+        <li><a href="#" data-color="#8b5cf6" data-rgb="139,92,246"  class="swatch" style="background:#8b5cf6;" title="Purple"></a></li>
+        <li><a href="#" data-color="#ec4899" data-rgb="236,72,153"  class="swatch" style="background:#ec4899;" title="Pink"></a></li>
+        <li><a href="#" data-color="#06b6d4" data-rgb="6,182,212"   class="swatch" style="background:#06b6d4;" title="Cyan"></a></li>
+      </ul>
+      <div class="custom-color-wrap">
+        <label for="custom-color-input">Custom:</label>
+        <input type="color" id="custom-color-input" value="#ffee02" title="Pick custom color" />
+      </div>
+    </div>
+
+    <!-- Dark Mode -->
+    <div class="switcher-section">
+      <p class="switcher-label">Color Mode</p>
+      <div class="mode-toggle-wrap">
+        <button class="mode-btn active" id="light-mode-btn"><i class="fas fa-sun"></i> Light</button>
+        <button class="mode-btn" id="dark-mode-btn"><i class="fas fa-moon"></i> Dark</button>
+      </div>
+    </div>
+
+    <!-- Reset -->
+    <div class="switcher-section">
+      <button id="switcher-reset"><i class="fas fa-undo"></i> Reset to Default</button>
+    </div>
+  </div>
+</div>
+
+<script src="color-switcher/style-switcher.js"></script>

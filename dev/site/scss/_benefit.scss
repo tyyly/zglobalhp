@@ -1,0 +1,339 @@
+/*** 
+
+====================================================================
+    Benefit Section
+====================================================================
+
+***/
+
+.benefit-section {
+  position: relative;
+  padding: 120px 0 80px;
+  .sec-title {
+    .sub-title {
+      margin-bottom: 5px;
+    }
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 1100px;
+    height: 100%;
+    background-color: var(--theme-color1);
+    clip-path: polygon(18% 0, 100% 0, 80% 100%, 0% 100%);
+    z-index: 1;
+    @include media-breakpoint-down(lg){
+      display: none;
+    }
+  }
+  .image-column {
+    position: relative;
+    z-index: 2;
+    @include media-breakpoint-down(lg){
+      order: 3;
+    }
+    .inner-column {
+      position: relative;
+      margin-top: -85px;
+      margin-left: -35px;
+      margin-right: -45px;
+      @include media-breakpoint-down(lg){
+        margin-top: 0;
+        margin-left: 0;
+        margin-right: 0;
+      }
+      .image {
+        position: relative;
+        display: block;
+        margin-bottom: 0;
+        clip-path: polygon(31% 0, 100% 0, 69% 100%, 0% 100%);
+        @include media-breakpoint-down(lg){
+          clip-path: none;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+  .blocks-column {
+    position: relative;
+    z-index: 2;
+    &.style-two {
+      .inner-column {
+        margin-left: 20px;
+        @include media-breakpoint-down(lg){
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}
+
+.benefit-block {
+  margin-bottom: 65px;
+  @include media-breakpoint-down(md){
+    margin-bottom: 30px;
+  }
+  .inner-box {
+    position: relative;
+    display: flex;
+    .icon-check {
+      position: relative;
+      margin-right: 15px;
+    }
+    .icon {
+      position: relative;
+      width: 45px;
+      height: 45px;
+      @include flex-center;
+      font-size: 28px;
+      border-radius: 50%;
+      margin-right: 15px;
+      margin-top: 2px;
+      color: var(--theme-color1);
+      background-color: var(--theme-color-dark);
+      @include transition(all 300ms ease);
+    }
+    .title {
+      position: relative;
+      font-size: 30px;
+      margin-bottom: 5px;
+    }
+    .text {
+      position: relative;
+      max-width: 265px;
+      margin-bottom: 0;
+    }
+  }
+}
+
+/*** 
+
+====================================================================
+    Benefit Section Two
+====================================================================
+
+***/
+
+.benefit-section-two {
+  position: relative;
+  padding: 120px 0 54px;
+  .sec-title {
+    .sub-title {
+      margin-bottom: 5px;
+    }
+  }
+  .image-column {
+    position: relative;
+    z-index: 2;
+    @include media-breakpoint-down(lg){
+      order: 3;
+    }
+    .inner-column {
+      position: relative;
+      margin-top: 0;
+        &:before {
+          background-color: var(--theme-color-dark);
+          content: "";
+          width: 255px;
+          height: 100%;
+          max-height: 498px;
+          right: 135px;
+          position: absolute;
+          top:50%;
+          transform: skewX(-18deg) translateY(-50%);
+          z-index: -1;
+        }
+      .image {
+        position: relative;
+        display: block;
+        margin-bottom: 0;
+        text-align: center;
+        img {
+          width: auto;
+        }
+      }
+    }
+  }
+  .blocks-column {
+    position: relative;
+    z-index: 2;
+    &.style-two {
+      .inner-column {
+        margin-left: 90px;
+        @include media-breakpoint-down(lg){
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}
+
+.benefit-block-two {
+  margin-bottom: 65px;
+  @include media-breakpoint-down(md){
+    margin-bottom: 30px;
+  }
+  .inner-box {
+    position: relative;
+    &:hover {
+      .icon {
+        &:after {
+          left: 0px;
+          width: 55px;
+        }
+      }
+    }
+    .icon-check {
+      position: relative;
+      margin-right: 15px;
+    }
+    .icon {
+      color: var(--theme-color-dark);
+      display: inline-block;
+      position: relative;
+      font-size: 54px;
+      margin-bottom: 20px;
+      @include transition(all 300ms ease);
+      &:after {
+        background-color: var(--theme-color1);
+        content: "";
+        width: 20px;
+        height: calc(100% + 10px);
+        left: 34px;
+        position: absolute;
+        top: -5px;
+        -webkit-transform: skewX(-14deg);
+        transform: skewX(-14deg);
+        z-index: -1;
+        @include transition(all 300ms ease);
+      }
+    }
+    .title {
+      position: relative;
+      font-size: 30px;
+      margin-bottom: 15px;
+    }
+    .text {
+      position: relative;
+      max-width: 285px;
+      margin-bottom: 0;
+    }
+  }
+}
+
+/*** 
+
+====================================================================
+    Benefit Section Three
+====================================================================
+
+***/
+
+.benefit-section-three {
+  background-color: #f5f5f5;
+  position: relative;
+  padding: 120px 0;
+  .bg-image {
+    pointer-events: none;
+    &:before {
+      background-image: url(../images/icons/shape-1.png);
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 18px;
+    }
+  }
+  .image-column {
+    .inner-column {
+      .image {
+        margin-left: -100px;
+        position: relative;
+        &:after {
+          background-color: var(--theme-color1);
+          content: "";
+          width: 120px;
+          height: 237px;
+          right: 40px;
+          position: absolute;
+          top: 0;
+          transform: skewX(19.7deg);
+          -webkit-transition: all 300ms ease;
+          transition: all 300ms ease;
+        }
+      }
+    }
+  }
+  .content-column {
+    .inner-column {
+      padding-left: 30px;
+      margin-top: -7px;
+      .sec-title {
+        margin-bottom: 38px;
+      }
+      .benefit-box {
+        margin-bottom: 30px;
+      }
+    }
+  }
+}
+
+.benefit-block-three {
+  .inner-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 21px;
+    .icon-check {
+      position: relative;
+      margin-right: 15px;
+    }
+    .number {
+      color: rgba(var(--theme-color-light-rgb), .6);
+      position: relative;
+      font-size: 70px;
+      line-height: 1;
+      border-radius: 50%;
+      padding-left: 65px;
+      margin-right: 35px;
+      @include transition(all 300ms ease);
+      &:before {
+        background-color: var(--theme-color1);
+        border: 1px solid var(--theme-color-dark);
+        content: "";
+        width: 20px;
+        height: 38px;
+        left: 0;
+        position: absolute;
+        top: calc(50% - 6px);
+        transform: skewX(-22deg) translateY(-50%);
+        transition: all 300ms ease;
+        z-index: 1;
+      }
+      &:after {
+        background-color: var(--theme-color-light);
+        content: "";
+        width: 26px;
+        height: 47px;
+        left: 9px;
+        position: absolute;
+        top: calc(50% - 6px);
+        transform: skewX(-22deg) translateY(-50%);
+        transition: all 300ms ease;
+      }
+    }
+    .title {
+      color: var(--theme-color-light);
+      margin-bottom: 8px;
+    }
+    .text {
+      color: #B8B8B8;
+      position: relative;
+      margin-bottom: 0;
+    }
+  }
+}
