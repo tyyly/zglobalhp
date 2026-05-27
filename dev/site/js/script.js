@@ -6,7 +6,7 @@ var THEMEMASCOT = {};
   /* ---------------------------------------------------------------------- */
   /* --------------------------- Start Demo Switcher  --------------------- */
   /* ---------------------------------------------------------------------- */
-  var showSwitcher = true;
+  var showSwitcher = false;
   var $body = $('body');
   var $style_switcher = $('#style-switcher');
   if( !$style_switcher.length && showSwitcher ) {
