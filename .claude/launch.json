@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "zglobal-hp",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["serve", "dev/site", "-p", "3333", "--no-clipboard"],
+      "port": 3333
+    }
+  ]
+}

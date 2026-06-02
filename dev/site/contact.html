@@ -2,8 +2,31 @@
 <html lang="ja">
   <head>
     <meta charset="utf-8" />
-    <title>お問い合わせ・ご予約 | Z&GLOBAL株式会社</title>
-    <meta name="description" content="Z&GLOBALへのお問い合わせ・ご予約。電話・メール・LINE・WeChat・フォームから24時間受付。通常2時間以内に返信いたします。" />
+    <title>お問い合わせ・ご予約 | Z&GLOBAL - 羽田・成田ハイヤー24時間受付中</title>
+    <meta name="description" content="Z&GLOBALへのご予約・お見積もり・ご質問。電話（080-3999-0379）・メール・LINE・WeChat・予約フォームから24時間受付。通常2時間以内に返信。空港送迎・役員送迎・観光・ゴルフなど全サービス対応。" />
+
+    <link rel="canonical" href="https://www.z-global.jp/contact.html" />
+
+    <link rel="alternate" hreflang="ja" href="https://www.z-global.jp/contact.html" />
+    <link rel="alternate" hreflang="en" href="https://www.z-global.jp/contact.html?lang=en" />
+    <link rel="alternate" hreflang="zh" href="https://www.z-global.jp/contact.html?lang=zh" />
+    <link rel="alternate" hreflang="ko" href="https://www.z-global.jp/contact.html?lang=ko" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Z&GLOBAL株式会社" />
+    <meta property="og:locale" content="ja_JP" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta property="og:locale:alternate" content="zh_CN" />
+    <meta property="og:locale:alternate" content="ko_KR" />
+    <meta property="og:title" content="お問い合わせ・ご予約 | Z&GLOBAL - 羽田・成田ハイヤー24時間受付中" />
+    <meta property="og:description" content="Z&GLOBALへのご予約・お見積もり・ご質問。電話（080-3999-0379）・メール・LINE・WeChat・予約フォームから24時間受付。通常2時間以内に返信。空港送迎・役員送迎・観光・ゴルフなど全サービス対応。" />
+    <meta property="og:url" content="https://www.z-global.jp/contact.html" />
+    <meta property="og:image" content="https://www.z-global.jp/images/zglobal/service-business.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="お問い合わせ・ご予約 | Z&GLOBAL - 羽田・成田ハイヤー24時間受付中" />
+    <meta name="twitter:description" content="Z&GLOBALへのご予約・お見積もり・ご質問。電話（080-3999-0379）・メール・LINE・WeChat・予約フォームから24時間受付。通常2時間以内に返信。空港送迎・役員送迎・観光・ゴルフなど全サービス対応。" />
+    <meta name="twitter:image" content="https://www.z-global.jp/images/zglobal/service-business.jpg" />
+
     <link href="css/bootstrap.min.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet" />
     <link href="css/custom.css" rel="stylesheet" />
@@ -26,6 +49,33 @@
         width: 100%; padding: 12px 14px; background: #f8f8f8; border: 1px solid #eee; font-size: 14px; border-radius: 2px; margin-bottom: 16px;
       }
       .contact-form-box textarea { min-height: 120px; }
+      .contact-form-box input.invalid, .contact-form-box select.invalid, .contact-form-box textarea.invalid { border-color: #e74c3c; background: #fff6f5; }
+      .field-error { display: none; color: #e74c3c; font-size: 12px; margin: -12px 0 14px; }
+      .field-error.show { display: block; }
+      .form-alert { display: none; padding: 14px 16px; border-radius: 3px; font-size: 14px; margin-bottom: 22px; }
+      .form-alert.show { display: block; }
+      .form-alert.error { background: #fdecea; border: 1px solid #f5c6cb; color: #c0392b; }
+      .privacy-row { display: flex; align-items: flex-start; gap: 10px; margin: 6px 0 22px; }
+      .privacy-row input[type="checkbox"] { width: auto; margin: 3px 0 0; flex: 0 0 auto; }
+      .privacy-row label { margin: 0; font-size: 13px; color: #444; line-height: 1.5; }
+      .privacy-row a { color: #c79a3a; text-decoration: underline; }
+      .btn-spinner { display: inline-block; width: 15px; height: 15px; border: 2px solid rgba(255,255,255,.4); border-top-color: #fff; border-radius: 50%; margin-left: 8px; vertical-align: -2px; animation: zg-spin .7s linear infinite; }
+      @keyframes zg-spin { to { transform: rotate(360deg); } }
+      .theme-btn[disabled] { opacity: .65; cursor: not-allowed; }
+      .reserve-success { display: none; background: #fff; padding: 48px 40px; border: 1px solid #eee; box-shadow: 0 8px 32px rgba(0,0,0,.06); text-align: center; }
+      .reserve-success.show { display: block; }
+      .reserve-success .check { width: 64px; height: 64px; border-radius: 50%; background: #2ecc71; color: #fff; font-size: 30px; line-height: 64px; margin: 0 auto 22px; }
+      .reserve-success h3 { font-size: 24px; color: #222; margin-bottom: 12px; }
+      .reserve-success .lead { color: #666; font-size: 15px; margin-bottom: 28px; }
+      .reserve-no-box { background: #f8f8f8; border-left: 4px solid #ffd322; padding: 22px 24px; display: inline-block; min-width: 280px; margin-bottom: 26px; }
+      .reserve-no-box .lbl { font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #888; margin-bottom: 6px; }
+      .reserve-no-box .no { font-size: 30px; font-weight: 700; color: #222; letter-spacing: 0.04em; font-family: 'Courier New', monospace; }
+      .reserve-recap { text-align: left; max-width: 420px; margin: 0 auto 26px; font-size: 13px; color: #555; }
+      .reserve-recap div { padding: 7px 0; border-bottom: 1px dashed #eee; display: flex; justify-content: space-between; gap: 16px; }
+      .reserve-recap div span:first-child { color: #999; flex: 0 0 auto; }
+      .reserve-recap div span:last-child { text-align: right; font-weight: 500; }
+      .copy-btn { background: transparent; border: 1px solid #ccc; color: #555; font-size: 12px; padding: 6px 14px; border-radius: 2px; cursor: pointer; margin-bottom: 18px; }
+      .copy-btn:hover { border-color: #999; }
       .map-container { width: 100%; height: 420px; }
     </style>
   </head>
@@ -40,7 +90,8 @@
             <div class="inner-container">
               <div class="top-left">
                 <ul class="list-style-one">
-                  <li><i class="fal fa-mobile"></i> <a href="tel:+81476295498">+81 (0)476-29-5498</a></li>
+                  <!-- 固定電話復活: 次行のコメント解除で固定電話を再表示 -->
+                  <!-- <li><i class="fal fa-mobile"></i> <a href="tel:+81476295498">+81 (0)476-29-5498</a></li> -->
                   <li><i class="fal fa-mobile"></i> <a href="tel:+818039990379">080-3999-0379</a></li>
                   <li><i class="fal fa-envelope"></i> <a href="mailto:zglobal777@gmail.com">zglobal777@gmail.com</a></li>
                 </ul>
@@ -84,8 +135,8 @@
             </div>
           </div>
         </div>
-        <div class="mobile-menu"><div class="menu-backdrop"></div><nav class="menu-box"><div class="upper-box"><div class="nav-logo"><a href="index.html"><img src="images/zglobal/logo.png" alt="" /></a></div><div class="close-btn"><i class="icon fa fa-times"></i></div></div><ul class="navigation clearfix"></ul><div class="lang-switch" role="group" aria-label="Language"><button data-lang="ja">JA</button><button data-lang="en">EN</button><button data-lang="zh">中文</button><button data-lang="ko">한국어</button></div></nav></div>
-        <div class="sticky-header"><div class="auto-container"><div class="inner-container"><div class="logo"><a href="index.html"><img src="images/zglobal/logo.png" alt="" style="max-height:48px;" /></a></div><div class="nav-outer"><nav class="main-menu"><div class="navbar-collapse show collapse clearfix"><ul class="navigation clearfix"></ul></div></nav><div class="mobile-nav-toggler"><span class="icon lnr-icon-bars"></span></div></div></div></div></div>
+        <div class="mobile-menu"><div class="menu-backdrop"></div><nav class="menu-box"><div class="upper-box"><div class="nav-logo"><a href="index.html"><img src="images/zglobal/logo.png" alt="" loading="lazy" /></a></div><div class="close-btn"><i class="icon fa fa-times"></i></div></div><ul class="navigation clearfix"></ul><div class="lang-switch" role="group" aria-label="Language"><button data-lang="ja">JA</button><button data-lang="en">EN</button><button data-lang="zh">中文</button><button data-lang="ko">한국어</button></div></nav></div>
+        <div class="sticky-header"><div class="auto-container"><div class="inner-container"><div class="logo"><a href="index.html"><img src="images/zglobal/logo.png" alt="" style="max-height:48px;" loading="lazy" /></a></div><div class="nav-outer"><nav class="main-menu"><div class="navbar-collapse show collapse clearfix"><ul class="navigation clearfix"></ul></div></nav><div class="mobile-nav-toggler"><span class="icon lnr-icon-bars"></span></div></div></div></div></div>
       </header>
 
       <!-- Page Title -->
@@ -115,7 +166,8 @@
               <div class="contact-info-box">
                 <div class="lbl" data-i18n="foot.tel">TEL</div>
                 <div class="val">
-                  <a href="tel:+81476295498">+81 (0)476-29-5498</a><br>
+                  <!-- 固定電話復活: 次行のコメント解除で固定電話を再表示 -->
+                  <!-- <a href="tel:+81476295498">+81 (0)476-29-5498</a><br> -->
                   <a href="tel:+818039990379">080-3999-0379</a>
                 </div>
               </div>
@@ -142,49 +194,65 @@
             </div>
 
             <div class="col-lg-7 col-md-12">
-              <form class="contact-form-box" onsubmit="event.preventDefault(); alert('Thank you. We will reply within 2 hours. / お問い合わせありがとうございます。2時間以内に返信いたします。');">
+              <form id="reserveForm" class="contact-form-box" novalidate>
+                <div id="formAlert" class="form-alert error" role="alert" aria-live="assertive"></div>
                 <div class="row">
                   <div class="col-md-6">
-                    <label><span data-i18n="page.contact.f.name">お名前</span><span class="req">*</span></label>
-                    <input type="text" required />
+                    <label for="rf-name"><span data-i18n="page.contact.f.name">お名前</span><span class="req">*</span></label>
+                    <input type="text" id="rf-name" name="name" maxlength="100" required autocomplete="name" />
+                    <div class="field-error" data-error-for="name" data-i18n="reserve.err.f.name">お名前を入力してください。</div>
                   </div>
                   <div class="col-md-6">
-                    <label><span data-i18n="page.contact.f.email">メールアドレス</span><span class="req">*</span></label>
-                    <input type="email" required />
+                    <label for="rf-phone"><span data-i18n="page.contact.f.tel">電話番号</span><span class="req">*</span></label>
+                    <input type="tel" id="rf-phone" name="phone" minlength="8" maxlength="20" required autocomplete="tel" inputmode="tel" />
+                    <div class="field-error" data-error-for="phone" data-i18n="reserve.err.f.phone">電話番号を8〜20文字で入力してください。</div>
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-md-6">
-                    <label data-i18n="page.contact.f.tel">電話番号</label>
-                    <input type="tel" />
+                    <label for="rf-email"><span data-i18n="page.contact.f.email">メールアドレス</span><span style="color:#999;font-weight:400;" data-i18n="reserve.optional"> (任意)</span></label>
+                    <input type="email" id="rf-email" name="email" autocomplete="email" inputmode="email" />
+                    <div class="field-error" data-error-for="email" data-i18n="reserve.err.f.email">メールアドレスの形式が正しくありません。</div>
                   </div>
                   <div class="col-md-6">
-                    <label><span data-i18n="page.contact.f.date">ご利用日</span><span class="req">*</span></label>
-                    <input type="date" required />
+                    <label for="rf-pax"><span data-i18n="page.contact.f.pax">乗車人数</span><span class="req">*</span></label>
+                    <input type="number" id="rf-pax" name="passengerCount" min="1" max="20" step="1" value="1" required inputmode="numeric" />
+                    <div class="field-error" data-error-for="passengerCount" data-i18n="reserve.err.f.pax">乗車人数は1〜20名で入力してください。</div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <label for="rf-pickupAt"><span data-i18n="page.contact.f.datetime">希望乗車日時</span><span class="req">*</span></label>
+                    <input type="datetime-local" id="rf-pickupAt" name="pickupAt" required />
+                    <div class="field-error" data-error-for="pickupAt" data-i18n="reserve.err.f.datetime">希望乗車日時を指定してください。</div>
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-md-6">
-                    <label data-i18n="page.contact.f.from">出発地</label>
-                    <input type="text" />
+                    <label for="rf-pickup"><span data-i18n="page.contact.f.from">出発地</span><span class="req">*</span></label>
+                    <input type="text" id="rf-pickup" name="pickupLocation" maxlength="200" required placeholder="" data-i18n-placeholder="reserve.ph.from" />
+                    <div class="field-error" data-error-for="pickupLocation" data-i18n="reserve.err.f.from">出発地を入力してください。</div>
                   </div>
                   <div class="col-md-6">
-                    <label data-i18n="page.contact.f.to">目的地</label>
-                    <input type="text" />
+                    <label for="rf-dropoff"><span data-i18n="page.contact.f.to">目的地</span><span class="req">*</span></label>
+                    <input type="text" id="rf-dropoff" name="dropoffLocation" maxlength="200" required placeholder="" data-i18n-placeholder="reserve.ph.to" />
+                    <div class="field-error" data-error-for="dropoffLocation" data-i18n="reserve.err.f.to">目的地を入力してください。</div>
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-md-6">
-                    <label data-i18n="page.contact.f.car">ご希望車両</label>
-                    <select>
+                    <label for="rf-car"><span data-i18n="page.contact.f.car">ご希望車両</span></label>
+                    <select id="rf-car" name="vehicle">
+                      <option value="" data-i18n="reserve.opt.none">指定なし</option>
                       <option data-i18n="fleet.alphard.nameja">ALPHARD / VELLFIRE</option>
                       <option data-i18n="fleet.granace.nameja">GRANACE</option>
                       <option data-i18n="fleet.hiace.nameja">HIACE</option>
                     </select>
                   </div>
                   <div class="col-md-6">
-                    <label data-i18n="page.contact.f.purpose">ご用途</label>
-                    <select>
+                    <label for="rf-purpose"><span data-i18n="page.contact.f.purpose">ご用途</span></label>
+                    <select id="rf-purpose" name="purpose">
+                      <option value="" data-i18n="reserve.opt.none">指定なし</option>
                       <option data-i18n="svc.airport.ja">空港送迎</option>
                       <option data-i18n="svc.business.ja">役員・ビジネス送迎</option>
                       <option data-i18n="svc.tour.ja">観光チャーター</option>
@@ -192,10 +260,30 @@
                     </select>
                   </div>
                 </div>
-                <label data-i18n="page.contact.f.msg">ご質問・備考</label>
-                <textarea></textarea>
-                <button type="submit" class="theme-btn btn-style-one" style="width: 100%; justify-content: center; padding: 16px;"><span class="btn-title" data-i18n="page.contact.f.submit">送信する</span></button>
+                <label for="rf-note" data-i18n="page.contact.f.msg">ご質問・備考</label>
+                <textarea id="rf-note" name="note" maxlength="1000"></textarea>
+                <div class="privacy-row">
+                  <input type="checkbox" id="rf-privacy" name="privacy" required />
+                  <label for="rf-privacy" data-i18n="reserve.privacy">個人情報の取り扱いに同意のうえ送信します。</label>
+                </div>
+                <div class="field-error" data-error-for="privacy" style="margin-top:-14px;" data-i18n="reserve.err.f.privacy">送信には同意が必要です。</div>
+                <button type="submit" id="rf-submit" class="theme-btn btn-style-one" style="width: 100%; justify-content: center; padding: 16px;"><span class="btn-title" data-i18n="page.contact.f.submit.book">予約を送信する</span></button>
               </form>
+
+              <div id="reserveSuccess" class="reserve-success" role="status" aria-live="polite">
+                <div class="check">&#10003;</div>
+                <h3 data-i18n="reserve.success.title">ご予約を受け付けました</h3>
+                <div class="lead" data-i18n="reserve.success.lead">担当者より折り返しご連絡いたします。</div>
+                <div class="reserve-no-box">
+                  <div class="lbl" data-i18n="reserve.success.no">予約番号</div>
+                  <div class="no" id="rs-no">—</div>
+                </div>
+                <div class="reserve-recap" id="rs-recap"></div>
+                <div>
+                  <button type="button" class="copy-btn" id="rs-copy" data-i18n="reserve.copy">予約番号をコピー</button>
+                </div>
+                <button type="button" class="theme-btn btn-style-one" id="rs-again" style="justify-content:center; padding: 14px 28px;"><span class="btn-title" data-i18n="reserve.success.again">続けて予約する</span></button>
+              </div>
             </div>
           </div>
         </div>
@@ -209,7 +297,7 @@
       <!-- Footer -->
       <footer class="main-footer footer-style-three">
         <div class="bg bg-pattern-8"></div>
-        <div class="footer-top"><div class="bg-overlay-7"></div><div class="auto-container"><div class="inner-container"><div class="top-left"><h6 class="sub-title" data-i18n="cta.eyebrow">Reservation</h6><h2 class="title" data-i18n="cta.heading">ご予約・お見積もりは、<br />お気軽に。</h2></div><div class="top-right"><div class="info-btn"><i class="icon fal fa-mobile"></i><div class="content"><h5 class="title" data-i18n="cta.call">お電話</h5><a href="tel:+81476295498" class="phone-no">+81 (0)476-29-5498</a></div></div><div class="btn-box"><a href="contact.html" class="theme-btn btn-style-one yellow-line dark-bg hover-light"><span class="btn-title" data-i18n="nav.book">ご予約</span></a></div></div></div></div></div>
+        <div class="footer-top"><div class="bg-overlay-7"></div><div class="auto-container"><div class="inner-container"><div class="top-left"><h6 class="sub-title" data-i18n="cta.eyebrow">Reservation</h6><h2 class="title" data-i18n="cta.heading">ご予約・お見積もりは、<br />お気軽に。</h2></div><div class="top-right"><div class="info-btn"><i class="icon fal fa-mobile"></i><div class="content"><h5 class="title" data-i18n="cta.call">お電話</h5><!-- 固定電話復活: 下のコメント解除＋携帯リンクを削除で元に戻る --><!-- <a href="tel:+81476295498" class="phone-no">+81 (0)476-29-5498</a> --><a href="tel:+818039990379" class="phone-no">080-3999-0379</a></div></div><div class="btn-box"><a href="contact.html" class="theme-btn btn-style-one yellow-line dark-bg hover-light"><span class="btn-title" data-i18n="nav.book">ご予約</span></a></div></div></div></div></div>
         <div class="widgets-section"><div class="auto-container"><div class="row">
           <div class="footer-column col-lg-4 col-md-6 col-sm-12"><div class="footer-widget about-widget"><h5 class="widget-title" data-i18n="foot.about">会社情報</h5><div class="widget-content"><div class="text" data-i18n="foot.about.body">Z&GLOBAL株式会社 — 羽田・成田の二大空港を拠点に、上質なハイヤーサービスを世界基準のホスピタリティでお届けします。</div></div></div></div>
           <div class="footer-column col-lg-3 col-md-6 col-sm-12"><div class="footer-widget links-widget"><h4 class="widget-title" data-i18n="foot.menu">メニュー</h4><div class="widget-content"><ul class="user-links two-column">
@@ -220,7 +308,9 @@
             <li><i class="icon fa fa-angle-double-right"></i> <a href="contact.html" data-i18n="nav.contact">お問い合わせ</a></li>
           </ul></div></div></div>
           <div class="footer-column col-lg-4 col-md-6 col-sm-12"><div class="footer-widget contact-widget"><h4 class="widget-title" data-i18n="foot.contact">コンタクト</h4><div class="widget-content">
-            <p style="color:#fff;"><b data-i18n="foot.tel">TEL</b>: <a href="tel:+81476295498" style="color:#fff;">+81 (0)476-29-5498</a> / <a href="tel:+818039990379" style="color:#fff;">080-3999-0379</a></p>
+            <!-- 固定電話復活: 下のコメント解除＋次の携帯のみの行を削除で元に戻る -->
+            <!-- <p style="color:#fff;"><b data-i18n="foot.tel">TEL</b>: <a href="tel:+81476295498" style="color:#fff;">+81 (0)476-29-5498</a> / <a href="tel:+818039990379" style="color:#fff;">080-3999-0379</a></p> -->
+            <p style="color:#fff;"><b data-i18n="foot.tel">TEL</b>: <a href="tel:+818039990379" style="color:#fff;">080-3999-0379</a></p>
             <p style="color:#fff;"><b data-i18n="foot.fax">FAX</b>: 0476-33-4744</p>
             <p style="color:#fff;"><b data-i18n="foot.mail">MAIL</b>: <a href="mailto:zglobal777@gmail.com" style="color:#fff;">zglobal777@gmail.com</a></p>
             <p style="color:#fff;"><b data-i18n="foot.address.lbl">住所</b>: <span data-i18n="foot.address">千葉県成田市 (羽田・成田空港 拠点)</span></p>
@@ -250,5 +340,6 @@
     <script src="js/script.js"></script>
     <script src="js/script-gsap.js"></script>
     <script src="js/i18n.js"></script>
+    <script src="js/reserve.js"></script>
   </body>
 </html>

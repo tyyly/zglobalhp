@@ -1,4 +1,5 @@
 deploy/zglobal-hp/site/
 dev/zglobal-raw/
+taxix-client-files/
 *.tar.gz
 .env

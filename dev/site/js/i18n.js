@@ -307,12 +307,47 @@
     "page.contact.f.msg":      { ja: "ご質問・備考", en: "Notes / Questions", zh: "备注・咨询", ko: "메시지・비고" },
     "page.contact.f.submit":   { ja: "送信する", en: "Send Message", zh: "发送", ko: "보내기" },
 
+    /* ============ RESERVATION FORM ============ */
+    "page.contact.f.submit.book": { ja: "予約を送信する", en: "Submit Reservation", zh: "提交预约", ko: "예약 보내기" },
+    "page.contact.f.datetime": { ja: "希望乗車日時", en: "Pick-up Date & Time", zh: "希望乘车时间", ko: "희망 승차 일시" },
+    "page.contact.f.pax":      { ja: "乗車人数", en: "Passengers", zh: "乘车人数", ko: "탑승 인원" },
+    "reserve.optional":        { ja: " (任意)", en: " (optional)", zh: " (选填)", ko: " (선택)" },
+    "reserve.opt.none":        { ja: "指定なし", en: "No preference", zh: "不指定", ko: "지정 안 함" },
+    "reserve.ph.from":         { ja: "例: 羽田空港 第3ターミナル", en: "e.g. Haneda Airport Terminal 3", zh: "例: 羽田机场第3航站楼", ko: "예: 하네다공항 제3터미널" },
+    "reserve.ph.to":           { ja: "例: 東京駅 丸の内口", en: "e.g. Tokyo Station Marunouchi", zh: "例: 东京站丸之内口", ko: "예: 도쿄역 마루노우치" },
+    "reserve.privacy":         { ja: "個人情報の取り扱いに同意のうえ送信します。", en: "I agree to the handling of my personal information.", zh: "我同意对个人信息的处理后提交。", ko: "개인정보 취급에 동의하고 전송합니다." },
+
+    "reserve.success.title":   { ja: "ご予約を受け付けました", en: "Reservation Received", zh: "已收到您的预约", ko: "예약을 접수했습니다" },
+    "reserve.success.lead":    { ja: "担当者より折り返しご連絡いたします。予約番号は控えとして保管してください。", en: "Our staff will contact you shortly. Please keep your reservation number for reference.", zh: "工作人员将尽快与您联系。请保留预约编号以备查询。", ko: "담당자가 곧 연락드립니다. 예약 번호를 보관해 주세요." },
+    "reserve.success.no":      { ja: "予約番号", en: "Reservation No.", zh: "预约编号", ko: "예약 번호" },
+    "reserve.success.again":   { ja: "続けて予約する", en: "Make another reservation", zh: "继续预约", ko: "계속 예약하기" },
+    "reserve.copy":            { ja: "予約番号をコピー", en: "Copy reservation number", zh: "复制预约编号", ko: "예약 번호 복사" },
+    "reserve.copied":          { ja: "コピーしました", en: "Copied", zh: "已复制", ko: "복사했습니다" },
+    "reserve.recap.datetime":  { ja: "乗車日時", en: "Pick-up", zh: "乘车时间", ko: "승차 일시" },
+    "reserve.recap.route":     { ja: "区間", en: "Route", zh: "区间", ko: "구간" },
+    "reserve.recap.pax":       { ja: "人数", en: "Passengers", zh: "人数", ko: "인원" },
+
+    "reserve.submitting":      { ja: "送信中…", en: "Sending…", zh: "提交中…", ko: "전송 중…" },
+    "reserve.err.required":    { ja: "未入力の必須項目があります。ご確認ください。", en: "Please fill in all required fields.", zh: "有必填项未填写，请确认。", ko: "필수 항목을 입력해 주세요." },
+    "reserve.err.400":         { ja: "入力内容をご確認ください。", en: "Please check your input.", zh: "请检查您的输入内容。", ko: "입력 내용을 확인해 주세요." },
+    "reserve.err.422":         { ja: "乗車日時の指定が正しくありません。", en: "The pick-up date/time is invalid.", zh: "乘车时间指定有误。", ko: "승차 일시 지정이 올바르지 않습니다." },
+    "reserve.err.429":         { ja: "送信が混み合っています。少し時間をおいて再度お試しください。", en: "Too many requests. Please wait a moment and try again.", zh: "请求过于频繁，请稍后再试。", ko: "요청이 많습니다. 잠시 후 다시 시도해 주세요." },
+    "reserve.err.500":         { ja: "通信エラーが発生しました。時間をおいて再度お試しください。", en: "A communication error occurred. Please try again later.", zh: "发生通信错误，请稍后再试。", ko: "통신 오류가 발생했습니다. 잠시 후 다시 시도해 주세요." },
+    "reserve.err.f.name":      { ja: "お名前を入力してください。", en: "Please enter your name.", zh: "请输入您的姓名。", ko: "이름을 입력해 주세요." },
+    "reserve.err.f.phone":     { ja: "電話番号を8〜20文字で入力してください。", en: "Please enter a phone number (8–20 characters).", zh: "请输入8〜20位的电话号码。", ko: "전화번호를 8~20자로 입력해 주세요." },
+    "reserve.err.f.email":     { ja: "メールアドレスの形式が正しくありません。", en: "Please enter a valid email address.", zh: "邮箱地址格式不正确。", ko: "이메일 형식이 올바르지 않습니다." },
+    "reserve.err.f.pax":       { ja: "乗車人数は1〜20名で入力してください。", en: "Passengers must be between 1 and 20.", zh: "乘车人数请填写1〜20。", ko: "탑승 인원은 1~20명으로 입력해 주세요." },
+    "reserve.err.f.datetime":  { ja: "希望乗車日時を指定してください。", en: "Please select a pick-up date and time.", zh: "请指定希望乘车时间。", ko: "희망 승차 일시를 지정해 주세요." },
+    "reserve.err.f.from":      { ja: "出発地を入力してください。", en: "Please enter the pick-up location.", zh: "请输入出发地。", ko: "출발지를 입력해 주세요." },
+    "reserve.err.f.to":        { ja: "目的地を入力してください。", en: "Please enter the destination.", zh: "请输入目的地。", ko: "목적지를 입력해 주세요." },
+    "reserve.err.f.privacy":   { ja: "送信には同意が必要です。", en: "You must agree to proceed.", zh: "提交前需同意。", ko: "전송하려면 동의가 필요합니다." },
+
     /* ============ HEAD TITLES ============ */
-    "title.index": { ja: "Z&GLOBAL株式会社 | 羽田・成田の高級ハイヤー", en: "Z&GLOBAL | Premium Chauffeur Haneda & Narita", zh: "Z&GLOBAL | 羽田・成田高级包车", ko: "Z&GLOBAL | 하네다・나리타 고급 하이어" },
-    "title.about": { ja: "会社概要 | Z&GLOBAL株式会社", en: "About Us | Z&GLOBAL", zh: "公司介绍 | Z&GLOBAL", ko: "회사 소개 | Z&GLOBAL" },
-    "title.fleet": { ja: "車両ラインナップ | Z&GLOBAL株式会社", en: "Our Fleet | Z&GLOBAL", zh: "车辆阵容 | Z&GLOBAL", ko: "차량 라인업 | Z&GLOBAL" },
-    "title.services": { ja: "サービス | Z&GLOBAL株式会社", en: "Services | Z&GLOBAL", zh: "服务内容 | Z&GLOBAL", ko: "서비스 | Z&GLOBAL" },
-    "title.contact": { ja: "お問い合わせ・ご予約 | Z&GLOBAL株式会社", en: "Contact & Book | Z&GLOBAL", zh: "联系与预约 | Z&GLOBAL", ko: "문의 및 예약 | Z&GLOBAL" }
+    "title.index": { ja: "羽田・成田の高級ハイヤー Z&GLOBAL | 空港送迎・役員送迎・観光チャーター 4言語対応", en: "Premium Chauffeur Haneda & Narita | Z&GLOBAL - Airport, Executive & Tour", zh: "羽田・成田高级包车 Z&GLOBAL | 机场接送・商务接送・观光包车 4语言对应", ko: "하네다・나리타 고급 하이어 Z&GLOBAL | 공항 픽업・임원 의전・관광 전세 4개국어" },
+    "title.about": { ja: "会社概要 | Z&GLOBAL株式会社 - 羽田・成田ハイヤー送迎の実績と信頼", en: "About Us | Z&GLOBAL - Trusted Haneda & Narita Chauffeur Service", zh: "公司介绍 | Z&GLOBAL - 羽田・成田包车接送的实绩与信赖", ko: "회사 소개 | Z&GLOBAL - 하네다・나리타 하이어 송영의 실적과 신뢰" },
+    "title.fleet": { ja: "車両ラインナップ | Z&GLOBAL - アルファード・グランエース・ハイエース料金比較", en: "Our Fleet | Z&GLOBAL - Alphard, Granace & Hiace Rates", zh: "车辆阵容 | Z&GLOBAL - 埃尔法・格瑞维亚・海狮 价格比较", ko: "차량 라인업 | Z&GLOBAL - 알파드・그란에이스・하이에이스 요금 비교" },
+    "title.services": { ja: "ハイヤーサービス | Z&GLOBAL - 空港送迎・役員送迎・観光・ゴルフ送迎", en: "Chauffeur Services | Z&GLOBAL - Airport, Executive, Tour & Golf", zh: "包车服务 | Z&GLOBAL - 机场接送・商务接送・观光・高尔夫接送", ko: "하이어 서비스 | Z&GLOBAL - 공항・임원・관광・골프 송영" },
+    "title.contact": { ja: "お問い合わせ・ご予約 | Z&GLOBAL - 羽田・成田ハイヤー24時間受付中", en: "Contact & Booking | Z&GLOBAL - Haneda & Narita Hire, 24h", zh: "联系与预约 | Z&GLOBAL - 羽田・成田包车 24小时受理", ko: "문의 및 예약 | Z&GLOBAL - 하네다・나리타 하이어 24시간 접수" }
   };
 
   function getLang() {
