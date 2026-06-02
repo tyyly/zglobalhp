@@ -350,7 +350,23 @@
     "title.contact": { ja: "お問い合わせ・ご予約 | Z&GLOBAL - 羽田・成田ハイヤー24時間受付中", en: "Contact & Booking | Z&GLOBAL - Haneda & Narita Hire, 24h", zh: "联系与预约 | Z&GLOBAL - 羽田・成田包车 24小时受理", ko: "문의 및 예약 | Z&GLOBAL - 하네다・나리타 하이어 24시간 접수" }
   };
 
+  // 言語別URL（/en/ /zh/ /ko/）配下なら、その言語をパスから判定する
+  function langFromPath() {
+    const m = location.pathname.match(/^\/(en|zh|ko)(?=\/|$)/);
+    return m ? m[1] : null;
+  }
+
+  // 現在ページの「言語接頭辞を除いたパス」に、指定言語の接頭辞を付けたURLを返す
+  function urlForLang(lang) {
+    let path = location.pathname.replace(/^\/(en|zh|ko)(?=\/|$)/, "");
+    if (path === "" || path === "/") path = "/index.html";
+    const prefix = lang === "ja" ? "" : "/" + lang;
+    return prefix + path + location.hash;
+  }
+
   function getLang() {
+    const fromPath = langFromPath();
+    if (fromPath) return fromPath; // 言語別URLが最優先
     const saved = localStorage.getItem("zglobal_lang");
     if (saved && DICT["nav.home"][saved]) return saved;
     const nav = (navigator.language || "ja").toLowerCase();
@@ -392,8 +408,14 @@
   function init() {
     const lang = getLang();
     setLang(lang);
+    // 言語切替は言語別URL（/en/ 等）へ遷移する。各言語ページの head が
+    // 翻訳済み meta/OGP を静的に持つため、SNS スクレイパーにも正しく伝わる。
     document.querySelectorAll(".lang-switch button").forEach((b) => {
-      b.addEventListener("click", () => setLang(b.dataset.lang));
+      b.addEventListener("click", () => {
+        const target = b.dataset.lang;
+        localStorage.setItem("zglobal_lang", target);
+        window.location.href = urlForLang(target);
+      });
     });
   }
 
