@@ -70,6 +70,38 @@ DESC = {
   },
 }
 
+# JSON-LD（構造化データ）本文の翻訳辞書。ja の JSON 値（"..."）完全一致で各言語へ置換する。
+# 完全一致（前後のダブルクオート込み）なので、"千葉県"→Chiba と FAQ 文中の "千葉" を取り違える誤爆が起きない。
+# 会社名は法人格サフィックスの誤訳を避けるためブランド名 "Z&GLOBAL" に統一（root ja のみ正式名 "Z&GLOBAL株式会社"）。
+LD_TR = {
+  "Z&GLOBAL株式会社": {"en": "Z&GLOBAL", "zh": "Z&GLOBAL", "ko": "Z&GLOBAL"},
+  "東京都": {"en": "Tokyo", "zh": "东京都", "ko": "도쿄도"},
+  "千葉県": {"en": "Chiba", "zh": "千叶县", "ko": "지바현"},
+  "神奈川県": {"en": "Kanagawa", "zh": "神奈川县", "ko": "가나가와현"},
+  "埼玉県": {"en": "Saitama", "zh": "埼玉县", "ko": "사이타마현"},
+  "成田市": {"en": "Narita", "zh": "成田市", "ko": "나리타시"},
+  # services.html: serviceType / OfferCatalog
+  "高級ハイヤー・送迎サービス": {"en": "Premium Chauffeur & Transfer Service", "zh": "高级包车・接送服务", "ko": "고급 하이어・송영 서비스"},
+  "ハイヤーサービス": {"en": "Chauffeur Services", "zh": "包车服务", "ko": "하이어 서비스"},
+  "空港送迎": {"en": "Airport Transfers", "zh": "机场接送", "ko": "공항 픽업"},
+  "羽田・成田空港への送迎、深夜・早朝対応": {"en": "Transfers to and from Haneda and Narita airports, with late-night and early-morning service", "zh": "羽田・成田机场的接送，对应深夜・清晨", "ko": "하네다・나리타 공항 송영, 심야・새벽 대응"},
+  "役員・ビジネス送迎": {"en": "Executive & Business Transport", "zh": "高管・商务接送", "ko": "임원・비즈니스 의전"},
+  "海外クライアント対応のエグゼクティブ送迎": {"en": "Executive transport for international clients", "zh": "面向海外客户的高管接送", "ko": "해외 고객 대응 임원 의전"},
+  "観光チャーター": {"en": "Sightseeing Charters", "zh": "观光包车", "ko": "관광 전세"},
+  "富士山・箱根・鎌倉・日光などのプライベートツアー": {"en": "Private tours to Mt. Fuji, Hakone, Kamakura, Nikko and more", "zh": "富士山・箱根・镰仓・日光等私人观光包车", "ko": "후지산・하코네・가마쿠라・닛코 등 프라이빗 투어"},
+  "ゴルフ・リゾート送迎": {"en": "Golf & Resort Transfers", "zh": "高尔夫・度假接送", "ko": "골프・리조트 송영"},
+  "ゴルフ場・リゾートへの送迎、ゴルフバッグ積載対応": {"en": "Transfers to golf courses and resorts, with golf-bag loading", "zh": "高尔夫球场・度假村的接送，可装载高尔夫球包", "ko": "골프장・리조트 송영, 골프백 적재 대응"},
+  # contact.html: FAQPage
+  "対応言語は何ですか？": {"en": "What languages do you support?", "zh": "支持哪些语言？", "ko": "대응 언어는 무엇인가요?"},
+  "日本語・英語・中国語・韓国語の4言語に対応しています。専属乗務員が対応いたします。": {"en": "We support four languages: Japanese, English, Chinese and Korean. A dedicated chauffeur will assist you.", "zh": "对应日语・英语・中文・韩语4种语言，由专属司机为您服务。", "ko": "일본어・영어・중국어・한국어 4개국어에 대응합니다. 전속 기사가 대응해 드립니다."},
+  "受付時間と返信までの時間は？": {"en": "What are your hours and response time?", "zh": "受理时间和回复时间是？", "ko": "접수 시간과 회신까지 걸리는 시간은?"},
+  "電話・メール・LINE・WeChat・予約フォームから24時間受付しています。通常2時間以内に返信いたします。": {"en": "We accept inquiries 24 hours a day by phone, email, LINE, WeChat and the reservation form, and usually reply within 2 hours.", "zh": "通过电话・邮件・LINE・WeChat・预约表单24小时受理，通常2小时内回复。", "ko": "전화・이메일・LINE・WeChat・예약 폼으로 24시간 접수하며, 보통 2시간 이내에 회신합니다."},
+  "対応エリアはどこですか？": {"en": "Which areas do you cover?", "zh": "对应区域是哪里？", "ko": "대응 지역은 어디인가요?"},
+  "羽田・成田空港を拠点に、東京・千葉・神奈川・埼玉エリアへ配車可能です。": {"en": "Based at Haneda and Narita airports, we can dispatch vehicles to the Tokyo, Chiba, Kanagawa and Saitama areas.", "zh": "以羽田・成田机场为据点，可派车至东京・千叶・神奈川・埼玉区域。", "ko": "하네다・나리타 공항을 거점으로 도쿄・지바・가나가와・사이타마 지역에 배차 가능합니다."},
+  "どの車種を選べますか？": {"en": "Which vehicles can I choose?", "zh": "可以选择哪些车型？", "ko": "어떤 차종을 선택할 수 있나요?"},
+  "アルファード/ヴェルファイア、グランエース、ハイエースの高級車3車種からお選びいただけます。": {"en": "You can choose from three premium vehicles: the Alphard/Vellfire, Granace and Hiace.", "zh": "可从埃尔法/威尔法、格瑞维亚、海狮3款高级车中选择。", "ko": "알파드/벨파이어, 그란에이스, 하이에이스의 고급차 3종 중에서 선택하실 수 있습니다."},
+}
+
 
 def page_url(page, lang):
     if page == "index.html":
@@ -125,6 +157,18 @@ def absolutize_nav(h, lang):
                   lambda m: f'href="/{lang}/{m.group(1)}.html', h)
 
 
+def translate_ld(h, lang):
+    """head 内 JSON-LD（構造化データ）の本文文字列を lang へ翻訳。
+    JSON 値（"..."）の完全一致置換のため部分語の誤爆なし。改行構造はそのまま保つ。
+    JSON-LD を持たないページ（about/fleet）では re.sub が非マッチで no-op。"""
+    def repl(m):
+        block = m.group(0)
+        for ja, tr in LD_TR.items():
+            block = block.replace(f'"{ja}"', f'"{tr[lang]}"')
+        return block
+    return re.sub(r'<script type="application/ld\+json">.*?</script>', repl, h, count=1, flags=re.S)
+
+
 def build_lang_file(page, lang):
     src = open(os.path.join(ROOT, page), encoding="utf-8", newline="").read()
     nl = "\r\n" if "\r\n" in src else "\n"
@@ -143,6 +187,7 @@ def build_lang_file(page, lang):
     h = set_meta(h, 'name="twitter:description"', desc)
     h = set_canonical(h, url)
     h = replace_hreflang(h, page, nl)
+    h = translate_ld(h, lang)
     h = prefix_assets(h)
     h = absolutize_nav(h, lang)
     outdir = os.path.join(ROOT, lang)
