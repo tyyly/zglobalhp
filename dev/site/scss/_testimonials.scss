@@ -370,6 +370,8 @@
   }
   .image-man {
     background-image: url(../images/resource/man1.png);
+    background-image: -webkit-image-set(url(../images/resource/man1.webp) 1x, url(../images/resource/man1.png) 1x);
+    background-image: image-set(url(../images/resource/man1.webp) type("image/webp"), url(../images/resource/man1.png) type("image/png"));
     width: 496px;
     height: 669px;
     position: absolute;
@@ -541,6 +543,8 @@
   z-index: 3;
   &:before {
     background-image: url(../images/icons/dotted-map1.png);
+    background-image: -webkit-image-set(url(../images/icons/dotted-map1.webp) 1x, url(../images/icons/dotted-map1.png) 1x);
+    background-image: image-set(url(../images/icons/dotted-map1.webp) type("image/webp"), url(../images/icons/dotted-map1.png) type("image/png"));
     content: "";
     position: absolute;
     left: 50%;
