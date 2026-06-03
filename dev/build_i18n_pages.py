@@ -157,6 +157,12 @@ def absolutize_nav(h, lang):
                   lambda m: f'href="/{lang}/{m.group(1)}.html', h)
 
 
+def set_captcha_lang(h, lang):
+    """hCaptcha ウィジェットの表示言語(data-hl)を生成先の言語に合わせる。
+    body は ja から複製されるため、明示しないと data-hl="ja" のまま残る(再生成で言語別設定が消える)。"""
+    return h.replace('data-hl="ja"', f'data-hl="{lang}"')
+
+
 def translate_ld(h, lang):
     """head 内 JSON-LD（構造化データ）の本文文字列を lang へ翻訳。
     JSON 値（"..."）の完全一致置換のため部分語の誤爆なし。改行構造はそのまま保つ。
@@ -190,6 +196,7 @@ def build_lang_file(page, lang):
     h = translate_ld(h, lang)
     h = prefix_assets(h)
     h = absolutize_nav(h, lang)
+    h = set_captcha_lang(h, lang)
     outdir = os.path.join(ROOT, lang)
     os.makedirs(outdir, exist_ok=True)
     with open(os.path.join(outdir, page), "w", encoding="utf-8", newline="") as f:

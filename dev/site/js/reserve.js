@@ -74,14 +74,56 @@
     return el ? el.value.trim() : "";
   }
 
-  function validate(payload, rawPax, pickupLocalValue) {
+  // ---- vehicle <-> passenger capacity (each vehicle seats up to data-max-pax) ----
+  var paxInput = form.querySelector('[name="passengerCount"]');
+  var vehicleSelect = form.querySelector('[name="vehicle"]');
+  var vehicleNote = document.getElementById("vehiclePaxNote");
+
+  function selectedVehicleMax() {
+    if (!vehicleSelect) return NaN;
+    var opt = vehicleSelect.options[vehicleSelect.selectedIndex];
+    return opt ? parseInt(opt.getAttribute("data-max-pax"), 10) : NaN;
+  }
+  function vehiclePaxExceeded() {
+    var max = selectedVehicleMax();
+    if (!(max >= 1)) return false;          // "指定なし" / no capacity data -> no constraint
+    var pax = parseInt(paxInput && paxInput.value, 10);
+    if (!(pax >= 1)) return false;          // empty/invalid pax handled by its own check
+    return pax > max;
+  }
+  function refreshVehicleNote() {
+    if (!vehicleNote) return;
+    var max = selectedVehicleMax();
+    if (!(max >= 1)) { vehicleNote.textContent = ""; vehicleNote.className = "vehicle-pax-note"; return; }
+    var over = vehiclePaxExceeded();
+    vehicleNote.textContent = t(over ? "reserve.cap.over" : "reserve.cap.ok").replace("{max}", String(max));
+    vehicleNote.className = "vehicle-pax-note " + (over ? "over" : "ok");
+  }
+  if (paxInput) paxInput.addEventListener("input", refreshVehicleNote);
+  if (vehicleSelect) vehicleSelect.addEventListener("change", refreshVehicleNote);
+
+  // floor the date picker at today (JST) so past dates can't be picked
+  (function initMinDate() {
+    var dateInput = form.querySelector('[name="pickupDate"]');
+    if (!dateInput) return;
+    try {
+      var ymd = new Intl.DateTimeFormat("en-CA", {
+        timeZone: "Asia/Tokyo", year: "numeric", month: "2-digit", day: "2-digit"
+      }).format(new Date());
+      if (/^\d{4}-\d{2}-\d{2}$/.test(ymd)) dateInput.min = ymd;
+    } catch (e) {}
+  })();
+
+  function validate(payload, rawPax, pickupDate, pickupTime) {
     var firstBad = null;
     function fail(name) { setFieldError(name, true); if (!firstBad) firstBad = name; }
 
     if (!payload.name || payload.name.length < 1 || payload.name.length > 100) fail("name");
     if (!payload.phone || payload.phone.length < 8 || payload.phone.length > 20) fail("phone");
     if (payload.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(payload.email)) fail("email");
-    if (!pickupLocalValue || !payload.pickupAt) fail("pickupAt");
+    if (!pickupDate) fail("pickupDate");
+    if (!pickupTime) fail("pickupTime");
+    if (pickupDate && pickupTime && !payload.pickupAt) { fail("pickupDate"); fail("pickupTime"); }
     if (!payload.pickupLocation || payload.pickupLocation.length > 200) fail("pickupLocation");
     if (!payload.dropoffLocation || payload.dropoffLocation.length > 200) fail("dropoffLocation");
     var pax = parseInt(rawPax, 10);
@@ -158,7 +200,9 @@
     clearAlert();
     clearAllFieldErrors();
 
-    var pickupLocalValue = val("pickupAt");
+    var pickupDate = val("pickupDate");
+    var pickupTime = val("pickupTime");
+    var pickupLocalValue = (pickupDate && pickupTime) ? (pickupDate + "T" + pickupTime) : "";
     var rawPax = val("passengerCount");
     var payload = {
       name: val("name"),
@@ -179,7 +223,7 @@
     payload.botcheck = honeypot && honeypot.checked ? "on" : "";
     payload.hcaptchaToken = getCaptchaToken();
 
-    var firstBad = validate(payload, rawPax, pickupLocalValue);
+    var firstBad = validate(payload, rawPax, pickupDate, pickupTime);
     if (firstBad) {
       var alertKey = firstBad === "privacy" ? "reserve.err.f.privacy"
                    : firstBad === "captcha" ? "reserve.err.captcha"
@@ -187,6 +231,16 @@
       showAlert(alertKey);
       var badEl = form.querySelector('[name="' + firstBad + '"]');
       if (badEl) badEl.focus();
+      return;
+    }
+
+    // vehicle <-> passenger-count capacity guard (after required-field checks)
+    if (vehiclePaxExceeded()) {
+      refreshVehicleNote();
+      alertBox.textContent = t("reserve.cap.over").replace("{max}", String(selectedVehicleMax()));
+      alertBox.classList.add("show");
+      alertBox.scrollIntoView({ behavior: "smooth", block: "center" });
+      if (paxInput) paxInput.focus();
       return;
     }
 
@@ -210,25 +264,28 @@
           // map class-validator field messages back to fields where possible
           var errs = (r.body && r.body.errors) || [];
           var map = {
-            name: "name", phone: "phone", email: "email", pickupAt: "pickupAt",
+            name: "name", phone: "phone", email: "email",
             pickupLocation: "pickupLocation", dropoffLocation: "dropoffLocation",
             passengerCount: "passengerCount"
           };
-          var matched = false;
           errs.forEach(function (msg) {
+            if (typeof msg !== "string") return;
+            // pickupAt is now split into two fields (date + time) on the form
+            if (msg.indexOf("pickupAt") === 0) {
+              setFieldError("pickupDate", true); setFieldError("pickupTime", true);
+            }
             Object.keys(map).forEach(function (field) {
-              if (typeof msg === "string" && msg.indexOf(field) === 0) {
-                setFieldError(map[field], true); matched = true;
-              }
+              if (msg.indexOf(field) === 0) setFieldError(map[field], true);
             });
           });
-          showAlert(matched ? "reserve.err.400" : "reserve.err.400");
+          showAlert("reserve.err.400");
         } else if (r.status === 403) {
           // honeypot / hCaptcha rejected by the BFF
           setFieldError("captcha", true);
           showAlert("reserve.err.captcha");
         } else if (r.status === 422) {
-          setFieldError("pickupAt", true);
+          setFieldError("pickupDate", true);
+          setFieldError("pickupTime", true);
           showAlert("reserve.err.422");
         } else if (r.status === 429) {
           var retry = (r.body && r.body.retryAfterSeconds) || null;
