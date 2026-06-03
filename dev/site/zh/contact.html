@@ -53,6 +53,9 @@
       .contact-form-box input.invalid, .contact-form-box select.invalid, .contact-form-box textarea.invalid { border-color: #e74c3c; background: #fff6f5; }
       .field-error { display: none; color: #e74c3c; font-size: 12px; margin: -12px 0 14px; }
       .field-error.show { display: block; }
+      .vehicle-pax-note { font-size: 12px; line-height: 1.5; margin: -10px 0 16px; min-height: 16px; }
+      .vehicle-pax-note.ok { color: #888; }
+      .vehicle-pax-note.over { color: #e74c3c; font-weight: 600; }
       .form-alert { display: none; padding: 14px 16px; border-radius: 3px; font-size: 14px; margin-bottom: 22px; }
       .form-alert.show { display: block; }
       .form-alert.error { background: #fdecea; border: 1px solid #f5c6cb; color: #c0392b; }
@@ -235,10 +238,15 @@
                   </div>
                 </div>
                 <div class="row">
-                  <div class="col-md-12">
-                    <label for="rf-pickupAt"><span data-i18n="page.contact.f.datetime">希望乗車日時</span><span class="req">*</span></label>
-                    <input type="datetime-local" id="rf-pickupAt" name="pickupAt" required />
-                    <div class="field-error" data-error-for="pickupAt" data-i18n="reserve.err.f.datetime">希望乗車日時を指定してください。</div>
+                  <div class="col-md-6">
+                    <label for="rf-pickupDate"><span data-i18n="page.contact.f.pickupDate">ご希望乗車日</span><span class="req">*</span></label>
+                    <input type="date" id="rf-pickupDate" name="pickupDate" required />
+                    <div class="field-error" data-error-for="pickupDate" data-i18n="reserve.err.f.date">ご希望乗車日を選択してください。</div>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="rf-pickupTime"><span data-i18n="page.contact.f.pickupTime">ご希望時刻</span><span class="req">*</span></label>
+                    <input type="time" id="rf-pickupTime" name="pickupTime" required />
+                    <div class="field-error" data-error-for="pickupTime" data-i18n="reserve.err.f.time">ご希望時刻を選択してください。</div>
                   </div>
                 </div>
                 <div class="row">
@@ -258,10 +266,11 @@
                     <label for="rf-car"><span data-i18n="page.contact.f.car">ご希望車両</span></label>
                     <select id="rf-car" name="vehicle">
                       <option value="" data-i18n="reserve.opt.none">指定なし</option>
-                      <option data-i18n="fleet.alphard.nameja">ALPHARD / VELLFIRE</option>
-                      <option data-i18n="fleet.granace.nameja">GRANACE</option>
-                      <option data-i18n="fleet.hiace.nameja">HIACE</option>
+                      <option data-i18n="fleet.alphard.nameja" data-max-pax="7">ALPHARD / VELLFIRE</option>
+                      <option data-i18n="fleet.granace.nameja" data-max-pax="6">GRANACE</option>
+                      <option data-i18n="fleet.hiace.nameja" data-max-pax="10">HIACE</option>
                     </select>
+                    <div class="vehicle-pax-note" id="vehiclePaxNote" aria-live="polite"></div>
                   </div>
                   <div class="col-md-6">
                     <label for="rf-purpose"><span data-i18n="page.contact.f.purpose">ご用途</span></label>
