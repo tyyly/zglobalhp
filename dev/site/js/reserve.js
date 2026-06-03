@@ -11,6 +11,26 @@
   var alertBox = document.getElementById("formAlert");
   var successBox = document.getElementById("reserveSuccess");
 
+  // ---- hCaptcha human-check (verified server-side in the /api/reserve BFF) ----
+  function getCaptchaToken() {
+    var el = form.querySelector('[name="h-captcha-response"]');
+    if (el && el.value) return el.value;
+    if (window.hcaptcha && typeof window.hcaptcha.getResponse === "function") {
+      try { return window.hcaptcha.getResponse() || ""; } catch (e) {}
+    }
+    return "";
+  }
+  function resetCaptcha() {
+    if (window.hcaptcha && typeof window.hcaptcha.reset === "function") {
+      try { window.hcaptcha.reset(); } catch (e) {}
+    }
+  }
+  // hCaptcha data-callback: clear the captcha error message once solved
+  window.zgCaptchaSolved = function () {
+    var msg = form.querySelector('[data-error-for="captcha"]');
+    if (msg) msg.classList.remove("show");
+  };
+
   function t(key) {
     var i18n = window.ZGLOBAL_I18N;
     if (!i18n) return key;
@@ -67,6 +87,7 @@
     var pax = parseInt(rawPax, 10);
     if (!(pax >= 1 && pax <= 20)) fail("passengerCount");
     if (!form.querySelector('[name="privacy"]').checked) fail("privacy");
+    if (!payload.hcaptchaToken) fail("captcha");
 
     return firstBad;
   }
@@ -153,9 +174,17 @@
     var note = buildNote();
     if (note) payload.note = note;
 
+    // anti-spam: honeypot + hCaptcha token (both verified server-side at /api/reserve)
+    var honeypot = form.querySelector('[name="botcheck"]');
+    payload.botcheck = honeypot && honeypot.checked ? "on" : "";
+    payload.hcaptchaToken = getCaptchaToken();
+
     var firstBad = validate(payload, rawPax, pickupLocalValue);
     if (firstBad) {
-      showAlert(firstBad === "privacy" ? "reserve.err.f.privacy" : "reserve.err.required");
+      var alertKey = firstBad === "privacy" ? "reserve.err.f.privacy"
+                   : firstBad === "captcha" ? "reserve.err.captcha"
+                   : "reserve.err.required";
+      showAlert(alertKey);
       var badEl = form.querySelector('[name="' + firstBad + '"]');
       if (badEl) badEl.focus();
       return;
@@ -194,6 +223,10 @@
             });
           });
           showAlert(matched ? "reserve.err.400" : "reserve.err.400");
+        } else if (r.status === 403) {
+          // honeypot / hCaptcha rejected by the BFF
+          setFieldError("captcha", true);
+          showAlert("reserve.err.captcha");
         } else if (r.status === 422) {
           setFieldError("pickupAt", true);
           showAlert("reserve.err.422");
@@ -212,6 +245,8 @@
       })
       .finally(function () {
         setLoading(false);
+        // hCaptcha tokens are single-use; reset so a retry requires a fresh check
+        resetCaptcha();
       });
   });
 

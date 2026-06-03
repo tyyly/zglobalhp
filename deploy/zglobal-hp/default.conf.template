@@ -1,14 +1,35 @@
+# hCaptcha human-check BFF (njs). See deploy/zglobal-hp/reserve_guard.js.
+# These directives sit in the http{} context (this file is included from http{}).
+js_path "/etc/nginx/njs/";
+js_import reserve_guard from reserve_guard.js;
+
+# DNS used by ngx.fetch() to reach api.hcaptcha.com (Docker embedded resolver).
+# If your runtime has no Docker DNS, replace with e.g. 1.1.1.1 8.8.8.8.
+resolver 127.0.0.11 ipv6=off valid=30s;
+resolver_timeout 5s;
+
+# CA bundle so ngx.fetch() can verify the hCaptcha TLS certificate.
+js_fetch_trusted_certificate /etc/ssl/certs/ca-certificates.crt;
+
 server {
     listen 80;
     server_name _;
     root /usr/share/nginx/html;
     index index.html;
 
-    # BFF relay: browser POSTs same-origin -> nginx forwards to Hireservice public booking API.
-    # Avoids CORS (API only allows the admin origin) and keeps the upstream URL server-side.
+    # Public booking endpoint: the browser POSTs here (same origin -> no CORS).
+    # njs verifies the hCaptcha token + honeypot, THEN forwards to hire-service.
     location = /api/reserve {
         limit_except POST OPTIONS { deny all; }
+        client_max_body_size 16k;
+        client_body_buffer_size 16k;
+        js_content reserve_guard.guardReserve;
+    }
 
+    # Internal only: reachable solely via the njs subrequest above (never directly).
+    # Relays to the Hireservice public booking API; body passed through unchanged.
+    location = /__reserve_upstream {
+        internal;
         proxy_pass ${HIRESERVICE_API_BASE}/v1/public-bookings;
         proxy_http_version 1.1;
         proxy_ssl_server_name on;

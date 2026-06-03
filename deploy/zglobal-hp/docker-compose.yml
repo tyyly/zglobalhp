@@ -3,10 +3,21 @@ services:
     build: .
     container_name: zglobal-hp
     restart: unless-stopped
+    environment:
+      # Real hCaptcha Secret Key for production. Set HCAPTCHA_SECRET in a
+      # gitignored .env next to this file (never commit it). If unset, this
+      # falls back to the hCaptcha TEST secret baked into the image, which
+      # always passes verification and gives NO real protection.
+      - HCAPTCHA_SECRET=${HCAPTCHA_SECRET:-0x0000000000000000000000000000000000000000}
     networks:
       - caddy_net
     labels:
-      caddy: http://zglobal.fly-japan.jp
+      # home-caddy (port 80) routes these hostnames to this container.
+      # TLS is terminated upstream by the reverse-proxy VPS (Caddy).
+      # www.z-global.jp added for Plan 1 (serve the main public site from here too).
+      # INERT until (a) www.z-global.jp DNS points at the VPS and (b) a matching
+      # VPS Caddyfile block exists. Until then only zglobal.fly-japan.jp is used.
+      caddy: http://zglobal.fly-japan.jp http://www.z-global.jp
       caddy.reverse_proxy: "{{upstreams 80}}"
 
 networks:

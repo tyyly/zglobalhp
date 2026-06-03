@@ -341,6 +341,7 @@
     "reserve.err.f.from":      { ja: "出発地を入力してください。", en: "Please enter the pick-up location.", zh: "请输入出发地。", ko: "출발지를 입력해 주세요." },
     "reserve.err.f.to":        { ja: "目的地を入力してください。", en: "Please enter the destination.", zh: "请输入目的地。", ko: "목적지를 입력해 주세요." },
     "reserve.err.f.privacy":   { ja: "送信には同意が必要です。", en: "You must agree to proceed.", zh: "提交前需同意。", ko: "전송하려면 동의가 필요합니다." },
+    "reserve.err.captcha":     { ja: "スパム対策の認証にチェックを入れてください。", en: "Please complete the anti-spam verification.", zh: "请完成人机验证（反垃圾）。", ko: "스팸 방지 인증을 완료해 주세요." },
 
     /* ============ HEAD TITLES ============ */
     "title.index": { ja: "羽田・成田の高級ハイヤー Z&GLOBAL | 空港送迎・役員送迎・観光チャーター 4言語対応", en: "Premium Chauffeur Haneda & Narita | Z&GLOBAL - Airport, Executive & Tour", zh: "羽田・成田高级包车 Z&GLOBAL | 机场接送・商务接送・观光包车 4语言对应", ko: "하네다・나리타 고급 하이어 Z&GLOBAL | 공항 픽업・임원 의전・관광 전세 4개국어" },
