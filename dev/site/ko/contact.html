@@ -281,6 +281,14 @@
                   <label for="rf-privacy" data-i18n="reserve.privacy">個人情報の取り扱いに同意のうえ送信します。</label>
                 </div>
                 <div class="field-error" data-error-for="privacy" style="margin-top:-14px;" data-i18n="reserve.err.f.privacy">送信には同意が必要です。</div>
+                <!-- honeypot: hidden; humans never tick this. Bots that do are rejected at /api/reserve. -->
+                <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none !important;" />
+                <!-- hCaptcha human-check (same approach as fly-japan.jp; token verified server-side at /api/reserve). -->
+                <!-- hCaptcha Site Key (production). Domain allowlist is managed in the hCaptcha dashboard. -->
+                <div class="captcha-row" style="display:flex;justify-content:center;margin:4px 0 18px;">
+                  <div class="h-captcha" data-sitekey="44ced706-b740-4c78-806c-86426f4ab20a" data-hl="ko" data-callback="zgCaptchaSolved"></div>
+                </div>
+                <div class="field-error" data-error-for="captcha" style="text-align:center;margin:-10px 0 14px;" data-i18n="reserve.err.captcha">スパム対策の認証にチェックを入れてください。</div>
                 <button type="submit" id="rf-submit" class="theme-btn btn-style-one" style="width: 100%; justify-content: center; padding: 16px;"><span class="btn-title" data-i18n="page.contact.f.submit.book">予約を送信する</span></button>
               </form>
 
@@ -335,6 +343,9 @@
       </footer>
     </div>
     <div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-angle-up"></span></div>
+
+    <!-- hCaptcha API (human check) -->
+    <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
 
     <script src="../js/jquery.js"></script>
     <script src="../js/popper.min.js"></script>
