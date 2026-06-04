@@ -79,7 +79,8 @@ LD_TR = {
   "千葉県": {"en": "Chiba", "zh": "千叶县", "ko": "지바현"},
   "神奈川県": {"en": "Kanagawa", "zh": "神奈川县", "ko": "가나가와현"},
   "埼玉県": {"en": "Saitama", "zh": "埼玉县", "ko": "사이타마현"},
-  "成田市": {"en": "Narita", "zh": "成田市", "ko": "나리타시"},
+  "印西市": {"en": "Inzai", "zh": "印西市", "ko": "인자이시"},
+  "大森2550-1-301": {"en": "2550-1-301 Omori", "zh": "大森2550-1-301", "ko": "오모리 2550-1-301"},
   # services.html: serviceType / OfferCatalog
   "高級ハイヤー・送迎サービス": {"en": "Premium Chauffeur & Transfer Service", "zh": "高级包车・接送服务", "ko": "고급 하이어・송영 서비스"},
   "ハイヤーサービス": {"en": "Chauffeur Services", "zh": "包车服务", "ko": "하이어 서비스"},
