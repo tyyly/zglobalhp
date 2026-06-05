@@ -1,0 +1,5 @@
+# real hCaptcha secret — never commit (only the *.example.php template is tracked)
+zglobal_hcaptcha_secret.php
+.hcaptcha_secret.php
+api/.hcaptcha_secret.php
+*.bak

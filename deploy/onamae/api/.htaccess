@@ -1,0 +1,14 @@
+# Z&GLOBAL reservation BFF — route POST /api/reserve to the PHP handler so the
+# shared front-end (dev/site/js/reserve.js posts to "/api/reserve") works on the
+# お名前.com static host without any front-end change.
+#
+# Internal rewrite (NOT a redirect) so the POST body + method are preserved.
+# If the docroot WordPress catch-all ("RewriteRule . /index.php") shadows this
+# per-directory rule on this host, move the rule into the DOCROOT .htaccess
+# ABOVE the "# BEGIN WordPress" marker instead (see ../README.md). In that case
+# /api/reserve.php still works directly as a fallback endpoint.
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /api/
+  RewriteRule ^reserve/?$ reserve.php [L]
+</IfModule>
