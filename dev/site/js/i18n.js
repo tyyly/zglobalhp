@@ -199,6 +199,7 @@
     "foot.tel":        { ja: "TEL",       en: "TEL",        zh: "电话",     ko: "TEL" },
     "foot.fax":        { ja: "FAX",       en: "FAX",        zh: "传真",     ko: "FAX" },
     "foot.mail":       { ja: "MAIL",      en: "Email",      zh: "邮箱",     ko: "이메일" },
+    "foot.dispatch":   { ja: "配車担当（谷）", en: "Dispatch (Tani)", zh: "配车负责人（谷）", ko: "배차 담당 (타니)" },
     "foot.address.lbl":{ ja: "住所",      en: "Address",    zh: "地址",     ko: "주소" },
     "foot.address":    { ja: "千葉県印西市大森2550-1-301 (羽田・成田空港 拠点)",
                           en: "2550-1-301 Omori, Inzai-shi, Chiba, Japan (Haneda & Narita based)",
