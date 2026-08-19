@@ -64,9 +64,9 @@ DESC = {
     "ko": "Z&GLOBAL의 고급 차량 3종을 요금・정원・특징으로 비교. 알파드/벨파이어(7인승)는 공항・소인원용; 그란에이스(6인승)는 웹 회의 대응 임원용; 하이에이스(10인승)는 대인원・골프백용. 전 차량 USB 충전・공기청정기・가죽시트 완비.",
   },
   "contact.html": {
-    "en": "Contact Z&GLOBAL for booking, quotes and inquiries. Available 24h via phone (080-3999-0379), email, LINE, WeChat and reservation form. We usually reply within 2 hours. All services: airport, executive, tour and golf transfers.",
-    "zh": "联系 Z&GLOBAL 进行预约・报价・咨询。可通过电话（080-3999-0379）・邮件・LINE・WeChat・预约表单24小时受理，通常2小时内回复。提供机场・高管・观光・高尔夫等全部接送服务。",
-    "ko": "예약・견적・문의는 Z&GLOBAL로. 전화(080-3999-0379)・이메일・LINE・WeChat・예약 폼으로 24시간 접수하며 보통 2시간 이내 회신합니다. 공항・임원・관광・골프 등 전 서비스 대응.",
+    "en": "Contact Z&GLOBAL for quotes and inquiries by phone (080-3999-0379), email, LINE or WeChat — we usually reply within 2 hours. Bookings are taken 24h on our reservation site. All services: airport, executive, tour and golf transfers.",
+    "zh": "联系 Z&GLOBAL 进行报价・咨询，可通过电话（080-3999-0379）・邮件・LINE・WeChat 受理，通常2小时内回复。预约请使用预约网站，24小时受理。提供机场・高管・观光・高尔夫等全部接送服务。",
+    "ko": "견적・문의는 전화(080-3999-0379)・이메일・LINE・WeChat으로 Z&GLOBAL에 문의해 주세요. 보통 2시간 이내 회신합니다. 예약은 예약 사이트에서 24시간 접수합니다. 공항・임원・관광・골프 등 전 서비스 대응.",
   },
 }
 
@@ -96,7 +96,7 @@ LD_TR = {
   "対応言語は何ですか？": {"en": "What languages do you support?", "zh": "支持哪些语言？", "ko": "대응 언어는 무엇인가요?"},
   "日本語・英語・中国語・韓国語の4言語に対応しています。専属乗務員が対応いたします。": {"en": "We support four languages: Japanese, English, Chinese and Korean. A dedicated chauffeur will assist you.", "zh": "对应日语・英语・中文・韩语4种语言，由专属司机为您服务。", "ko": "일본어・영어・중국어・한국어 4개국어에 대응합니다. 전속 기사가 대응해 드립니다."},
   "受付時間と返信までの時間は？": {"en": "What are your hours and response time?", "zh": "受理时间和回复时间是？", "ko": "접수 시간과 회신까지 걸리는 시간은?"},
-  "電話・メール・LINE・WeChat・予約フォームから24時間受付しています。通常2時間以内に返信いたします。": {"en": "We accept inquiries 24 hours a day by phone, email, LINE, WeChat and the reservation form, and usually reply within 2 hours.", "zh": "通过电话・邮件・LINE・WeChat・预约表单24小时受理，通常2小时内回复。", "ko": "전화・이메일・LINE・WeChat・예약 폼으로 24시간 접수하며, 보통 2시간 이내에 회신합니다."},
+  "ご予約は予約サイト (https://reserve.z-global.jp) から24時間受付しています。お問い合わせは電話・メール・LINE・WeChatから24時間受付し、通常2時間以内に返信いたします。ご予約の確定連絡は営業時間 10:00〜20:00 に差し上げます。": {"en": "Bookings are accepted 24 hours a day on our reservation site (https://reserve.z-global.jp). Inquiries by phone, email, LINE and WeChat are also accepted 24 hours a day and we usually reply within 2 hours. Booking confirmations are sent during business hours, 10:00-20:00.", "zh": "预约通过预约网站（https://reserve.z-global.jp）24小时受理。电话・邮件・LINE・WeChat 的咨询同样24小时受理，通常2小时内回复。预约确认将在营业时间 10:00〜20:00 内联系您。", "ko": "예약은 예약 사이트(https://reserve.z-global.jp)에서 24시간 접수합니다. 전화・이메일・LINE・WeChat 문의도 24시간 접수하며 보통 2시간 이내에 회신합니다. 예약 확정 연락은 영업시간 10:00~20:00에 드립니다."},
   "対応エリアはどこですか？": {"en": "Which areas do you cover?", "zh": "对应区域是哪里？", "ko": "대응 지역은 어디인가요?"},
   "羽田・成田空港を拠点に、東京・千葉・神奈川・埼玉エリアへ配車可能です。": {"en": "Based at Haneda and Narita airports, we can dispatch vehicles to the Tokyo, Chiba, Kanagawa and Saitama areas.", "zh": "以羽田・成田机场为据点，可派车至东京・千叶・神奈川・埼玉区域。", "ko": "하네다・나리타 공항을 거점으로 도쿄・지바・가나가와・사이타마 지역에 배차 가능합니다."},
   "どの車種を選べますか？": {"en": "Which vehicles can I choose?", "zh": "可以选择哪些车型？", "ko": "어떤 차종을 선택할 수 있나요?"},
