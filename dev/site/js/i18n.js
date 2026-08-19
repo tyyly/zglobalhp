@@ -293,7 +293,7 @@
                             zh: "预约・询价・咨询，请通过电话、邮箱、LINE 或下方表单联系。我们通常2小时内回复。",
                             ko: "예약・견적・문의는 전화・이메일・LINE 또는 아래 폼으로. 보통 2시간 이내 회신해 드립니다." },
     "page.contact.line":    { ja: "LINE", en: "LINE", zh: "LINE", ko: "LINE" },
-    "page.contact.line.v":  { ja: "ID: @zglobal", en: "ID: @zglobal", zh: "ID: @zglobal", ko: "ID: @zglobal" },
+    "page.contact.line.v":  { ja: "ID: @z-global", en: "ID: @z-global", zh: "ID: @z-global", ko: "ID: @z-global" },
     "page.contact.wechat":  { ja: "WeChat / 微信", en: "WeChat", zh: "微信", ko: "WeChat" },
     "page.contact.wechat.v":{ ja: "ID: zglobal777", en: "ID: zglobal777", zh: "ID: zglobal777", ko: "ID: zglobal777" },
 
