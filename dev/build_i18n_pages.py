@@ -10,7 +10,7 @@ import os, re
 
 ROOT = "dev/site"
 BASE = "https://www.z-global.jp"
-PAGES = ["index.html", "about.html", "services.html", "fleet.html", "contact.html"]
+PAGES = ["index.html", "about.html", "services.html", "fleet.html", "contact.html", "taxi.html"]
 LANGS = ["en", "zh", "ko"]
 LOCALE = {"ja": "ja_JP", "en": "en_US", "zh": "zh_CN", "ko": "ko_KR"}
 
@@ -40,6 +40,11 @@ TITLE = {
     "zh": "联系与预约 | Z&GLOBAL - 羽田・成田包车 24小时受理",
     "ko": "문의 및 예약 | Z&GLOBAL - 하네다・나리타 하이어 24시간 접수",
   },
+  "taxi.html": {
+    "en": "Taxi | Z&GLOBAL - Taxi Dispatch & Booking in Narita and Inzai",
+    "zh": "出租车 | Z&GLOBAL - 成田・印西地区出租车叫车・预约",
+    "ko": "택시 | Z&GLOBAL - 나리타・인자이 지역 택시 배차・예약",
+  },
 }
 
 DESC = {
@@ -67,6 +72,11 @@ DESC = {
     "en": "Contact Z&GLOBAL for quotes and inquiries by phone (0476-29-5498), email, LINE or WeChat — we usually reply within 2 hours. Bookings are taken 24h on our reservation site. All services: airport, executive, tour and golf transfers.",
     "zh": "联系 Z&GLOBAL 进行报价・咨询，可通过电话（0476-29-5498）・邮件・LINE・WeChat 受理，通常2小时内回复。预约请使用预约网站，24小时受理。提供机场・高管・观光・高尔夫等全部接送服务。",
     "ko": "견적・문의는 전화(0476-29-5498)・이메일・LINE・WeChat으로 Z&GLOBAL에 문의해 주세요. 보통 2시간 이내 회신합니다. 예약은 예약 사이트에서 24시간 접수합니다. 공항・임원・관광・골프 등 전 서비스 대응.",
+  },
+  "taxi.html": {
+    "en": "Z&GLOBAL taxis in the Hokuso area centred on Narita and Inzai, Chiba: pickups at home or the station, rides to Narita Airport, hospital visits, shopping and corporate use. Request or book by phone or LINE, in Japanese, English, Chinese or Korean.",
+    "zh": "Z&GLOBAL 出租车。在以成田・印西为中心的千叶县北总地区，提供住宅・车站接送、前往成田机场、就医・购物及企业用车。电话・LINE受理叫车与预约，支持日语・英语・中文・韩语。",
+    "ko": "Z&GLOBAL 택시. 지바현 나리타・인자이를 중심으로 한 호쿠소 지역에서 자택・역 픽업, 나리타 공항 이동, 병원・쇼핑, 법인 이용에. 전화・LINE으로 배차・예약을 받으며 일본어・영어・중국어・한국어로 예약할 수 있습니다.",
   },
 }
 
@@ -101,6 +111,22 @@ LD_TR = {
   "羽田・成田空港を拠点に、東京・千葉・神奈川・埼玉エリアへ配車可能です。": {"en": "Based at Haneda and Narita airports, we can dispatch vehicles to the Tokyo, Chiba, Kanagawa and Saitama areas.", "zh": "以羽田・成田机场为据点，可派车至东京・千叶・神奈川・埼玉区域。", "ko": "하네다・나리타 공항을 거점으로 도쿄・지바・가나가와・사이타마 지역에 배차 가능합니다."},
   "どの車種を選べますか？": {"en": "Which vehicles can I choose?", "zh": "可以选择哪些车型？", "ko": "어떤 차종을 선택할 수 있나요?"},
   "アルファード/ヴェルファイア、グランエース、ハイエースの高級車3車種からお選びいただけます。": {"en": "You can choose from three premium vehicles: the Alphard/Vellfire, Granace and Hiace.", "zh": "可从埃尔法/威尔法、格瑞维亚、海狮3款高级车中选择。", "ko": "알파드/벨파이어, 그란에이스, 하이에이스의 고급차 3종 중에서 선택하실 수 있습니다."},
+  # taxi.html: TaxiService + FAQPage（FAQ の訳は js/i18n.js の taxi.faq.* と同じ文にそろえる）
+  "Z&GLOBAL タクシー": {"en": "Z&GLOBAL Taxi", "zh": "Z&GLOBAL 出租车", "ko": "Z&GLOBAL 택시"},
+  "タクシー（一般乗用旅客自動車運送事業）": {"en": "Taxi (general passenger vehicle transport business)", "zh": "出租车（一般乘用旅客汽车运输事业）", "ko": "택시 (일반승용여객자동차운송사업)"},
+  "成田市": {"en": "Narita", "zh": "成田市", "ko": "나리타시"},
+  "タクシーの予約はできますか？": {"en": "Can I book a taxi in advance?", "zh": "可以预约出租车吗？", "ko": "택시를 예약할 수 있나요?"},
+  "はい。お電話またはLINEで承ります。ご希望の日時・お迎え場所・行き先・人数をお知らせください。": {"en": "Yes. We accept bookings by phone or LINE. Please tell us the date and time, pickup point, destination and number of passengers.", "zh": "可以。通过电话或LINE受理。请告知希望的日期时间・上车地点・目的地・人数。", "ko": "네. 전화 또는 LINE으로 받습니다. 희망 일시・픽업 장소・목적지・인원을 알려 주세요."},
+  "どのエリアで利用できますか？": {"en": "Which areas do you serve?", "zh": "可在哪些区域使用？", "ko": "어느 지역에서 이용할 수 있나요?"},
+  "成田市・印西市を中心とする北総交通圏が営業区域です。区域内から東京方面や羽田空港など、区域外への移動にもご利用いただけます。": {"en": "Our service area is the Hokuso traffic zone, centred on Narita and Inzai. You can also ride from within the zone to destinations outside it, such as central Tokyo or Haneda Airport.", "zh": "营业区域为以成田市・印西市为中心的北总交通圈。也可从区域内前往东京方向或羽田机场等区域外目的地。", "ko": "나리타시・인자이시를 중심으로 하는 호쿠소 교통권이 영업 구역입니다. 구역 내에서 도쿄 방면이나 하네다 공항 등 구역 밖으로의 이동에도 이용하실 수 있습니다."},
+  "成田空港まで、早朝や深夜でも乗れますか？": {"en": "Can I take a taxi to Narita Airport early in the morning or late at night?", "zh": "清晨或深夜也能乘车去成田机场吗？", "ko": "이른 아침이나 심야에도 나리타 공항까지 탈 수 있나요?"},
+  "事前にご予約いただければ承ります。時間が決まっている場合は、前日までのご予約をおすすめします。": {"en": "Yes, with an advance booking. If your time is fixed, we recommend booking by the day before.", "zh": "提前预约即可受理。如时间已确定，建议在前一天之前预约。", "ko": "사전에 예약하시면 받습니다. 시간이 정해져 있다면 전날까지 예약하시기를 권장합니다."},
+  "支払い方法は何がありますか？": {"en": "How can I pay?", "zh": "有哪些付款方式？", "ko": "결제 방법은 무엇이 있나요?"},
+  "現金でお支払いいただけます。法人のお客様は請求書による後払いもご利用いただけます。そのほかの決済方法は、ご予約時にお問い合わせください。": {"en": "You can pay in cash. Corporate customers can also pay later by invoice. For other payment methods, please ask when you book.", "zh": "可使用现金付款。企业客户也可使用账单后付款。其他付款方式请在预约时咨询。", "ko": "현금으로 결제하실 수 있습니다. 법인 고객은 청구서에 의한 후불도 이용하실 수 있습니다. 그 밖의 결제 방법은 예약 시 문의해 주세요."},
+  "外国語で予約できますか？": {"en": "Can I book in a language other than Japanese?", "zh": "可以用外语预约吗？", "ko": "외국어로 예약할 수 있나요?"},
+  "英語・中国語・韓国語でもご予約を承ります。お電話・LINEのどちらでもお気軽にどうぞ。": {"en": "Yes. We also take bookings in English, Chinese and Korean, by phone or LINE.", "zh": "也可用英语・中文・韩语预约。电话・LINE均可，欢迎随时联系。", "ko": "영어・중국어・한국어로도 예약을 받습니다. 전화・LINE 어느 쪽이든 편하게 연락 주세요."},
+  "車内に忘れ物をしたときは？": {"en": "What if I leave something in the taxi?", "zh": "在车内遗忘物品怎么办？", "ko": "차 안에 물건을 두고 내렸을 때는?"},
+  "お電話（0476-29-5498）で、ご乗車の日時・乗った場所と降りた場所・お忘れ物の特徴をお知らせください。": {"en": "Please call us at 0476-29-5498 and tell us the date and time of your ride, where you got on and off, and a description of the item.", "zh": "请致电（0476-29-5498），告知乘车日期时间・上下车地点・遗失物品的特征。", "ko": "전화(0476-29-5498)로 승차 일시・승차한 곳과 내린 곳・분실물의 특징을 알려 주세요."},
 }
 
 
@@ -152,9 +178,9 @@ def prefix_assets(h):
 
 
 def absolutize_nav(h, lang):
-    """内部ページリンク(index/about/services/fleet/contact.html)を /{lang}/... の絶対パスに。
+    """内部ページリンク(index/about/services/fleet/contact/taxi.html)を /{lang}/... の絶対パスに。
     末尾スラッシュ有無に依存せず同一言語内で正しく遷移させるため。#アンカーやクエリも保持。"""
-    return re.sub(r'href="(index|about|services|fleet|contact)\.html',
+    return re.sub(r'href="(index|about|services|fleet|contact|taxi)\.html',
                   lambda m: f'href="/{lang}/{m.group(1)}.html', h)
 
 

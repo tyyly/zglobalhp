@@ -8,7 +8,7 @@
     <xhtml:link rel="alternate" hreflang="zh" href="https://www.z-global.jp/zh/index.html" />
     <xhtml:link rel="alternate" hreflang="ko" href="https://www.z-global.jp/ko/index.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.z-global.jp/" />
-    <lastmod>2026-06-02</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -19,7 +19,18 @@
     <xhtml:link rel="alternate" hreflang="zh" href="https://www.z-global.jp/zh/services.html" />
     <xhtml:link rel="alternate" hreflang="ko" href="https://www.z-global.jp/ko/services.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.z-global.jp/services.html" />
-    <lastmod>2026-06-02</lastmod>
+    <lastmod>2026-11-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.z-global.jp/taxi.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.z-global.jp/taxi.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.z-global.jp/en/taxi.html" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://www.z-global.jp/zh/taxi.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="https://www.z-global.jp/ko/taxi.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.z-global.jp/taxi.html" />
+    <lastmod>2026-11-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -30,7 +41,7 @@
     <xhtml:link rel="alternate" hreflang="zh" href="https://www.z-global.jp/zh/fleet.html" />
     <xhtml:link rel="alternate" hreflang="ko" href="https://www.z-global.jp/ko/fleet.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.z-global.jp/fleet.html" />
-    <lastmod>2026-06-02</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -41,7 +52,7 @@
     <xhtml:link rel="alternate" hreflang="zh" href="https://www.z-global.jp/zh/about.html" />
     <xhtml:link rel="alternate" hreflang="ko" href="https://www.z-global.jp/ko/about.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.z-global.jp/about.html" />
-    <lastmod>2026-06-02</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -52,7 +63,7 @@
     <xhtml:link rel="alternate" hreflang="zh" href="https://www.z-global.jp/zh/contact.html" />
     <xhtml:link rel="alternate" hreflang="ko" href="https://www.z-global.jp/ko/contact.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.z-global.jp/contact.html" />
-    <lastmod>2026-06-02</lastmod>
+    <lastmod>2026-11-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
