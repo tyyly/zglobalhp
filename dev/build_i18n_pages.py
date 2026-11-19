@@ -64,9 +64,9 @@ DESC = {
     "ko": "Z&GLOBAL의 고급 차량 3종을 요금・정원・특징으로 비교. 알파드/벨파이어(7인승)는 공항・소인원용; 그란에이스(6인승)는 웹 회의 대응 임원용; 하이에이스(10인승)는 대인원・골프백용. 전 차량 USB 충전・공기청정기・가죽시트 완비.",
   },
   "contact.html": {
-    "en": "Contact Z&GLOBAL for quotes and inquiries by phone (080-3999-0379), email, LINE or WeChat — we usually reply within 2 hours. Bookings are taken 24h on our reservation site. All services: airport, executive, tour and golf transfers.",
-    "zh": "联系 Z&GLOBAL 进行报价・咨询，可通过电话（080-3999-0379）・邮件・LINE・WeChat 受理，通常2小时内回复。预约请使用预约网站，24小时受理。提供机场・高管・观光・高尔夫等全部接送服务。",
-    "ko": "견적・문의는 전화(080-3999-0379)・이메일・LINE・WeChat으로 Z&GLOBAL에 문의해 주세요. 보통 2시간 이내 회신합니다. 예약은 예약 사이트에서 24시간 접수합니다. 공항・임원・관광・골프 등 전 서비스 대응.",
+    "en": "Contact Z&GLOBAL for quotes and inquiries by phone (0476-29-5498), email, LINE or WeChat — we usually reply within 2 hours. Bookings are taken 24h on our reservation site. All services: airport, executive, tour and golf transfers.",
+    "zh": "联系 Z&GLOBAL 进行报价・咨询，可通过电话（0476-29-5498）・邮件・LINE・WeChat 受理，通常2小时内回复。预约请使用预约网站，24小时受理。提供机场・高管・观光・高尔夫等全部接送服务。",
+    "ko": "견적・문의는 전화(0476-29-5498)・이메일・LINE・WeChat으로 Z&GLOBAL에 문의해 주세요. 보통 2시간 이내 회신합니다. 예약은 예약 사이트에서 24시간 접수합니다. 공항・임원・관광・골프 등 전 서비스 대응.",
   },
 }
 
