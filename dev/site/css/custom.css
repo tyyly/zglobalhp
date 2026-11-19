@@ -1116,3 +1116,6 @@ a:hover {
 
 /* タクシーページのお電話ボタン（スマホ）は四角 */
 .mobile-fab.zg-fab-square { border-radius: 0; }
+
+/* 会社概要の要点（AI・検索が引用しやすい一文。2026-11-19） */
+.zg-about-summary { margin: 0 0 36px; font-size: 16px; line-height: 2; color: #333; }

@@ -2,8 +2,9 @@
 <html lang="zh">
   <head>
     <meta charset="utf-8" />
-    <title>包车服务 | Z&GLOBAL - 机场接送・商务接送・观光・高尔夫接送</title>
+    <title>包车服务 | 成田・羽田机场接送・商务用车・观光包车 Z&GLOBAL</title>
     <meta name="description" content="Z&GLOBAL 的四大包车服务：羽田・成田至东京・神奈川・埼玉的机场接送；面向海外客户的高管商务接送；富士山・箱根・镰仓・日光的观光包车；高尔夫与度假接送。提供月租与回数券方案。" />
+    <meta name="keywords" content="成田机场接送,羽田机场接送,包车 价格,高管接送 东京,VIP 接送 日本,富士山 箱根 包车,高尔夫 接送,迪士尼 接送" />
 
     <link rel="canonical" href="https://www.z-global.jp/zh/services.html" />
     <link rel="alternate" hreflang="ja" href="https://www.z-global.jp/services.html" />
@@ -20,12 +21,12 @@
     <meta property="og:locale:alternate" content="en_US" />
     <meta property="og:locale:alternate" content="zh_CN" />
     <meta property="og:locale:alternate" content="ko_KR" />
-    <meta property="og:title" content="包车服务 | Z&GLOBAL - 机场接送・商务接送・观光・高尔夫接送" />
+    <meta property="og:title" content="包车服务 | 成田・羽田机场接送・商务用车・观光包车 Z&GLOBAL" />
     <meta property="og:description" content="Z&GLOBAL 的四大包车服务：羽田・成田至东京・神奈川・埼玉的机场接送；面向海外客户的高管商务接送；富士山・箱根・镰仓・日光的观光包车；高尔夫与度假接送。提供月租与回数券方案。" />
     <meta property="og:url" content="https://www.z-global.jp/zh/services.html" />
     <meta property="og:image" content="https://www.z-global.jp/images/zglobal/service-tour.jpg" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="包车服务 | Z&GLOBAL - 机场接送・商务接送・观光・高尔夫接送" />
+    <meta name="twitter:title" content="包车服务 | 成田・羽田机场接送・商务用车・观光包车 Z&GLOBAL" />
     <meta name="twitter:description" content="Z&GLOBAL 的四大包车服务：羽田・成田至东京・神奈川・埼玉的机场接送；面向海外客户的高管商务接送；富士山・箱根・镰仓・日光的观光包车；高尔夫与度假接送。提供月租与回数券方案。" />
     <meta name="twitter:image" content="https://www.z-global.jp/images/zglobal/service-tour.jpg" />
 
@@ -45,26 +46,165 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Service",
-      "serviceType": "高级包车・接送服务",
-      "provider": { "@type": "LocalBusiness", "name": "Z&GLOBAL", "url": "https://www.z-global.jp/" },
-      "areaServed": [
-        { "@type": "AdministrativeArea", "name": "东京都" },
-        { "@type": "AdministrativeArea", "name": "千叶县" },
-        { "@type": "AdministrativeArea", "name": "神奈川县" },
-        { "@type": "AdministrativeArea", "name": "埼玉县" }
-      ],
-      "availableLanguage": ["ja", "en", "zh", "ko"],
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "包车服务",
-        "itemListElement": [
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "机场接送", "description": "羽田・成田机场的接送，对应深夜・清晨" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "高管・商务接送", "description": "面向海外客户的高管接送" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "观光包车", "description": "富士山・箱根・镰仓・日光等私人观光包车" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "高尔夫・度假接送", "description": "高尔夫球场・度假村的接送，可装载高尔夫球包" } }
-        ]
-      }
+      "@graph": [
+        {
+          "@type": "Service",
+          "serviceType": "高级包车・接送服务",
+          "provider": {
+            "@type": "LocalBusiness",
+            "@id": "https://www.z-global.jp/#organization",
+            "name": "Z&GLOBAL",
+            "url": "https://www.z-global.jp/"
+          },
+          "areaServed": [
+            {
+              "@type": "AdministrativeArea",
+              "name": "东京都"
+            },
+            {
+              "@type": "AdministrativeArea",
+              "name": "千叶县"
+            },
+            {
+              "@type": "AdministrativeArea",
+              "name": "神奈川县"
+            },
+            {
+              "@type": "AdministrativeArea",
+              "name": "埼玉县"
+            }
+          ],
+          "availableLanguage": [
+            "ja",
+            "en",
+            "zh",
+            "ko"
+          ],
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "包车服务",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "机场接送",
+                  "description": "羽田・成田机场的接送，对应深夜・清晨"
+                },
+                "priceSpecification": {
+                  "@type": "PriceSpecification",
+                  "minPrice": 35000,
+                  "priceCurrency": "JPY"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "高管・商务接送",
+                  "description": "面向海外客户的高管接送"
+                },
+                "priceSpecification": {
+                  "@type": "PriceSpecification",
+                  "minPrice": 240000,
+                  "priceCurrency": "JPY"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "观光包车",
+                  "description": "富士山・箱根・镰仓・日光等私人观光包车"
+                },
+                "priceSpecification": {
+                  "@type": "PriceSpecification",
+                  "minPrice": 85000,
+                  "priceCurrency": "JPY"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "高尔夫・度假接送",
+                  "description": "高尔夫球场・度假村的接送，可装载高尔夫球包"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "机场接送的费用是多少？",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "参考价格：埃尔法 ¥35,000起（羽田・成田⇔东京市内酒店）。格瑞维亚 ¥42,000起，海狮 ¥48,000起。深夜（22:00〜5:00）加收20%，高速费另计。准确金额将通过报价告知。"
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "航班延误会产生等候费吗？",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "抵达后90分钟内不收取等候费。我们也会追踪航班延误情况，请放心。"
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "可以接送到哪里？",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "以羽田・成田机场为据点，接送范围覆盖东京・千叶・神奈川・埼玉。也承接前往富士山・箱根・镰仓・日光等地的观光包车。"
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "如何预约和付款？",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "可通过预约网站24小时申请（也可通过电话・LINE・邮件）。付款可通过我们发送的付款链接，使用信用卡・PayPay・银行转账。"
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "观光包车的费用是多少？",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "1天（8小时・100公里以内）参考价格 ¥85,000起。将根据目的地与行程为您报价。"
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "企业可以定期使用吗？",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "我们提供高管接送月租方案（每月8次以内定额），¥240,000/月起。每月汇总开具符合日本发票制度的账单。"
+              }
+            }
+          ]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "首页",
+              "item": "https://www.z-global.jp/zh/index.html"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "服务",
+              "item": "https://www.z-global.jp/zh/services.html"
+            }
+          ]
+        }
+      ]
     }
     </script>
   </head>
@@ -108,17 +248,17 @@
               <div class="nav-outer">
                 <nav class="nav main-menu">
                   <ul class="navigation">
-                    <li><a href="/zh/index.html" data-i18n="nav.home">ホーム</a></li>
-                    <li><a href="/zh/about.html" data-i18n="nav.about">会社概要</a></li>
-                    <li><a href="/zh/fleet.html" data-i18n="nav.fleet">車両ラインナップ</a></li>
-                    <li class="current"><a href="/zh/services.html" data-i18n="nav.services">サービス</a></li>
-                    <li><a href="/zh/taxi.html" data-i18n="nav.taxi">タクシー</a></li>
-                    <li><a href="/zh/contact.html" data-i18n="nav.contact">お問い合わせ</a></li>
+                    <li><a href="/zh/index.html" data-i18n="nav.home">首页</a></li>
+                    <li><a href="/zh/about.html" data-i18n="nav.about">公司介绍</a></li>
+                    <li><a href="/zh/fleet.html" data-i18n="nav.fleet">车辆阵容</a></li>
+                    <li class="current"><a href="/zh/services.html" data-i18n="nav.services">服务</a></li>
+                    <li><a href="/zh/taxi.html" data-i18n="nav.taxi">出租车</a></li>
+                    <li><a href="/zh/contact.html" data-i18n="nav.contact">联系我们</a></li>
                   </ul>
                 </nav>
               </div>
               <div class="outer-box">
-                <div class="btn-box"><a href="https://reserve.z-global.jp" target="_blank" rel="noopener" class="theme-btn btn-style-one"><span class="btn-title" data-i18n="nav.book">ご予約</span></a></div>
+                <div class="btn-box"><a href="https://reserve.z-global.jp" target="_blank" rel="noopener" class="theme-btn btn-style-one"><span class="btn-title" data-i18n="nav.book">立即预约</span></a></div>
                 <div class="mobile-nav-toggler"><span class="icon lnr-icon-bars"></span></div>
               </div>
             </div>
@@ -132,10 +272,10 @@
       <section class="page-title" style="background-image: url(../images/zglobal/service-tour.jpg);">
         <div class="auto-container">
           <div class="title-outer text-center">
-            <h1 class="title" data-i18n="page.services.title">サービス</h1>
+            <h1 class="title" data-i18n="page.services.title">服务内容</h1>
             <ul class="page-breadcrumb">
-              <li><a href="/zh/index.html" data-i18n="nav.home">ホーム</a></li>
-              <li data-i18n="nav.services">サービス</li>
+              <li><a href="/zh/index.html" data-i18n="nav.home">首页</a></li>
+              <li data-i18n="nav.services">服务</li>
             </ul>
           </div>
         </div>
@@ -145,9 +285,9 @@
       <section class="service-section-three">
         <div class="auto-container">
           <div class="sec-title text-center">
-            <span class="sub-title" data-i18n="svc.eyebrow">Our Services</span>
-            <h2 class="letters-slide-up text-split" data-i18n="svc.heading">4つのご利用シーン</h2>
-            <div class="text" data-i18n="page.svc.lead" style="max-width: 760px; margin: 18px auto 0;">空港送迎から観光チャーターまで、4つの主要サービスをご用意。すべてのプランで4言語対応・上質な車両・経験豊富な乗務員が標準装備です。</div>
+            <span class="sub-title" data-i18n="svc.eyebrow">我们的服务</span>
+            <h2 class="letters-slide-up text-split" data-i18n="svc.heading">四种用车场景</h2>
+            <div class="text" data-i18n="page.svc.lead" style="max-width: 760px; margin: 18px auto 0;">从机场接送到观光包车，4项主要服务一应俱全。所有方案均含4种语言对应、高级车型、经验丰富的司机。</div>
           </div>
 
           <div class="row">
@@ -155,8 +295,8 @@
               <div class="inner-box">
                 <div class="image-box"><figure class="image css-crossfade slides-2"><img src="../images/zglobal/service-airport-new.jpg" alt="Airport transfer" loading="lazy" /><img src="../images/zglobal/service-airport-new3.jpg" alt="Airport transfer" loading="lazy" /></figure><i class="icon flaticon-taxi-2"></i></div>
                 <div class="content">
-                  <h4 class="title" data-i18n="page.svc.airport.h">空港送迎 / Airport Transfer</h4>
-                  <div class="text" data-i18n="page.svc.airport.b">羽田空港・成田空港から、都内ホテル・ご自宅・近郊エリアまでドアtoドアで送迎。フライト遅延の追跡もお任せください。到着ロビーでは到着後90分まで待機料金無料。</div>
+                  <h4 class="title" data-i18n="page.svc.airport.h">机场接送 / Airport Transfer</h4>
+                  <div class="text" data-i18n="page.svc.airport.b">从羽田・成田机场至都内酒店、住宅、周边地区的门到门接送。航班延误自动追踪，到达大厅免费等待90分钟。</div>
                   <a href="/zh/contact.html" class="icon fa fa-angle-double-right"></a>
                 </div>
               </div>
@@ -166,8 +306,8 @@
               <div class="inner-box">
                 <div class="image-box"><figure class="image css-crossfade slides-3"><img src="../images/zglobal/service-business.jpg" alt="Executive charter" loading="lazy" /><img src="../images/zglobal/service-business-new.jpg" alt="Executive charter" loading="lazy" /><img src="../images/zglobal/service-business-new4.jpg" alt="Executive charter" loading="lazy" /></figure><i class="icon flaticon-mobile-app"></i></div>
                 <div class="content">
-                  <h4 class="title" data-i18n="page.svc.business.h">役員・ビジネス送迎 / Executive Charter</h4>
-                  <div class="text" data-i18n="page.svc.business.b">海外取引先のお出迎え、レセプション、視察、社内イベント等、大切な場面の送迎を承ります。月極・回数券プランで定常的なご利用にも柔軟に対応。請求書・領収書発行可。</div>
+                  <h4 class="title" data-i18n="page.svc.business.h">商务包车 / Business Chartered</h4>
+                  <div class="text" data-i18n="page.svc.business.b">迎接海外客户、招待会、视察、公司活动等重要场合的接送。提供月度合约・回数券方案，灵活对应日常使用，可开具发票。</div>
                   <a href="/zh/contact.html" class="icon fa fa-angle-double-right"></a>
                 </div>
               </div>
@@ -177,8 +317,8 @@
               <div class="inner-box">
                 <div class="image-box"><figure class="image css-crossfade slides-3"><img src="../images/zglobal/service-tour-new.jpg" alt="Private tour" loading="lazy" /><img src="../images/zglobal/service-tour-new2.jpg" alt="Private tour" loading="lazy" /><img src="../images/zglobal/service-tour-new3.jpg" alt="Private tour" loading="lazy" /></figure><i class="icon flaticon-driver-3"></i></div>
                 <div class="content">
-                  <h4 class="title" data-i18n="page.svc.tour.h">観光チャーター / Private Tour</h4>
-                  <div class="text" data-i18n="page.svc.tour.b">富士山・箱根・鎌倉・日光など、関東近郊への1日〜数日のプライベートツアー。観光プランのご相談から、ご家族・ご友人グループに最適な車両と行程をご提案します。</div>
+                  <h4 class="title" data-i18n="page.svc.tour.h">观光包车 / Private Tour</h4>
+                  <div class="text" data-i18n="page.svc.tour.b">富士山・箱根・镰仓・日光等关东周边1日至数日的私人观光行程。从行程咨询到为家庭・朋友团队推荐最合适的车型与路线。</div>
                   <a href="/zh/contact.html" class="icon fa fa-angle-double-right"></a>
                 </div>
               </div>
@@ -188,8 +328,8 @@
               <div class="inner-box">
                 <div class="image-box"><figure class="image css-crossfade slides-3"><img src="../images/zglobal/service-disney.jpg" alt="Golf / Resort" loading="lazy" /><img src="../images/zglobal/service-disney-new2.jpg" alt="Golf / Resort" loading="lazy" /><img src="../images/zglobal/service-disney-new.jpg" alt="Golf / Resort" loading="lazy" /></figure><i class="icon flaticon-taxi-2"></i></div>
                 <div class="content">
-                  <h4 class="title" data-i18n="page.svc.golf.h">ゴルフ・リゾート送迎 / Golf & Resort</h4>
-                  <div class="text" data-i18n="page.svc.golf.b">早朝のゴルフラウンド、ディズニーリゾート、軽井沢への送迎などリゾート目的の利用に。荷物の積み下ろしから、温泉宿への往復まで快適なご移動を。</div>
+                  <h4 class="title" data-i18n="page.svc.golf.h">高尔夫・度假村接送 / Golf &amp; Resort</h4>
+                  <div class="text" data-i18n="page.svc.golf.b">清晨高尔夫、东京迪士尼、轻井泽等度假地的接送。从行李装卸到温泉旅馆往返，舒适出行无忧。</div>
                   <a href="/zh/contact.html" class="icon fa fa-angle-double-right"></a>
                 </div>
               </div>
@@ -204,10 +344,10 @@
           <div class="zg-svcbanner">
             <i class="zg-svcbanner-icon flaticon-taxi" aria-hidden="true"></i>
             <div>
-              <h2 class="zg-h3" data-i18n="taxi.svcpage.h">近距離の移動や通院には、タクシーもどうぞ。</h2>
-              <p data-i18n="taxi.svcpage.b">成田・印西を中心とした北総エリアで、メーター運賃のタクシーを運行しています。お電話・LINEで配車・ご予約を承ります。</p>
+              <h2 class="zg-h3" data-i18n="taxi.svcpage.h">短途出行或就医，也欢迎乘坐出租车。</h2>
+              <p data-i18n="taxi.svcpage.b">我们在以成田・印西为中心的北总地区经营按表计费的出租车。电话・LINE受理叫车与预约。</p>
             </div>
-            <a href="/zh/taxi.html" class="zg-btn zg-btn-dark"><span data-i18n="taxi.top.more">タクシーについて詳しく</span><i class="fal fa-arrow-right" aria-hidden="true"></i></a>
+            <a href="/zh/taxi.html" class="zg-btn zg-btn-dark"><span data-i18n="taxi.top.more">了解出租车服务</span><i class="fal fa-arrow-right" aria-hidden="true"></i></a>
           </div>
         </div>
       </section>
@@ -221,14 +361,14 @@
             <div class="content-column col-lg-6 col-md-12 col-sm-12">
               <div class="inner-column">
                 <div class="sec-title light text-center">
-                  <span class="sub-title" data-i18n="proc.eyebrow">Reservation Flow</span>
-                  <h2 class="letters-slide-up text-split" data-i18n="proc.heading">ご予約から乗車まで、4ステップ。</h2>
+                  <span class="sub-title" data-i18n="proc.eyebrow">预约流程</span>
+                  <h2 class="letters-slide-up text-split" data-i18n="proc.heading">从预约到上车，仅需4步</h2>
                 </div>
                 <div class="blocks-outer-box">
-                  <div class="app-block"><div class="inner-box"><i class="icon flaticon-search"></i><div class="content"><h4 class="title" data-i18n="proc.1.short">01. Web・LINE・お電話・メールから予約</h4></div></div></div>
-                  <div class="app-block style-two"><div class="inner-box"><i class="icon flaticon-clock"></i><div class="content"><h4 class="title" data-i18n="proc.2.short">02. 決済リンク送付 (クレカ・PayPay・振込)</h4></div></div></div>
-                  <div class="app-block"><div class="inner-box"><i class="icon flaticon-driver-3"></i><div class="content"><h4 class="title" data-i18n="proc.3.short">03. 前日に乗務員・車両番号をご連絡</h4></div></div></div>
-                  <div class="app-block style-two"><div class="inner-box"><i class="icon flaticon-taxi-2"></i><div class="content"><h4 class="title" data-i18n="proc.4.short">04. 当日 時間通りにお迎え (到着90分待機 ¥0)</h4></div></div></div>
+                  <div class="app-block"><div class="inner-box"><i class="icon flaticon-search"></i><div class="content"><h4 class="title" data-i18n="proc.1.short">01. 通过网页・LINE・电话・邮件预约</h4></div></div></div>
+                  <div class="app-block style-two"><div class="inner-box"><i class="icon flaticon-clock"></i><div class="content"><h4 class="title" data-i18n="proc.2.short">02. 发送支付链接（信用卡・PayPay・转账）</h4></div></div></div>
+                  <div class="app-block"><div class="inner-box"><i class="icon flaticon-driver-3"></i><div class="content"><h4 class="title" data-i18n="proc.3.short">03. 前一日告知司机和车牌号</h4></div></div></div>
+                  <div class="app-block style-two"><div class="inner-box"><i class="icon flaticon-taxi-2"></i><div class="content"><h4 class="title" data-i18n="proc.4.short">04. 当天准时接车（到达后90分钟免等待）</h4></div></div></div>
                 </div>
               </div>
             </div>
@@ -239,30 +379,48 @@
         </div>
       </section>
 
+      <!-- Hire FAQ (2026-11-19 追加: 検索・AI 検索向けのよくあるご質問) -->
+      <section class="zg-taxi-sec zg-taxi-faq" id="faq">
+        <div class="auto-container">
+          <div class="zg-sec-head text-center">
+            <span class="zg-eyebrow">FAQ</span>
+            <h2 class="zg-h2" data-i18n="svc.faq.heading">包车常见问题</h2>
+          </div>
+          <div class="zg-faq">
+            <details class="zg-faq-item"><summary data-i18n="svc.faq.1.q">机场接送的费用是多少？</summary><p data-i18n="svc.faq.1.a">参考价格：埃尔法 ¥35,000起（羽田・成田⇔东京市内酒店）。格瑞维亚 ¥42,000起，海狮 ¥48,000起。深夜（22:00〜5:00）加收20%，高速费另计。准确金额将通过报价告知。</p></details>
+            <details class="zg-faq-item"><summary data-i18n="svc.faq.2.q">航班延误会产生等候费吗？</summary><p data-i18n="svc.faq.2.a">抵达后90分钟内不收取等候费。我们也会追踪航班延误情况，请放心。</p></details>
+            <details class="zg-faq-item"><summary data-i18n="svc.faq.3.q">可以接送到哪里？</summary><p data-i18n="svc.faq.3.a">以羽田・成田机场为据点，接送范围覆盖东京・千叶・神奈川・埼玉。也承接前往富士山・箱根・镰仓・日光等地的观光包车。</p></details>
+            <details class="zg-faq-item"><summary data-i18n="svc.faq.4.q">如何预约和付款？</summary><p data-i18n="svc.faq.4.a">可通过预约网站24小时申请（也可通过电话・LINE・邮件）。付款可通过我们发送的付款链接，使用信用卡・PayPay・银行转账。</p></details>
+            <details class="zg-faq-item"><summary data-i18n="svc.faq.5.q">观光包车的费用是多少？</summary><p data-i18n="svc.faq.5.a">1天（8小时・100公里以内）参考价格 ¥85,000起。将根据目的地与行程为您报价。</p></details>
+            <details class="zg-faq-item"><summary data-i18n="svc.faq.6.q">企业可以定期使用吗？</summary><p data-i18n="svc.faq.6.a">我们提供高管接送月租方案（每月8次以内定额），¥240,000/月起。每月汇总开具符合日本发票制度的账单。</p></details>
+          </div>
+        </div>
+      </section>
+
       <!-- Footer -->
       <footer class="main-footer footer-style-three">
         <div class="bg bg-pattern-8"></div>
-        <div class="footer-top"><div class="bg-overlay-7"></div><div class="auto-container"><div class="inner-container"><div class="top-left"><h6 class="sub-title" data-i18n="cta.eyebrow">Reservation</h6><h2 class="title" data-i18n="cta.heading">ご予約・お見積もりは、<br />お気軽に。</h2></div><div class="top-right"><div class="info-btn"><i class="icon fal fa-mobile"></i><div class="content"><h5 class="title" data-i18n="cta.call">お電話</h5><!-- 電話: 会社固定のみ --><a href="tel:+81476295498" class="phone-no">0476-29-5498</a></div></div><div class="btn-box"><a href="https://reserve.z-global.jp" target="_blank" rel="noopener" class="theme-btn btn-style-one yellow-line dark-bg hover-light"><span class="btn-title" data-i18n="nav.book">ご予約</span></a></div></div></div></div></div>
+        <div class="footer-top"><div class="bg-overlay-7"></div><div class="auto-container"><div class="inner-container"><div class="top-left"><h6 class="sub-title" data-i18n="cta.eyebrow">立即预约</h6><h2 class="title" data-i18n="cta.heading">预约・询价，<br />请随时联系。</h2></div><div class="top-right"><div class="info-btn"><i class="icon fal fa-mobile"></i><div class="content"><h5 class="title" data-i18n="cta.call">致电</h5><!-- 電話: 会社固定のみ --><a href="tel:+81476295498" class="phone-no">0476-29-5498</a></div></div><div class="btn-box"><a href="https://reserve.z-global.jp" target="_blank" rel="noopener" class="theme-btn btn-style-one yellow-line dark-bg hover-light"><span class="btn-title" data-i18n="nav.book">立即预约</span></a></div></div></div></div></div>
         <div class="widgets-section"><div class="auto-container"><div class="row">
-          <div class="footer-column col-lg-4 col-md-6 col-sm-12"><div class="footer-widget about-widget"><h5 class="widget-title" data-i18n="foot.about">会社情報</h5><div class="widget-content"><div class="text" data-i18n="foot.about.body">Z&GLOBAL株式会社 — 羽田・成田の二大空港を拠点に、上質なハイヤーサービスを世界基準のホスピタリティでお届けします。</div></div></div></div>
-          <div class="footer-column col-lg-3 col-md-6 col-sm-12"><div class="footer-widget links-widget"><h4 class="widget-title" data-i18n="foot.menu">メニュー</h4><div class="widget-content"><ul class="user-links two-column">
-            <li><i class="icon fa fa-angle-double-right"></i> <a href="/zh/index.html" data-i18n="nav.home">ホーム</a></li>
-            <li><i class="icon fa fa-angle-double-right"></i> <a href="/zh/about.html" data-i18n="nav.about">会社概要</a></li>
-            <li><i class="icon fa fa-angle-double-right"></i> <a href="/zh/fleet.html" data-i18n="nav.fleet">車両ラインナップ</a></li>
-            <li><i class="icon fa fa-angle-double-right"></i> <a href="/zh/services.html" data-i18n="nav.services">サービス</a></li>
-            <li><i class="icon fa fa-angle-double-right"></i> <a href="/zh/taxi.html" data-i18n="nav.taxi">タクシー</a></li>
-            <li><i class="icon fa fa-angle-double-right"></i> <a href="/zh/contact.html" data-i18n="nav.contact">お問い合わせ</a></li>
+          <div class="footer-column col-lg-4 col-md-6 col-sm-12"><div class="footer-widget about-widget"><h5 class="widget-title" data-i18n="foot.about">公司</h5><div class="widget-content"><div class="text" data-i18n="foot.about.body">Z&amp;GLOBAL株式会社 — 以羽田・成田双机场为基地，提供世界级品质的高级司机包车服务，并在成田・印西地区经营出租车。</div></div></div></div>
+          <div class="footer-column col-lg-3 col-md-6 col-sm-12"><div class="footer-widget links-widget"><h4 class="widget-title" data-i18n="foot.menu">导航</h4><div class="widget-content"><ul class="user-links two-column">
+            <li><i class="icon fa fa-angle-double-right"></i> <a href="/zh/index.html" data-i18n="nav.home">首页</a></li>
+            <li><i class="icon fa fa-angle-double-right"></i> <a href="/zh/about.html" data-i18n="nav.about">公司介绍</a></li>
+            <li><i class="icon fa fa-angle-double-right"></i> <a href="/zh/fleet.html" data-i18n="nav.fleet">车辆阵容</a></li>
+            <li><i class="icon fa fa-angle-double-right"></i> <a href="/zh/services.html" data-i18n="nav.services">服务</a></li>
+            <li><i class="icon fa fa-angle-double-right"></i> <a href="/zh/taxi.html" data-i18n="nav.taxi">出租车</a></li>
+            <li><i class="icon fa fa-angle-double-right"></i> <a href="/zh/contact.html" data-i18n="nav.contact">联系我们</a></li>
           </ul></div></div></div>
-          <div class="footer-column col-lg-4 col-md-6 col-sm-12"><div class="footer-widget contact-widget"><h4 class="widget-title" data-i18n="foot.contact">コンタクト</h4><div class="widget-content">
+          <div class="footer-column col-lg-4 col-md-6 col-sm-12"><div class="footer-widget contact-widget"><h4 class="widget-title" data-i18n="foot.contact">联系方式</h4><div class="widget-content">
             <!-- 電話: 会社固定のみ -->
-            <p style="color:#fff;"><b data-i18n="foot.tel">TEL</b>: <a href="tel:+81476295498" style="color:#fff;">0476-29-5498</a></p>
-            <p style="color:#fff;"><b data-i18n="foot.fax">FAX</b>: 0476-33-4744</p>
-            <p style="color:#fff;"><b data-i18n="foot.mail">MAIL</b>: <a href="mailto:info@z-global.jp" style="color:#fff;">info@z-global.jp</a></p>
-            <p style="color:#fff;"><b data-i18n="foot.address.lbl">住所</b>: <span data-i18n="foot.address">千葉県印西市大森2550-1-301</span></p>
-            <p style="color:#fff;"><b data-i18n="foot.hours.lbl">対応時間</b>: <span data-i18n="foot.hours">24時間対応 (要事前予約)</span></p>
+            <p style="color:#fff;"><b data-i18n="foot.tel">电话</b>: <a href="tel:+81476295498" style="color:#fff;">0476-29-5498</a></p>
+            <p style="color:#fff;"><b data-i18n="foot.fax">传真</b>: 0476-33-4744</p>
+            <p style="color:#fff;"><b data-i18n="foot.mail">邮箱</b>: <a href="mailto:info@z-global.jp" style="color:#fff;">info@z-global.jp</a></p>
+            <p style="color:#fff;"><b data-i18n="foot.address.lbl">地址</b>: <span data-i18n="foot.address">千叶县印西市大森2550-1-301</span></p>
+            <p style="color:#fff;"><b data-i18n="foot.hours.lbl">对应时间</b>: <span data-i18n="foot.hours">24小时受理（需提前预约）</span></p>
           </div></div></div>
         </div></div></div>
-        <div class="footer-bottom"><div class="auto-container"><div class="inner-container"><div class="copyright-text" data-i18n="foot.copy">© 2026 Z&GLOBAL Co., Ltd. All rights reserved.</div><ul class="footer-nav"><li><a href="https://www.facebook.com/profile.php?id=61556119412403" target="_blank" rel="noopener"><i class="fab fa-facebook"></i> Facebook</a></li><li><a href="https://lin.ee/4xPSOz9" target="_blank" rel="noopener"><i class="fab fa-line"></i> LINE</a></li><li><a href="mailto:info@z-global.jp"><i class="fal fa-envelope"></i> Email</a></li></ul></div></div></div>
+        <div class="footer-bottom"><div class="auto-container"><div class="inner-container"><div class="copyright-text" data-i18n="foot.copy">© 2026 Z&amp;GLOBAL株式会社 版权所有</div><ul class="footer-nav"><li><a href="https://www.facebook.com/profile.php?id=61556119412403" target="_blank" rel="noopener"><i class="fab fa-facebook"></i> Facebook</a></li><li><a href="https://lin.ee/4xPSOz9" target="_blank" rel="noopener"><i class="fab fa-line"></i> LINE</a></li><li><a href="mailto:info@z-global.jp"><i class="fal fa-envelope"></i> Email</a></li></ul></div></div></div>
       </footer>
     </div>
     <div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-angle-up"></span></div>
