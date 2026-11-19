@@ -2,8 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Chauffeur Services | Z&GLOBAL - Airport, Executive, Tour & Golf</title>
+    <title>Chauffeur Services | Narita & Haneda Airport Transfers, Executive Cars, Tours - Z&GLOBAL</title>
     <meta name="description" content="Z&GLOBAL's four chauffeur services: airport transfers from Haneda & Narita to Tokyo, Kanagawa and Saitama; executive business transport for international clients; sightseeing charters to Mt. Fuji, Hakone, Kamakura and Nikko; golf and resort transfers. Monthly and multi-ride plans available." />
+    <meta name="keywords" content="airport transfer Narita,airport transfer Haneda,chauffeur service rates,executive transport Tokyo,VIP transfer Japan,private tour Mt Fuji Hakone,golf transfer Chiba,Disney resort transfer" />
 
     <link rel="canonical" href="https://www.z-global.jp/en/services.html" />
     <link rel="alternate" hreflang="ja" href="https://www.z-global.jp/services.html" />
@@ -20,12 +21,12 @@
     <meta property="og:locale:alternate" content="en_US" />
     <meta property="og:locale:alternate" content="zh_CN" />
     <meta property="og:locale:alternate" content="ko_KR" />
-    <meta property="og:title" content="Chauffeur Services | Z&GLOBAL - Airport, Executive, Tour & Golf" />
+    <meta property="og:title" content="Chauffeur Services | Narita & Haneda Airport Transfers, Executive Cars, Tours - Z&GLOBAL" />
     <meta property="og:description" content="Z&GLOBAL's four chauffeur services: airport transfers from Haneda & Narita to Tokyo, Kanagawa and Saitama; executive business transport for international clients; sightseeing charters to Mt. Fuji, Hakone, Kamakura and Nikko; golf and resort transfers. Monthly and multi-ride plans available." />
     <meta property="og:url" content="https://www.z-global.jp/en/services.html" />
     <meta property="og:image" content="https://www.z-global.jp/images/zglobal/service-tour.jpg" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Chauffeur Services | Z&GLOBAL - Airport, Executive, Tour & Golf" />
+    <meta name="twitter:title" content="Chauffeur Services | Narita & Haneda Airport Transfers, Executive Cars, Tours - Z&GLOBAL" />
     <meta name="twitter:description" content="Z&GLOBAL's four chauffeur services: airport transfers from Haneda & Narita to Tokyo, Kanagawa and Saitama; executive business transport for international clients; sightseeing charters to Mt. Fuji, Hakone, Kamakura and Nikko; golf and resort transfers. Monthly and multi-ride plans available." />
     <meta name="twitter:image" content="https://www.z-global.jp/images/zglobal/service-tour.jpg" />
 
@@ -45,26 +46,165 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Service",
-      "serviceType": "Premium Chauffeur & Transfer Service",
-      "provider": { "@type": "LocalBusiness", "name": "Z&GLOBAL", "url": "https://www.z-global.jp/" },
-      "areaServed": [
-        { "@type": "AdministrativeArea", "name": "Tokyo" },
-        { "@type": "AdministrativeArea", "name": "Chiba" },
-        { "@type": "AdministrativeArea", "name": "Kanagawa" },
-        { "@type": "AdministrativeArea", "name": "Saitama" }
-      ],
-      "availableLanguage": ["ja", "en", "zh", "ko"],
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Chauffeur Services",
-        "itemListElement": [
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Airport Transfers", "description": "Transfers to and from Haneda and Narita airports, with late-night and early-morning service" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Executive & Business Transport", "description": "Executive transport for international clients" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Sightseeing Charters", "description": "Private tours to Mt. Fuji, Hakone, Kamakura, Nikko and more" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Golf & Resort Transfers", "description": "Transfers to golf courses and resorts, with golf-bag loading" } }
-        ]
-      }
+      "@graph": [
+        {
+          "@type": "Service",
+          "serviceType": "Premium Chauffeur & Transfer Service",
+          "provider": {
+            "@type": "LocalBusiness",
+            "@id": "https://www.z-global.jp/#organization",
+            "name": "Z&GLOBAL",
+            "url": "https://www.z-global.jp/"
+          },
+          "areaServed": [
+            {
+              "@type": "AdministrativeArea",
+              "name": "Tokyo"
+            },
+            {
+              "@type": "AdministrativeArea",
+              "name": "Chiba"
+            },
+            {
+              "@type": "AdministrativeArea",
+              "name": "Kanagawa"
+            },
+            {
+              "@type": "AdministrativeArea",
+              "name": "Saitama"
+            }
+          ],
+          "availableLanguage": [
+            "ja",
+            "en",
+            "zh",
+            "ko"
+          ],
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Chauffeur Services",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Airport Transfers",
+                  "description": "Transfers to and from Haneda and Narita airports, with late-night and early-morning service"
+                },
+                "priceSpecification": {
+                  "@type": "PriceSpecification",
+                  "minPrice": 35000,
+                  "priceCurrency": "JPY"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Executive & Business Transport",
+                  "description": "Executive transport for international clients"
+                },
+                "priceSpecification": {
+                  "@type": "PriceSpecification",
+                  "minPrice": 240000,
+                  "priceCurrency": "JPY"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Sightseeing Charters",
+                  "description": "Private tours to Mt. Fuji, Hakone, Kamakura, Nikko and more"
+                },
+                "priceSpecification": {
+                  "@type": "PriceSpecification",
+                  "minPrice": 85000,
+                  "priceCurrency": "JPY"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Golf & Resort Transfers",
+                  "description": "Transfers to golf courses and resorts, with golf-bag loading"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "How much does an airport transfer cost?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "As a guide, an Alphard starts from ¥35,000 (Haneda or Narita to a hotel in central Tokyo). A Granace starts from ¥42,000 and a Hiace from ¥48,000. A 20% surcharge applies late at night (22:00-5:00), and highway tolls are extra. We will give you an exact price in a quote."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Will I pay waiting fees if my flight is delayed?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No. Waiting is free for up to 90 minutes after arrival, and we track your flight for delays."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Where can you take me?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Based at Haneda and Narita airports, we serve Tokyo, Chiba, Kanagawa and Saitama. We also run sightseeing charters to Mt. Fuji, Hakone, Kamakura, Nikko and more."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How do I book and pay?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Book any time, 24 hours a day, on our reservation site (or by phone, LINE or email). Pay by credit card, PayPay or bank transfer through the payment link we send you."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How much is a sightseeing charter?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "A full day (up to 8 hours and 100 km) starts from ¥85,000 as a guide. We will quote based on your destinations and itinerary."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can companies use you on a regular basis?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. Our monthly executive plan (flat rate for up to 8 rides a month) starts from ¥240,000 per month, with one invoice per month that meets Japan's qualified invoice requirements."
+              }
+            }
+          ]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://www.z-global.jp/en/index.html"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Services",
+              "item": "https://www.z-global.jp/en/services.html"
+            }
+          ]
+        }
+      ]
     }
     </script>
   </head>
@@ -108,17 +248,17 @@
               <div class="nav-outer">
                 <nav class="nav main-menu">
                   <ul class="navigation">
-                    <li><a href="/en/index.html" data-i18n="nav.home">ホーム</a></li>
-                    <li><a href="/en/about.html" data-i18n="nav.about">会社概要</a></li>
-                    <li><a href="/en/fleet.html" data-i18n="nav.fleet">車両ラインナップ</a></li>
-                    <li class="current"><a href="/en/services.html" data-i18n="nav.services">サービス</a></li>
-                    <li><a href="/en/taxi.html" data-i18n="nav.taxi">タクシー</a></li>
-                    <li><a href="/en/contact.html" data-i18n="nav.contact">お問い合わせ</a></li>
+                    <li><a href="/en/index.html" data-i18n="nav.home">Home</a></li>
+                    <li><a href="/en/about.html" data-i18n="nav.about">About</a></li>
+                    <li><a href="/en/fleet.html" data-i18n="nav.fleet">Fleet</a></li>
+                    <li class="current"><a href="/en/services.html" data-i18n="nav.services">Services</a></li>
+                    <li><a href="/en/taxi.html" data-i18n="nav.taxi">Taxi</a></li>
+                    <li><a href="/en/contact.html" data-i18n="nav.contact">Contact</a></li>
                   </ul>
                 </nav>
               </div>
               <div class="outer-box">
-                <div class="btn-box"><a href="https://reserve.z-global.jp" target="_blank" rel="noopener" class="theme-btn btn-style-one"><span class="btn-title" data-i18n="nav.book">ご予約</span></a></div>
+                <div class="btn-box"><a href="https://reserve.z-global.jp" target="_blank" rel="noopener" class="theme-btn btn-style-one"><span class="btn-title" data-i18n="nav.book">Book Now</span></a></div>
                 <div class="mobile-nav-toggler"><span class="icon lnr-icon-bars"></span></div>
               </div>
             </div>
@@ -132,10 +272,10 @@
       <section class="page-title" style="background-image: url(../images/zglobal/service-tour.jpg);">
         <div class="auto-container">
           <div class="title-outer text-center">
-            <h1 class="title" data-i18n="page.services.title">サービス</h1>
+            <h1 class="title" data-i18n="page.services.title">Services</h1>
             <ul class="page-breadcrumb">
-              <li><a href="/en/index.html" data-i18n="nav.home">ホーム</a></li>
-              <li data-i18n="nav.services">サービス</li>
+              <li><a href="/en/index.html" data-i18n="nav.home">Home</a></li>
+              <li data-i18n="nav.services">Services</li>
             </ul>
           </div>
         </div>
@@ -146,8 +286,8 @@
         <div class="auto-container">
           <div class="sec-title text-center">
             <span class="sub-title" data-i18n="svc.eyebrow">Our Services</span>
-            <h2 class="letters-slide-up text-split" data-i18n="svc.heading">4つのご利用シーン</h2>
-            <div class="text" data-i18n="page.svc.lead" style="max-width: 760px; margin: 18px auto 0;">空港送迎から観光チャーターまで、4つの主要サービスをご用意。すべてのプランで4言語対応・上質な車両・経験豊富な乗務員が標準装備です。</div>
+            <h2 class="letters-slide-up text-split" data-i18n="svc.heading">Four Ways to Travel With Us</h2>
+            <div class="text" data-i18n="page.svc.lead" style="max-width: 760px; margin: 18px auto 0;">Four core services from airport transfers to private tours. All plans include four-language support, premium vehicles, and experienced chauffeurs.</div>
           </div>
 
           <div class="row">
@@ -155,8 +295,8 @@
               <div class="inner-box">
                 <div class="image-box"><figure class="image css-crossfade slides-2"><img src="../images/zglobal/service-airport-new.jpg" alt="Airport transfer" loading="lazy" /><img src="../images/zglobal/service-airport-new3.jpg" alt="Airport transfer" loading="lazy" /></figure><i class="icon flaticon-taxi-2"></i></div>
                 <div class="content">
-                  <h4 class="title" data-i18n="page.svc.airport.h">空港送迎 / Airport Transfer</h4>
-                  <div class="text" data-i18n="page.svc.airport.b">羽田空港・成田空港から、都内ホテル・ご自宅・近郊エリアまでドアtoドアで送迎。フライト遅延の追跡もお任せください。到着ロビーでは到着後90分まで待機料金無料。</div>
+                  <h4 class="title" data-i18n="page.svc.airport.h">Airport Transfer</h4>
+                  <div class="text" data-i18n="page.svc.airport.b">Door-to-door service from Haneda and Narita to Tokyo hotels, your home, or nearby areas. We monitor your flight in real time. Free 90-minute wait at arrivals.</div>
                   <a href="/en/contact.html" class="icon fa fa-angle-double-right"></a>
                 </div>
               </div>
@@ -166,8 +306,8 @@
               <div class="inner-box">
                 <div class="image-box"><figure class="image css-crossfade slides-3"><img src="../images/zglobal/service-business.jpg" alt="Executive charter" loading="lazy" /><img src="../images/zglobal/service-business-new.jpg" alt="Executive charter" loading="lazy" /><img src="../images/zglobal/service-business-new4.jpg" alt="Executive charter" loading="lazy" /></figure><i class="icon flaticon-mobile-app"></i></div>
                 <div class="content">
-                  <h4 class="title" data-i18n="page.svc.business.h">役員・ビジネス送迎 / Executive Charter</h4>
-                  <div class="text" data-i18n="page.svc.business.b">海外取引先のお出迎え、レセプション、視察、社内イベント等、大切な場面の送迎を承ります。月極・回数券プランで定常的なご利用にも柔軟に対応。請求書・領収書発行可。</div>
+                  <h4 class="title" data-i18n="page.svc.business.h">Executive Charter</h4>
+                  <div class="text" data-i18n="page.svc.business.b">Overseas client pick-ups, receptions, inspections, corporate events — we handle the moments that matter. Monthly and prepaid plans available; invoices issued.</div>
                   <a href="/en/contact.html" class="icon fa fa-angle-double-right"></a>
                 </div>
               </div>
@@ -177,8 +317,8 @@
               <div class="inner-box">
                 <div class="image-box"><figure class="image css-crossfade slides-3"><img src="../images/zglobal/service-tour-new.jpg" alt="Private tour" loading="lazy" /><img src="../images/zglobal/service-tour-new2.jpg" alt="Private tour" loading="lazy" /><img src="../images/zglobal/service-tour-new3.jpg" alt="Private tour" loading="lazy" /></figure><i class="icon flaticon-driver-3"></i></div>
                 <div class="content">
-                  <h4 class="title" data-i18n="page.svc.tour.h">観光チャーター / Private Tour</h4>
-                  <div class="text" data-i18n="page.svc.tour.b">富士山・箱根・鎌倉・日光など、関東近郊への1日〜数日のプライベートツアー。観光プランのご相談から、ご家族・ご友人グループに最適な車両と行程をご提案します。</div>
+                  <h4 class="title" data-i18n="page.svc.tour.h">Private Tour</h4>
+                  <div class="text" data-i18n="page.svc.tour.b">Mt. Fuji, Hakone, Kamakura, Nikko and beyond — one-day to multi-day private tours in the Kanto area. We help plan the route and pick the right vehicle for your group.</div>
                   <a href="/en/contact.html" class="icon fa fa-angle-double-right"></a>
                 </div>
               </div>
@@ -188,8 +328,8 @@
               <div class="inner-box">
                 <div class="image-box"><figure class="image css-crossfade slides-3"><img src="../images/zglobal/service-disney.jpg" alt="Golf / Resort" loading="lazy" /><img src="../images/zglobal/service-disney-new2.jpg" alt="Golf / Resort" loading="lazy" /><img src="../images/zglobal/service-disney-new.jpg" alt="Golf / Resort" loading="lazy" /></figure><i class="icon flaticon-taxi-2"></i></div>
                 <div class="content">
-                  <h4 class="title" data-i18n="page.svc.golf.h">ゴルフ・リゾート送迎 / Golf & Resort</h4>
-                  <div class="text" data-i18n="page.svc.golf.b">早朝のゴルフラウンド、ディズニーリゾート、軽井沢への送迎などリゾート目的の利用に。荷物の積み下ろしから、温泉宿への往復まで快適なご移動を。</div>
+                  <h4 class="title" data-i18n="page.svc.golf.h">Golf &amp; Resort</h4>
+                  <div class="text" data-i18n="page.svc.golf.b">Early-morning golf rounds, Tokyo Disney Resort, Karuizawa retreats — leisure transport made effortless. Luggage handled, hot-spring return trips arranged.</div>
                   <a href="/en/contact.html" class="icon fa fa-angle-double-right"></a>
                 </div>
               </div>
@@ -204,10 +344,10 @@
           <div class="zg-svcbanner">
             <i class="zg-svcbanner-icon flaticon-taxi" aria-hidden="true"></i>
             <div>
-              <h2 class="zg-h3" data-i18n="taxi.svcpage.h">近距離の移動や通院には、タクシーもどうぞ。</h2>
-              <p data-i18n="taxi.svcpage.b">成田・印西を中心とした北総エリアで、メーター運賃のタクシーを運行しています。お電話・LINEで配車・ご予約を承ります。</p>
+              <h2 class="zg-h3" data-i18n="taxi.svcpage.h">For short trips and hospital visits, try our taxis.</h2>
+              <p data-i18n="taxi.svcpage.b">We run metered taxis in the Hokuso area centred on Narita and Inzai. Call us or message us on LINE to request or book a ride.</p>
             </div>
-            <a href="/en/taxi.html" class="zg-btn zg-btn-dark"><span data-i18n="taxi.top.more">タクシーについて詳しく</span><i class="fal fa-arrow-right" aria-hidden="true"></i></a>
+            <a href="/en/taxi.html" class="zg-btn zg-btn-dark"><span data-i18n="taxi.top.more">Learn About Our Taxis</span><i class="fal fa-arrow-right" aria-hidden="true"></i></a>
           </div>
         </div>
       </section>
@@ -222,13 +362,13 @@
               <div class="inner-column">
                 <div class="sec-title light text-center">
                   <span class="sub-title" data-i18n="proc.eyebrow">Reservation Flow</span>
-                  <h2 class="letters-slide-up text-split" data-i18n="proc.heading">ご予約から乗車まで、4ステップ。</h2>
+                  <h2 class="letters-slide-up text-split" data-i18n="proc.heading">From Booking to Pick-up in Four Steps</h2>
                 </div>
                 <div class="blocks-outer-box">
-                  <div class="app-block"><div class="inner-box"><i class="icon flaticon-search"></i><div class="content"><h4 class="title" data-i18n="proc.1.short">01. Web・LINE・お電話・メールから予約</h4></div></div></div>
-                  <div class="app-block style-two"><div class="inner-box"><i class="icon flaticon-clock"></i><div class="content"><h4 class="title" data-i18n="proc.2.short">02. 決済リンク送付 (クレカ・PayPay・振込)</h4></div></div></div>
-                  <div class="app-block"><div class="inner-box"><i class="icon flaticon-driver-3"></i><div class="content"><h4 class="title" data-i18n="proc.3.short">03. 前日に乗務員・車両番号をご連絡</h4></div></div></div>
-                  <div class="app-block style-two"><div class="inner-box"><i class="icon flaticon-taxi-2"></i><div class="content"><h4 class="title" data-i18n="proc.4.short">04. 当日 時間通りにお迎え (到着90分待機 ¥0)</h4></div></div></div>
+                  <div class="app-block"><div class="inner-box"><i class="icon flaticon-search"></i><div class="content"><h4 class="title" data-i18n="proc.1.short">01. Book via web, LINE, phone, or email</h4></div></div></div>
+                  <div class="app-block style-two"><div class="inner-box"><i class="icon flaticon-clock"></i><div class="content"><h4 class="title" data-i18n="proc.2.short">02. Secure payment link (card, PayPay, transfer)</h4></div></div></div>
+                  <div class="app-block"><div class="inner-box"><i class="icon flaticon-driver-3"></i><div class="content"><h4 class="title" data-i18n="proc.3.short">03. Driver and vehicle info sent the day before</h4></div></div></div>
+                  <div class="app-block style-two"><div class="inner-box"><i class="icon flaticon-taxi-2"></i><div class="content"><h4 class="title" data-i18n="proc.4.short">04. On-time pick-up (free 90-min wait at arrivals)</h4></div></div></div>
                 </div>
               </div>
             </div>
@@ -239,30 +379,48 @@
         </div>
       </section>
 
+      <!-- Hire FAQ (2026-11-19 追加: 検索・AI 検索向けのよくあるご質問) -->
+      <section class="zg-taxi-sec zg-taxi-faq" id="faq">
+        <div class="auto-container">
+          <div class="zg-sec-head text-center">
+            <span class="zg-eyebrow">FAQ</span>
+            <h2 class="zg-h2" data-i18n="svc.faq.heading">Chauffeur Service FAQ</h2>
+          </div>
+          <div class="zg-faq">
+            <details class="zg-faq-item"><summary data-i18n="svc.faq.1.q">How much does an airport transfer cost?</summary><p data-i18n="svc.faq.1.a">As a guide, an Alphard starts from ¥35,000 (Haneda or Narita to a hotel in central Tokyo). A Granace starts from ¥42,000 and a Hiace from ¥48,000. A 20% surcharge applies late at night (22:00-5:00), and highway tolls are extra. We will give you an exact price in a quote.</p></details>
+            <details class="zg-faq-item"><summary data-i18n="svc.faq.2.q">Will I pay waiting fees if my flight is delayed?</summary><p data-i18n="svc.faq.2.a">No. Waiting is free for up to 90 minutes after arrival, and we track your flight for delays.</p></details>
+            <details class="zg-faq-item"><summary data-i18n="svc.faq.3.q">Where can you take me?</summary><p data-i18n="svc.faq.3.a">Based at Haneda and Narita airports, we serve Tokyo, Chiba, Kanagawa and Saitama. We also run sightseeing charters to Mt. Fuji, Hakone, Kamakura, Nikko and more.</p></details>
+            <details class="zg-faq-item"><summary data-i18n="svc.faq.4.q">How do I book and pay?</summary><p data-i18n="svc.faq.4.a">Book any time, 24 hours a day, on our reservation site (or by phone, LINE or email). Pay by credit card, PayPay or bank transfer through the payment link we send you.</p></details>
+            <details class="zg-faq-item"><summary data-i18n="svc.faq.5.q">How much is a sightseeing charter?</summary><p data-i18n="svc.faq.5.a">A full day (up to 8 hours and 100 km) starts from ¥85,000 as a guide. We will quote based on your destinations and itinerary.</p></details>
+            <details class="zg-faq-item"><summary data-i18n="svc.faq.6.q">Can companies use you on a regular basis?</summary><p data-i18n="svc.faq.6.a">Yes. Our monthly executive plan (flat rate for up to 8 rides a month) starts from ¥240,000 per month, with one invoice per month that meets Japan's qualified invoice requirements.</p></details>
+          </div>
+        </div>
+      </section>
+
       <!-- Footer -->
       <footer class="main-footer footer-style-three">
         <div class="bg bg-pattern-8"></div>
-        <div class="footer-top"><div class="bg-overlay-7"></div><div class="auto-container"><div class="inner-container"><div class="top-left"><h6 class="sub-title" data-i18n="cta.eyebrow">Reservation</h6><h2 class="title" data-i18n="cta.heading">ご予約・お見積もりは、<br />お気軽に。</h2></div><div class="top-right"><div class="info-btn"><i class="icon fal fa-mobile"></i><div class="content"><h5 class="title" data-i18n="cta.call">お電話</h5><!-- 電話: 会社固定のみ --><a href="tel:+81476295498" class="phone-no">0476-29-5498</a></div></div><div class="btn-box"><a href="https://reserve.z-global.jp" target="_blank" rel="noopener" class="theme-btn btn-style-one yellow-line dark-bg hover-light"><span class="btn-title" data-i18n="nav.book">ご予約</span></a></div></div></div></div></div>
+        <div class="footer-top"><div class="bg-overlay-7"></div><div class="auto-container"><div class="inner-container"><div class="top-left"><h6 class="sub-title" data-i18n="cta.eyebrow">Reservation</h6><h2 class="title" data-i18n="cta.heading">Get a Quote or Book —<br />We're Here.</h2></div><div class="top-right"><div class="info-btn"><i class="icon fal fa-mobile"></i><div class="content"><h5 class="title" data-i18n="cta.call">Call Us</h5><!-- 電話: 会社固定のみ --><a href="tel:+81476295498" class="phone-no">0476-29-5498</a></div></div><div class="btn-box"><a href="https://reserve.z-global.jp" target="_blank" rel="noopener" class="theme-btn btn-style-one yellow-line dark-bg hover-light"><span class="btn-title" data-i18n="nav.book">Book Now</span></a></div></div></div></div></div>
         <div class="widgets-section"><div class="auto-container"><div class="row">
-          <div class="footer-column col-lg-4 col-md-6 col-sm-12"><div class="footer-widget about-widget"><h5 class="widget-title" data-i18n="foot.about">会社情報</h5><div class="widget-content"><div class="text" data-i18n="foot.about.body">Z&GLOBAL株式会社 — 羽田・成田の二大空港を拠点に、上質なハイヤーサービスを世界基準のホスピタリティでお届けします。</div></div></div></div>
-          <div class="footer-column col-lg-3 col-md-6 col-sm-12"><div class="footer-widget links-widget"><h4 class="widget-title" data-i18n="foot.menu">メニュー</h4><div class="widget-content"><ul class="user-links two-column">
-            <li><i class="icon fa fa-angle-double-right"></i> <a href="/en/index.html" data-i18n="nav.home">ホーム</a></li>
-            <li><i class="icon fa fa-angle-double-right"></i> <a href="/en/about.html" data-i18n="nav.about">会社概要</a></li>
-            <li><i class="icon fa fa-angle-double-right"></i> <a href="/en/fleet.html" data-i18n="nav.fleet">車両ラインナップ</a></li>
-            <li><i class="icon fa fa-angle-double-right"></i> <a href="/en/services.html" data-i18n="nav.services">サービス</a></li>
-            <li><i class="icon fa fa-angle-double-right"></i> <a href="/en/taxi.html" data-i18n="nav.taxi">タクシー</a></li>
-            <li><i class="icon fa fa-angle-double-right"></i> <a href="/en/contact.html" data-i18n="nav.contact">お問い合わせ</a></li>
+          <div class="footer-column col-lg-4 col-md-6 col-sm-12"><div class="footer-widget about-widget"><h5 class="widget-title" data-i18n="foot.about">Company</h5><div class="widget-content"><div class="text" data-i18n="foot.about.body">Z&amp;GLOBAL Co., Ltd. — Premium chauffeured transport from Haneda and Narita with world-class hospitality, plus taxis in the Narita and Inzai area.</div></div></div></div>
+          <div class="footer-column col-lg-3 col-md-6 col-sm-12"><div class="footer-widget links-widget"><h4 class="widget-title" data-i18n="foot.menu">Menu</h4><div class="widget-content"><ul class="user-links two-column">
+            <li><i class="icon fa fa-angle-double-right"></i> <a href="/en/index.html" data-i18n="nav.home">Home</a></li>
+            <li><i class="icon fa fa-angle-double-right"></i> <a href="/en/about.html" data-i18n="nav.about">About</a></li>
+            <li><i class="icon fa fa-angle-double-right"></i> <a href="/en/fleet.html" data-i18n="nav.fleet">Fleet</a></li>
+            <li><i class="icon fa fa-angle-double-right"></i> <a href="/en/services.html" data-i18n="nav.services">Services</a></li>
+            <li><i class="icon fa fa-angle-double-right"></i> <a href="/en/taxi.html" data-i18n="nav.taxi">Taxi</a></li>
+            <li><i class="icon fa fa-angle-double-right"></i> <a href="/en/contact.html" data-i18n="nav.contact">Contact</a></li>
           </ul></div></div></div>
-          <div class="footer-column col-lg-4 col-md-6 col-sm-12"><div class="footer-widget contact-widget"><h4 class="widget-title" data-i18n="foot.contact">コンタクト</h4><div class="widget-content">
+          <div class="footer-column col-lg-4 col-md-6 col-sm-12"><div class="footer-widget contact-widget"><h4 class="widget-title" data-i18n="foot.contact">Contact</h4><div class="widget-content">
             <!-- 電話: 会社固定のみ -->
             <p style="color:#fff;"><b data-i18n="foot.tel">TEL</b>: <a href="tel:+81476295498" style="color:#fff;">0476-29-5498</a></p>
             <p style="color:#fff;"><b data-i18n="foot.fax">FAX</b>: 0476-33-4744</p>
-            <p style="color:#fff;"><b data-i18n="foot.mail">MAIL</b>: <a href="mailto:info@z-global.jp" style="color:#fff;">info@z-global.jp</a></p>
-            <p style="color:#fff;"><b data-i18n="foot.address.lbl">住所</b>: <span data-i18n="foot.address">千葉県印西市大森2550-1-301</span></p>
-            <p style="color:#fff;"><b data-i18n="foot.hours.lbl">対応時間</b>: <span data-i18n="foot.hours">24時間対応 (要事前予約)</span></p>
+            <p style="color:#fff;"><b data-i18n="foot.mail">Email</b>: <a href="mailto:info@z-global.jp" style="color:#fff;">info@z-global.jp</a></p>
+            <p style="color:#fff;"><b data-i18n="foot.address.lbl">Address</b>: <span data-i18n="foot.address">2550-1-301 Omori, Inzai-shi, Chiba, Japan</span></p>
+            <p style="color:#fff;"><b data-i18n="foot.hours.lbl">Hours</b>: <span data-i18n="foot.hours">24/7 with advance booking</span></p>
           </div></div></div>
         </div></div></div>
-        <div class="footer-bottom"><div class="auto-container"><div class="inner-container"><div class="copyright-text" data-i18n="foot.copy">© 2026 Z&GLOBAL Co., Ltd. All rights reserved.</div><ul class="footer-nav"><li><a href="https://www.facebook.com/profile.php?id=61556119412403" target="_blank" rel="noopener"><i class="fab fa-facebook"></i> Facebook</a></li><li><a href="https://lin.ee/4xPSOz9" target="_blank" rel="noopener"><i class="fab fa-line"></i> LINE</a></li><li><a href="mailto:info@z-global.jp"><i class="fal fa-envelope"></i> Email</a></li></ul></div></div></div>
+        <div class="footer-bottom"><div class="auto-container"><div class="inner-container"><div class="copyright-text" data-i18n="foot.copy">© 2026 Z&amp;GLOBAL Co., Ltd. All rights reserved.</div><ul class="footer-nav"><li><a href="https://www.facebook.com/profile.php?id=61556119412403" target="_blank" rel="noopener"><i class="fab fa-facebook"></i> Facebook</a></li><li><a href="https://lin.ee/4xPSOz9" target="_blank" rel="noopener"><i class="fab fa-line"></i> LINE</a></li><li><a href="mailto:info@z-global.jp"><i class="fal fa-envelope"></i> Email</a></li></ul></div></div></div>
       </footer>
     </div>
     <div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-angle-up"></span></div>

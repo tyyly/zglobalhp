@@ -1,0 +1,9 @@
+# 2026-11-19: 使っていない古いファイル（旧 WordPress の控え・テンプレートのメール送信 PHP）。
+# ファイルは消さずに、外から開けないようにする。元に戻すときはこのファイルを消す。
+<IfModule mod_authz_core.c>
+Require all denied
+</IfModule>
+<IfModule !mod_authz_core.c>
+Order allow,deny
+Deny from all
+</IfModule>

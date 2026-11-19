@@ -2,8 +2,9 @@
 <html lang="ja">
   <head>
     <meta charset="utf-8" />
-    <title>タクシー | Z&GLOBAL - 成田・印西エリアのタクシー配車・予約</title>
-    <meta name="description" content="Z&GLOBALのタクシー。成田・印西を中心とした北総エリアで、ご自宅や駅へのお迎え、成田空港への移動、通院・お買い物、法人のご利用に。お電話・LINEで配車・ご予約を承ります。英語・中国語・韓国語でのご予約にも対応。" />
+    <title>印西・成田のタクシー予約・配車 | Z&GLOBAL 成田空港・通院・法人</title>
+    <meta name="description" content="印西・成田のタクシーならZ&GLOBAL。千葉ニュータウン中央・印西牧の原・成田などの駅やご自宅へのお迎え、成田空港への移動、通院・お買い物、法人のご利用に。お電話・LINEで配車・ご予約。英語・中国語・韓国語でも予約できます。" />
+    <meta name="keywords" content="印西 タクシー,印西市 タクシー 予約,千葉ニュータウン タクシー,印西牧の原 タクシー,木下 タクシー,成田 タクシー,成田空港 タクシー 予約,通院 タクシー,観光タクシー 成田,外国語 予約 タクシー,Z&GLOBAL タクシー" />
 
     <link rel="canonical" href="https://www.z-global.jp/taxi.html" />
     <link rel="alternate" hreflang="ja" href="https://www.z-global.jp/taxi.html" />
@@ -20,13 +21,13 @@
     <meta property="og:locale:alternate" content="en_US" />
     <meta property="og:locale:alternate" content="zh_CN" />
     <meta property="og:locale:alternate" content="ko_KR" />
-    <meta property="og:title" content="タクシー | Z&GLOBAL - 成田・印西エリアのタクシー配車・予約" />
-    <meta property="og:description" content="Z&GLOBALのタクシー。成田・印西を中心とした北総エリアで、ご自宅や駅へのお迎え、成田空港への移動、通院・お買い物、法人のご利用に。お電話・LINEで配車・ご予約を承ります。英語・中国語・韓国語でのご予約にも対応。" />
+    <meta property="og:title" content="印西・成田のタクシー予約・配車 | Z&GLOBAL 成田空港・通院・法人" />
+    <meta property="og:description" content="印西・成田のタクシーならZ&GLOBAL。千葉ニュータウン中央・印西牧の原・成田などの駅やご自宅へのお迎え、成田空港への移動、通院・お買い物、法人のご利用に。お電話・LINEで配車・ご予約。英語・中国語・韓国語でも予約できます。" />
     <meta property="og:url" content="https://www.z-global.jp/taxi.html" />
     <meta property="og:image" content="https://www.z-global.jp/images/zglobal/service-airport.jpg" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="タクシー | Z&GLOBAL - 成田・印西エリアのタクシー配車・予約" />
-    <meta name="twitter:description" content="Z&GLOBALのタクシー。成田・印西を中心とした北総エリアで、ご自宅や駅へのお迎え、成田空港への移動、通院・お買い物、法人のご利用に。お電話・LINEで配車・ご予約を承ります。英語・中国語・韓国語でのご予約にも対応。" />
+    <meta name="twitter:title" content="印西・成田のタクシー予約・配車 | Z&GLOBAL 成田空港・通院・法人" />
+    <meta name="twitter:description" content="印西・成田のタクシーならZ&GLOBAL。千葉ニュータウン中央・印西牧の原・成田などの駅やご自宅へのお迎え、成田空港への移動、通院・お買い物、法人のご利用に。お電話・LINEで配車・ご予約。英語・中国語・韓国語でも予約できます。" />
     <meta name="twitter:image" content="https://www.z-global.jp/images/zglobal/service-airport.jpg" />
 
     <link href="css/bootstrap.min.css" rel="stylesheet" />
@@ -51,22 +52,98 @@
           "name": "Z&GLOBAL タクシー",
           "serviceType": "タクシー（一般乗用旅客自動車運送事業）",
           "url": "https://www.z-global.jp/taxi.html",
-          "provider": { "@type": "LocalBusiness", "name": "Z&GLOBAL株式会社", "url": "https://www.z-global.jp/", "telephone": "+81-476-29-5498" },
+          "provider": {
+            "@type": "LocalBusiness",
+            "@id": "https://www.z-global.jp/#organization",
+            "name": "Z&GLOBAL株式会社",
+            "url": "https://www.z-global.jp/",
+            "telephone": "+81-476-29-5498"
+          },
           "areaServed": [
-            { "@type": "City", "name": "成田市" },
-            { "@type": "City", "name": "印西市" }
+            {
+              "@type": "City",
+              "name": "成田市"
+            },
+            {
+              "@type": "City",
+              "name": "印西市"
+            }
           ],
-          "availableLanguage": ["ja", "en", "zh", "ko"]
+          "availableLanguage": [
+            "ja",
+            "en",
+            "zh",
+            "ko"
+          ]
         },
         {
           "@type": "FAQPage",
           "mainEntity": [
-            { "@type": "Question", "name": "タクシーの予約はできますか？", "acceptedAnswer": { "@type": "Answer", "text": "はい。お電話またはLINEで承ります。ご希望の日時・お迎え場所・行き先・人数をお知らせください。" } },
-            { "@type": "Question", "name": "どのエリアで利用できますか？", "acceptedAnswer": { "@type": "Answer", "text": "成田市・印西市を中心とする北総交通圏が営業区域です。区域内から東京方面や羽田空港など、区域外への移動にもご利用いただけます。" } },
-            { "@type": "Question", "name": "成田空港まで、早朝や深夜でも乗れますか？", "acceptedAnswer": { "@type": "Answer", "text": "事前にご予約いただければ承ります。時間が決まっている場合は、前日までのご予約をおすすめします。" } },
-            { "@type": "Question", "name": "支払い方法は何がありますか？", "acceptedAnswer": { "@type": "Answer", "text": "現金でお支払いいただけます。法人のお客様は請求書による後払いもご利用いただけます。そのほかの決済方法は、ご予約時にお問い合わせください。" } },
-            { "@type": "Question", "name": "外国語で予約できますか？", "acceptedAnswer": { "@type": "Answer", "text": "英語・中国語・韓国語でもご予約を承ります。お電話・LINEのどちらでもお気軽にどうぞ。" } },
-            { "@type": "Question", "name": "車内に忘れ物をしたときは？", "acceptedAnswer": { "@type": "Answer", "text": "お電話（0476-29-5498）で、ご乗車の日時・乗った場所と降りた場所・お忘れ物の特徴をお知らせください。" } }
+            {
+              "@type": "Question",
+              "name": "タクシーの予約はできますか？",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "はい。お電話またはLINEで承ります。ご希望の日時・お迎え場所・行き先・人数をお知らせください。"
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "どのエリアで利用できますか？",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "成田市・印西市を中心とする北総交通圏が営業区域です（千葉ニュータウン中央駅・印西牧の原駅・木下駅・成田駅などからのお迎えも承ります）。区域内から東京方面や羽田空港など、区域外への移動にもご利用いただけます。"
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "成田空港まで、早朝や深夜でも乗れますか？",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "事前にご予約いただければ承ります。時間が決まっている場合は、前日までのご予約をおすすめします。"
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "支払い方法は何がありますか？",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "現金でお支払いいただけます。法人のお客様は請求書による後払いもご利用いただけます。そのほかの決済方法は、ご予約時にお問い合わせください。"
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "外国語で予約できますか？",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "英語・中国語・韓国語でもご予約を承ります。お電話・LINEのどちらでもお気軽にどうぞ。"
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "車内に忘れ物をしたときは？",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "お電話（0476-29-5498）で、ご乗車の日時・乗った場所と降りた場所・お忘れ物の特徴をお知らせください。"
+              }
+            }
+          ]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "ホーム",
+              "item": "https://www.z-global.jp/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "タクシー",
+              "item": "https://www.z-global.jp/taxi.html"
+            }
           ]
         }
       ]
@@ -182,7 +259,7 @@
             <article class="zg-card" id="pickup">
               <i class="zg-card-icon fal fa-map-marker-alt" aria-hidden="true"></i>
               <h3 class="zg-card-title" data-i18n="taxi.svc.pickup.h">ご予約・お迎え配車</h3>
-              <p class="zg-card-text" data-i18n="taxi.svc.pickup.b">ご自宅・駅・ホテル・施設など、ご指定の場所と時間にお迎えに伺います。朝の通勤や大切なご予定の前も、時間どおりに。</p>
+              <p class="zg-card-text" data-i18n="taxi.svc.pickup.b">ご自宅、千葉ニュータウン中央・印西牧の原・成田などの駅、ホテルや病院まで、ご指定の場所と時間にお迎えに伺います。朝の通勤や大切なご予定の前も、時間どおりに。</p>
             </article>
             <article class="zg-card" id="airport">
               <i class="zg-card-icon fal fa-plane-departure" aria-hidden="true"></i>
@@ -339,7 +416,7 @@
           </div>
           <div class="zg-faq">
             <details class="zg-faq-item"><summary data-i18n="taxi.faq.1.q">タクシーの予約はできますか？</summary><p data-i18n="taxi.faq.1.a">はい。お電話またはLINEで承ります。ご希望の日時・お迎え場所・行き先・人数をお知らせください。</p></details>
-            <details class="zg-faq-item"><summary data-i18n="taxi.faq.2.q">どのエリアで利用できますか？</summary><p data-i18n="taxi.faq.2.a">成田市・印西市を中心とする北総交通圏が営業区域です。区域内から東京方面や羽田空港など、区域外への移動にもご利用いただけます。</p></details>
+            <details class="zg-faq-item"><summary data-i18n="taxi.faq.2.q">どのエリアで利用できますか？</summary><p data-i18n="taxi.faq.2.a">成田市・印西市を中心とする北総交通圏が営業区域です（千葉ニュータウン中央駅・印西牧の原駅・木下駅・成田駅などからのお迎えも承ります）。区域内から東京方面や羽田空港など、区域外への移動にもご利用いただけます。</p></details>
             <details class="zg-faq-item"><summary data-i18n="taxi.faq.3.q">成田空港まで、早朝や深夜でも乗れますか？</summary><p data-i18n="taxi.faq.3.a">事前にご予約いただければ承ります。時間が決まっている場合は、前日までのご予約をおすすめします。</p></details>
             <details class="zg-faq-item"><summary data-i18n="taxi.faq.4.q">支払い方法は何がありますか？</summary><p data-i18n="taxi.fare.pay.b">現金でお支払いいただけます。法人のお客様は請求書による後払いもご利用いただけます。そのほかの決済方法は、ご予約時にお問い合わせください。</p></details>
             <details class="zg-faq-item"><summary data-i18n="taxi.faq.5.q">外国語で予約できますか？</summary><p data-i18n="taxi.faq.5.a">英語・中国語・韓国語でもご予約を承ります。お電話・LINEのどちらでもお気軽にどうぞ。</p></details>
@@ -353,7 +430,7 @@
         <div class="bg bg-pattern-8"></div>
         <div class="footer-top"><div class="bg-overlay-7"></div><div class="auto-container"><div class="inner-container"><div class="top-left"><h6 class="sub-title" data-i18n="nav.taxi">タクシー</h6><h2 class="title" data-i18n="taxi.cta.heading">タクシーのご用命は、<br />お電話・LINEで。</h2></div><div class="top-right"><div class="info-btn"><i class="icon fal fa-mobile"></i><div class="content"><h5 class="title" data-i18n="cta.call">お電話</h5><!-- 電話: 会社固定のみ --><a href="tel:+81476295498" class="phone-no">0476-29-5498</a></div></div><div class="btn-box"><a href="https://lin.ee/4xPSOz9" target="_blank" rel="noopener" class="theme-btn btn-style-one yellow-line dark-bg hover-light"><span class="btn-title" data-i18n="taxi.how.line.btn">LINEを開く</span></a></div></div></div></div></div>
         <div class="widgets-section"><div class="auto-container"><div class="row">
-          <div class="footer-column col-lg-4 col-md-6 col-sm-12"><div class="footer-widget about-widget"><h5 class="widget-title" data-i18n="foot.about">会社情報</h5><div class="widget-content"><div class="text" data-i18n="foot.about.body">Z&GLOBAL株式会社 — 羽田・成田の二大空港を拠点に、上質なハイヤーサービスを世界基準のホスピタリティでお届けします。</div></div></div></div>
+          <div class="footer-column col-lg-4 col-md-6 col-sm-12"><div class="footer-widget about-widget"><h5 class="widget-title" data-i18n="foot.about">会社情報</h5><div class="widget-content"><div class="text" data-i18n="foot.about.body">Z&GLOBAL株式会社 — 羽田・成田の二大空港を拠点に、上質なハイヤーサービスを世界基準のホスピタリティでお届けします。成田・印西エリアではタクシーも運行しています。</div></div></div></div>
           <div class="footer-column col-lg-3 col-md-6 col-sm-12"><div class="footer-widget links-widget"><h4 class="widget-title" data-i18n="foot.menu">メニュー</h4><div class="widget-content"><ul class="user-links two-column">
             <li><i class="icon fa fa-angle-double-right"></i> <a href="index.html" data-i18n="nav.home">ホーム</a></li>
             <li><i class="icon fa fa-angle-double-right"></i> <a href="about.html" data-i18n="nav.about">会社概要</a></li>

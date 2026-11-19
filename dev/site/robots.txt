@@ -1,4 +1,27 @@
+# www.z-global.jp — Z&GLOBAL株式会社
+# 検索エンジンと AI 検索のクローラーを歓迎します（2026-11-19 更新）
+
 User-agent: *
 Allow: /
+Disallow: /api/
+Disallow: /bak/
+Disallow: /includes/
+
+# AI 検索・AI アシスタント（明示的に許可）
+User-agent: GPTBot
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: ClaudeBot
+User-agent: Claude-SearchBot
+User-agent: Claude-User
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+User-agent: Bingbot
+Allow: /
+Disallow: /api/
+Disallow: /bak/
+Disallow: /includes/
 
 Sitemap: https://www.z-global.jp/sitemap.xml

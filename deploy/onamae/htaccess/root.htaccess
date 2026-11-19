@@ -1,0 +1,31 @@
+ErrorDocument 401 /error/401.html
+
+# 2026-11-19: www なし（z-global.jp）を www.z-global.jp へ 301 で統一（検索エンジンの重複を防ぐ）
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^z-global\.jp$ [NC]
+RewriteRule ^(.*)$ https://www.z-global.jp/$1 [R=301,L]
+</IfModule>
+
+# 2026-11-19: 社内の写真比較ページは検索結果に出さない
+<IfModule mod_headers.c>
+<FilesMatch "^(vehicle|image)-comparison\.html$">
+Header set X-Robots-Tag "noindex, nofollow"
+</FilesMatch>
+</IfModule>
+
+# BEGIN WordPress
+# "BEGIN WordPress" から "END WordPress" までのディレクティブ (行) は
+# 動的に生成され、WordPress フィルターによってのみ修正が可能です。
+# これらのマーカー間にあるディレクティブへのいかなる変更も上書きされてしまいます。
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+
+# END WordPress
