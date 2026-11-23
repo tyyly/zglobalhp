@@ -363,7 +363,10 @@
             <div class="button-column col-lg-6 col-md-12 col-sm-12">
               <div class="inner-column">
                 <div class="text" data-i18n="hero.subShort" style="font-size: 1.1rem; margin-bottom: 30px;">알파드, 그란에이스, 하이에이스 —<br />4개 언어 대응 전속 기사가 안내합니다.</div>
-                <a href="/ko/fleet.html" class="theme-btn btn-style-one dark-line-two hover-light"><span class="btn-title" data-i18n="hero.cta2">차량 보기</span></a>
+                <div class="zg-hero-btns">
+                  <a href="/ko/taxi.html" class="zg-btn zg-btn-gold zg-hero-taxi"><i class="flaticon-taxi-2" aria-hidden="true"></i><span data-i18n="hero.ctaTaxi">택시 부르기</span></a>
+                  <a href="/ko/fleet.html" class="theme-btn btn-style-one dark-line-two hover-light"><span class="btn-title" data-i18n="hero.cta2">차량 보기</span></a>
+                </div>
               </div>
             </div>
 
@@ -377,6 +380,31 @@
                 </h4>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Taxi Band (2026-11-19 追加 / 2026-11-23 ヒーロー直下へ移動して目立たせた → taxi.html) -->
+      <section class="zg-taxi-sec zg-taxi-band zg-dark" id="taxi">
+        <div class="auto-container">
+          <div class="zg-band-grid">
+            <div>
+              <span class="zg-eyebrow" data-i18n="taxi.eyebrow">택시 서비스</span>
+              <span class="zg-taxi-live" data-i18n="taxi.top.badge">나리타·인자이 지역 운행 중</span>
+              <h2 class="zg-h2" data-i18n="taxi.top.heading">택시도 Z&amp;GLOBAL로.</h2>
+              <p class="zg-lead" data-i18n="taxi.top.lead">하이어와 함께 나리타・인자이를 중심으로 한 호쿠소 지역에서 택시를 운행하고 있습니다. 자택이나 역 픽업, 나리타 공항 이동, 병원 방문과 쇼핑에. 전화・LINE으로 배차・예약을 받습니다.</p>
+              <div class="zg-btn-row">
+                <a href="/ko/taxi.html" class="zg-btn zg-btn-gold"><span data-i18n="taxi.top.more">택시 자세히 보기</span><i class="fal fa-arrow-right" aria-hidden="true"></i></a>
+                <!-- 電話: 会社固定のみ -->
+                <a href="tel:+81476295498" class="zg-btn zg-btn-ghost"><i class="fal fa-phone-alt" aria-hidden="true"></i>0476-29-5498</a>
+              </div>
+            </div>
+            <ul class="zg-band-list">
+              <li><a href="/ko/taxi.html#pickup"><i class="zg-band-icon fal fa-map-marker-alt" aria-hidden="true"></i><span data-i18n="taxi.svc.pickup.h">예약・픽업 배차</span><i class="zg-arrow fal fa-arrow-right" aria-hidden="true"></i></a></li>
+              <li><a href="/ko/taxi.html#airport"><i class="zg-band-icon fal fa-plane-departure" aria-hidden="true"></i><span data-i18n="taxi.svc.airport.h">나리타 공항 택시</span><i class="zg-arrow fal fa-arrow-right" aria-hidden="true"></i></a></li>
+              <li><a href="/ko/taxi.html#daily"><i class="zg-band-icon fal fa-hospital" aria-hidden="true"></i><span data-i18n="taxi.svc.daily.h">병원・쇼핑</span><i class="zg-arrow fal fa-arrow-right" aria-hidden="true"></i></a></li>
+              <li><a href="/ko/taxi.html#corporate"><i class="zg-band-icon fal fa-briefcase" aria-hidden="true"></i><span data-i18n="taxi.svc.corp.h">법인・비즈니스 이용</span><i class="zg-arrow fal fa-arrow-right" aria-hidden="true"></i></a></li>
+            </ul>
           </div>
         </div>
       </section>
@@ -682,30 +710,6 @@
 
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Taxi Band (2026-11-19 追加: タクシー事業の案内 → taxi.html) -->
-      <section class="zg-taxi-sec zg-taxi-band zg-dark" id="taxi">
-        <div class="auto-container">
-          <div class="zg-band-grid">
-            <div>
-              <span class="zg-eyebrow" data-i18n="taxi.eyebrow">택시 서비스</span>
-              <h2 class="zg-h2" data-i18n="taxi.top.heading">택시도 Z&amp;GLOBAL로.</h2>
-              <p class="zg-lead" data-i18n="taxi.top.lead">하이어와 함께 나리타・인자이를 중심으로 한 호쿠소 지역에서 택시를 운행하고 있습니다. 자택이나 역 픽업, 나리타 공항 이동, 병원 방문과 쇼핑에. 전화・LINE으로 배차・예약을 받습니다.</p>
-              <div class="zg-btn-row">
-                <a href="/ko/taxi.html" class="zg-btn zg-btn-gold"><span data-i18n="taxi.top.more">택시 자세히 보기</span><i class="fal fa-arrow-right" aria-hidden="true"></i></a>
-                <!-- 電話: 会社固定のみ -->
-                <a href="tel:+81476295498" class="zg-btn zg-btn-ghost"><i class="fal fa-phone-alt" aria-hidden="true"></i>0476-29-5498</a>
-              </div>
-            </div>
-            <ul class="zg-band-list">
-              <li><a href="/ko/taxi.html#pickup"><i class="zg-band-icon fal fa-map-marker-alt" aria-hidden="true"></i><span data-i18n="taxi.svc.pickup.h">예약・픽업 배차</span><i class="zg-arrow fal fa-arrow-right" aria-hidden="true"></i></a></li>
-              <li><a href="/ko/taxi.html#airport"><i class="zg-band-icon fal fa-plane-departure" aria-hidden="true"></i><span data-i18n="taxi.svc.airport.h">나리타 공항 택시</span><i class="zg-arrow fal fa-arrow-right" aria-hidden="true"></i></a></li>
-              <li><a href="/ko/taxi.html#daily"><i class="zg-band-icon fal fa-hospital" aria-hidden="true"></i><span data-i18n="taxi.svc.daily.h">병원・쇼핑</span><i class="zg-arrow fal fa-arrow-right" aria-hidden="true"></i></a></li>
-              <li><a href="/ko/taxi.html#corporate"><i class="zg-band-icon fal fa-briefcase" aria-hidden="true"></i><span data-i18n="taxi.svc.corp.h">법인・비즈니스 이용</span><i class="zg-arrow fal fa-arrow-right" aria-hidden="true"></i></a></li>
-            </ul>
           </div>
         </div>
       </section>
