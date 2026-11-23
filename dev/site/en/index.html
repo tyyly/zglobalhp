@@ -363,7 +363,10 @@
             <div class="button-column col-lg-6 col-md-12 col-sm-12">
               <div class="inner-column">
                 <div class="text" data-i18n="hero.subShort" style="font-size: 1.1rem; margin-bottom: 30px;">Alphard, Granace, HiAce —<br />operated by four-language-capable chauffeurs.</div>
-                <a href="/en/fleet.html" class="theme-btn btn-style-one dark-line-two hover-light"><span class="btn-title" data-i18n="hero.cta2">View Our Fleet</span></a>
+                <div class="zg-hero-btns">
+                  <a href="/en/taxi.html" class="zg-btn zg-btn-gold zg-hero-taxi"><i class="flaticon-taxi-2" aria-hidden="true"></i><span data-i18n="hero.ctaTaxi">Book a Taxi</span></a>
+                  <a href="/en/fleet.html" class="theme-btn btn-style-one dark-line-two hover-light"><span class="btn-title" data-i18n="hero.cta2">View Our Fleet</span></a>
+                </div>
               </div>
             </div>
 
@@ -377,6 +380,31 @@
                 </h4>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Taxi Band (2026-11-19 追加 / 2026-11-23 ヒーロー直下へ移動して目立たせた → taxi.html) -->
+      <section class="zg-taxi-sec zg-taxi-band zg-dark" id="taxi">
+        <div class="auto-container">
+          <div class="zg-band-grid">
+            <div>
+              <span class="zg-eyebrow" data-i18n="taxi.eyebrow">Taxi Service</span>
+              <span class="zg-taxi-live" data-i18n="taxi.top.badge">Now operating in Narita &amp; Inzai</span>
+              <h2 class="zg-h2" data-i18n="taxi.top.heading">Taxis, Too, from Z&amp;GLOBAL.</h2>
+              <p class="zg-lead" data-i18n="taxi.top.lead">Alongside our chauffeur service, we run taxis in the Hokuso area centred on Narita and Inzai, for pickups at home or the station, rides to Narita Airport, hospital visits and shopping. Call us or message us on LINE to request or book a taxi.</p>
+              <div class="zg-btn-row">
+                <a href="/en/taxi.html" class="zg-btn zg-btn-gold"><span data-i18n="taxi.top.more">Learn About Our Taxis</span><i class="fal fa-arrow-right" aria-hidden="true"></i></a>
+                <!-- 電話: 会社固定のみ -->
+                <a href="tel:+81476295498" class="zg-btn zg-btn-ghost"><i class="fal fa-phone-alt" aria-hidden="true"></i>0476-29-5498</a>
+              </div>
+            </div>
+            <ul class="zg-band-list">
+              <li><a href="/en/taxi.html#pickup"><i class="zg-band-icon fal fa-map-marker-alt" aria-hidden="true"></i><span data-i18n="taxi.svc.pickup.h">Booked Pickups</span><i class="zg-arrow fal fa-arrow-right" aria-hidden="true"></i></a></li>
+              <li><a href="/en/taxi.html#airport"><i class="zg-band-icon fal fa-plane-departure" aria-hidden="true"></i><span data-i18n="taxi.svc.airport.h">Taxi to Narita Airport</span><i class="zg-arrow fal fa-arrow-right" aria-hidden="true"></i></a></li>
+              <li><a href="/en/taxi.html#daily"><i class="zg-band-icon fal fa-hospital" aria-hidden="true"></i><span data-i18n="taxi.svc.daily.h">Hospital Visits &amp; Shopping</span><i class="zg-arrow fal fa-arrow-right" aria-hidden="true"></i></a></li>
+              <li><a href="/en/taxi.html#corporate"><i class="zg-band-icon fal fa-briefcase" aria-hidden="true"></i><span data-i18n="taxi.svc.corp.h">Corporate &amp; Business</span><i class="zg-arrow fal fa-arrow-right" aria-hidden="true"></i></a></li>
+            </ul>
           </div>
         </div>
       </section>
@@ -682,30 +710,6 @@
 
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Taxi Band (2026-11-19 追加: タクシー事業の案内 → taxi.html) -->
-      <section class="zg-taxi-sec zg-taxi-band zg-dark" id="taxi">
-        <div class="auto-container">
-          <div class="zg-band-grid">
-            <div>
-              <span class="zg-eyebrow" data-i18n="taxi.eyebrow">Taxi Service</span>
-              <h2 class="zg-h2" data-i18n="taxi.top.heading">Taxis, Too, from Z&amp;GLOBAL.</h2>
-              <p class="zg-lead" data-i18n="taxi.top.lead">Alongside our chauffeur service, we run taxis in the Hokuso area centred on Narita and Inzai, for pickups at home or the station, rides to Narita Airport, hospital visits and shopping. Call us or message us on LINE to request or book a taxi.</p>
-              <div class="zg-btn-row">
-                <a href="/en/taxi.html" class="zg-btn zg-btn-gold"><span data-i18n="taxi.top.more">Learn About Our Taxis</span><i class="fal fa-arrow-right" aria-hidden="true"></i></a>
-                <!-- 電話: 会社固定のみ -->
-                <a href="tel:+81476295498" class="zg-btn zg-btn-ghost"><i class="fal fa-phone-alt" aria-hidden="true"></i>0476-29-5498</a>
-              </div>
-            </div>
-            <ul class="zg-band-list">
-              <li><a href="/en/taxi.html#pickup"><i class="zg-band-icon fal fa-map-marker-alt" aria-hidden="true"></i><span data-i18n="taxi.svc.pickup.h">Booked Pickups</span><i class="zg-arrow fal fa-arrow-right" aria-hidden="true"></i></a></li>
-              <li><a href="/en/taxi.html#airport"><i class="zg-band-icon fal fa-plane-departure" aria-hidden="true"></i><span data-i18n="taxi.svc.airport.h">Taxi to Narita Airport</span><i class="zg-arrow fal fa-arrow-right" aria-hidden="true"></i></a></li>
-              <li><a href="/en/taxi.html#daily"><i class="zg-band-icon fal fa-hospital" aria-hidden="true"></i><span data-i18n="taxi.svc.daily.h">Hospital Visits &amp; Shopping</span><i class="zg-arrow fal fa-arrow-right" aria-hidden="true"></i></a></li>
-              <li><a href="/en/taxi.html#corporate"><i class="zg-band-icon fal fa-briefcase" aria-hidden="true"></i><span data-i18n="taxi.svc.corp.h">Corporate &amp; Business</span><i class="zg-arrow fal fa-arrow-right" aria-hidden="true"></i></a></li>
-            </ul>
           </div>
         </div>
       </section>

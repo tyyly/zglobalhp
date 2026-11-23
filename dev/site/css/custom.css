@@ -1119,3 +1119,19 @@ a:hover {
 
 /* 会社概要の要点（AI・検索が引用しやすい一文。2026-11-19） */
 .zg-about-summary { margin: 0 0 36px; font-size: 16px; line-height: 2; color: #333; }
+
+/* ===== 2026-11-23 タクシーを目立たせる ===== */
+/* メニューの「タクシー」を全ページで金色に */
+.main-menu .navigation > li > a[href$="taxi.html"],
+.sticky-header .navigation > li > a[href$="taxi.html"],
+.mobile-menu .navigation li > a[href$="taxi.html"] { color: var(--theme-color1) !important; font-weight: 700; }
+.main-menu .navigation > li > a[href$="taxi.html"]::after { content: "TAXI"; display: inline-block; margin-left: 6px; padding: 1px 5px; font-size: 10px; line-height: 1.4; letter-spacing: .08em; background: var(--theme-color1); color: #141414; border-radius: 0; vertical-align: 2px; position: static; }
+/* ヒーローのボタン 2 つ */
+.zg-hero-btns { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+.zg-hero-btns .theme-btn { margin: 0; }
+.zg-hero-taxi { padding: 16px 28px; font-size: 1rem; border-radius: 0; }
+.zg-hero-taxi i { font-size: 1.1em; }
+/* ヒーロー直下のタクシー帯 */
+.zg-taxi-band { border-top: 4px solid var(--theme-color1); }
+.zg-taxi-live { display: inline-block; margin: 0 0 14px; padding: 3px 10px; font-size: .85rem; font-weight: 700; border: 1px solid var(--theme-color1); color: var(--theme-color1); border-radius: 0; vertical-align: middle; }
+.zg-taxi-live::before { content: ""; display: inline-block; width: 8px; height: 8px; margin-right: 6px; border-radius: 50%; background: #3ec46d; vertical-align: 1px; }

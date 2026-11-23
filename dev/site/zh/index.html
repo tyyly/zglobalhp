@@ -363,7 +363,10 @@
             <div class="button-column col-lg-6 col-md-12 col-sm-12">
               <div class="inner-column">
                 <div class="text" data-i18n="hero.subShort" style="font-size: 1.1rem; margin-bottom: 30px;">阿尔法、皇狮、海狮 —<br />由4种语言对应的专属司机驾驶。</div>
-                <a href="/zh/fleet.html" class="theme-btn btn-style-one dark-line-two hover-light"><span class="btn-title" data-i18n="hero.cta2">查看车型</span></a>
+                <div class="zg-hero-btns">
+                  <a href="/zh/taxi.html" class="zg-btn zg-btn-gold zg-hero-taxi"><i class="flaticon-taxi-2" aria-hidden="true"></i><span data-i18n="hero.ctaTaxi">预约出租车</span></a>
+                  <a href="/zh/fleet.html" class="theme-btn btn-style-one dark-line-two hover-light"><span class="btn-title" data-i18n="hero.cta2">查看车型</span></a>
+                </div>
               </div>
             </div>
 
@@ -377,6 +380,31 @@
                 </h4>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Taxi Band (2026-11-19 追加 / 2026-11-23 ヒーロー直下へ移動して目立たせた → taxi.html) -->
+      <section class="zg-taxi-sec zg-taxi-band zg-dark" id="taxi">
+        <div class="auto-container">
+          <div class="zg-band-grid">
+            <div>
+              <span class="zg-eyebrow" data-i18n="taxi.eyebrow">出租车服务</span>
+              <span class="zg-taxi-live" data-i18n="taxi.top.badge">成田・印西地区运营中</span>
+              <h2 class="zg-h2" data-i18n="taxi.top.heading">出租车，也选 Z&amp;GLOBAL。</h2>
+              <p class="zg-lead" data-i18n="taxi.top.lead">除包车外，我们还在以成田・印西为中心的北总地区经营出租车。可用于住宅・车站接送、前往成田机场、就医与购物。电话・LINE受理叫车与预约。</p>
+              <div class="zg-btn-row">
+                <a href="/zh/taxi.html" class="zg-btn zg-btn-gold"><span data-i18n="taxi.top.more">了解出租车服务</span><i class="fal fa-arrow-right" aria-hidden="true"></i></a>
+                <!-- 電話: 会社固定のみ -->
+                <a href="tel:+81476295498" class="zg-btn zg-btn-ghost"><i class="fal fa-phone-alt" aria-hidden="true"></i>0476-29-5498</a>
+              </div>
+            </div>
+            <ul class="zg-band-list">
+              <li><a href="/zh/taxi.html#pickup"><i class="zg-band-icon fal fa-map-marker-alt" aria-hidden="true"></i><span data-i18n="taxi.svc.pickup.h">预约・上门接送</span><i class="zg-arrow fal fa-arrow-right" aria-hidden="true"></i></a></li>
+              <li><a href="/zh/taxi.html#airport"><i class="zg-band-icon fal fa-plane-departure" aria-hidden="true"></i><span data-i18n="taxi.svc.airport.h">前往成田机场的出租车</span><i class="zg-arrow fal fa-arrow-right" aria-hidden="true"></i></a></li>
+              <li><a href="/zh/taxi.html#daily"><i class="zg-band-icon fal fa-hospital" aria-hidden="true"></i><span data-i18n="taxi.svc.daily.h">就医・购物</span><i class="zg-arrow fal fa-arrow-right" aria-hidden="true"></i></a></li>
+              <li><a href="/zh/taxi.html#corporate"><i class="zg-band-icon fal fa-briefcase" aria-hidden="true"></i><span data-i18n="taxi.svc.corp.h">企业・商务用车</span><i class="zg-arrow fal fa-arrow-right" aria-hidden="true"></i></a></li>
+            </ul>
           </div>
         </div>
       </section>
@@ -682,30 +710,6 @@
 
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Taxi Band (2026-11-19 追加: タクシー事業の案内 → taxi.html) -->
-      <section class="zg-taxi-sec zg-taxi-band zg-dark" id="taxi">
-        <div class="auto-container">
-          <div class="zg-band-grid">
-            <div>
-              <span class="zg-eyebrow" data-i18n="taxi.eyebrow">出租车服务</span>
-              <h2 class="zg-h2" data-i18n="taxi.top.heading">出租车，也选 Z&amp;GLOBAL。</h2>
-              <p class="zg-lead" data-i18n="taxi.top.lead">除包车外，我们还在以成田・印西为中心的北总地区经营出租车。可用于住宅・车站接送、前往成田机场、就医与购物。电话・LINE受理叫车与预约。</p>
-              <div class="zg-btn-row">
-                <a href="/zh/taxi.html" class="zg-btn zg-btn-gold"><span data-i18n="taxi.top.more">了解出租车服务</span><i class="fal fa-arrow-right" aria-hidden="true"></i></a>
-                <!-- 電話: 会社固定のみ -->
-                <a href="tel:+81476295498" class="zg-btn zg-btn-ghost"><i class="fal fa-phone-alt" aria-hidden="true"></i>0476-29-5498</a>
-              </div>
-            </div>
-            <ul class="zg-band-list">
-              <li><a href="/zh/taxi.html#pickup"><i class="zg-band-icon fal fa-map-marker-alt" aria-hidden="true"></i><span data-i18n="taxi.svc.pickup.h">预约・上门接送</span><i class="zg-arrow fal fa-arrow-right" aria-hidden="true"></i></a></li>
-              <li><a href="/zh/taxi.html#airport"><i class="zg-band-icon fal fa-plane-departure" aria-hidden="true"></i><span data-i18n="taxi.svc.airport.h">前往成田机场的出租车</span><i class="zg-arrow fal fa-arrow-right" aria-hidden="true"></i></a></li>
-              <li><a href="/zh/taxi.html#daily"><i class="zg-band-icon fal fa-hospital" aria-hidden="true"></i><span data-i18n="taxi.svc.daily.h">就医・购物</span><i class="zg-arrow fal fa-arrow-right" aria-hidden="true"></i></a></li>
-              <li><a href="/zh/taxi.html#corporate"><i class="zg-band-icon fal fa-briefcase" aria-hidden="true"></i><span data-i18n="taxi.svc.corp.h">企业・商务用车</span><i class="zg-arrow fal fa-arrow-right" aria-hidden="true"></i></a></li>
-            </ul>
           </div>
         </div>
       </section>
